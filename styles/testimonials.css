@@ -1,0 +1,201 @@
+/* Tệp CSS định nghĩa phong cách cho phần Ý kiến cảm nhận học viên và phụ huynh (Figma Node 1:2460) */
+
+.testimonials-section {
+    background-color: #ffffff; /* Nền trắng sạch sẽ */
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Tiêu đề chính của section cảm nhận */
+.testimonials-header {
+    margin-bottom: 35px;
+}
+
+.testimonials-title {
+    font-family: var(--font-main);
+    font-weight: 700;
+    font-size: 36px;
+    color: rgba(50, 50, 50, 0.95);
+    line-height: 1.3;
+}
+
+/* Đường trang trí gạch dưới tiêu đề */
+.testimonials-decor-line {
+    width: 120px;
+    height: 4px;
+    background-color: var(--secondary-color);
+    margin: 16px auto 0;
+    border-radius: 2px;
+}
+
+/* Khung bao ngoài slider để ẩn scrollbar */
+.testimonials-slider-wrapper {
+    width: 100%;
+    position: relative;
+}
+
+/* Thanh trượt slide chứa danh sách các thẻ cảm nhận */
+.testimonials-slider {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    padding-top: 68px;
+    padding-bottom: 30px;
+    padding-left: max(80px, calc((100% - 1280px) / 2));
+    padding-right: max(80px, calc((100% - 1280px) / 2));
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Ẩn scrollbar trên Firefox */
+    -ms-overflow-style: none; /* Ẩn scrollbar trên IE/Edge */
+    cursor: grab; /* Tạo hình bàn tay khi chuẩn bị kéo trượt */
+    user-select: none; /* Ngăn chặn bôi đen văn bản khi kéo trượt */
+}
+
+/* Ẩn scrollbar trên Chrome, Safari, Opera */
+.testimonials-slider::-webkit-scrollbar {
+    display: none;
+}
+
+/* Đổi con trỏ thành nắm tay khi đang thực hiện kéo trượt */
+.testimonials-slider.active {
+    cursor: grabbing;
+}
+
+/* Khung bọc ngoài mỗi thẻ để cố định chiều rộng */
+.testimonial-card-wrapper {
+    flex: 0 0 412px; /* Kích thước chiều rộng cố định 412px theo chuẩn Figma */
+    display: flex; /* Cho phép giãn chiều cao bằng nhau */
+}
+
+/* Thẻ cảm nhận cá nhân */
+.testimonial-card {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Xếp dọc các thành phần bên trong */
+}
+
+/* Ảnh đại diện tròn nhô cao của người cảm nhận */
+.testimonial-avatar {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -56px); /* Nhô cao lên 56px đè lên viền hộp */
+    width: 112px;
+    height: 112px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    z-index: 2;
+    transition: var(--transition-smooth);
+}
+
+.testimonial-avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Hộp thông tin phản hồi có màu nền đục mờ */
+.testimonial-box {
+    background-color: rgba(247, 247, 247, 0.50);
+    border-radius: 20px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    padding: 75px 24px 30px; /* Padding-top 75px để chừa chỗ cho avatar nhô xuống */
+    min-height: 307px; /* Chiều cao tối thiểu 307px từ Figma */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
+    flex: 1; /* Tự động kéo giãn để chiều cao các hộp bằng nhau */
+}
+
+/* Tên người phản hồi */
+.testimonial-name {
+    font-family: var(--font-main);
+    font-size: 22px;
+    font-weight: 700;
+    color: rgba(15, 15, 15, 0.85);
+    margin: 0 0 6px 0;
+}
+
+/* Chi tiết quan hệ/chức vụ phụ */
+.testimonial-subtitle {
+    font-family: var(--font-main);
+    font-size: 16px;
+    font-weight: 400;
+    color: #0F0F0FD9;
+    margin: 0 0 16px 0;
+}
+
+/* Nội dung trích dẫn cảm nhận */
+.testimonial-text {
+    font-family: var(--font-main);
+    font-size: 15px;
+    font-weight: 400;
+    color: rgba(15, 15, 15, 0.8);
+    line-height: 1.6;
+    margin: 0 0 auto 0; /* Đẩy cụm sao đánh giá xuống sát đáy */
+}
+
+/* Khu vực sao đánh giá chất lượng */
+.testimonial-stars {
+    margin-top: 24px;
+    display: flex;
+    gap: 4px;
+    color: #FFB800; /* Màu vàng cam của ngôi sao */
+    font-size: 20px;
+}
+
+.testimonial-stars .star {
+    user-select: none;
+}
+
+/* ==========================================================================
+   THIẾT KẾ PHẢN HỒI TƯƠNG THÍCH (RESPONSIVE)
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+    .testimonials-slider {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonials-slider {
+        padding-top: 56px;
+        padding-left: 20px;
+        padding-right: 20px;
+        gap: 16px;
+    }
+    .testimonial-card-wrapper {
+        flex: 0 0 340px; /* Thu hẹp thẻ trên máy tính bảng */
+    }
+    .testimonial-avatar {
+        width: 96px;
+        height: 96px;
+        transform: translate(-50%, -48px);
+    }
+    .testimonial-box {
+        padding: 60px 20px 24px;
+        min-height: 280px;
+    }
+    .testimonial-name {
+        font-size: 18px;
+    }
+    .testimonial-subtitle {
+        font-size: 14px;
+    }
+    .testimonial-text {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonial-card-wrapper {
+        flex: 0 0 290px; /* Chiều rộng thẻ tối ưu trên điện thoại di động */
+    }
+}

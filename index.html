@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="/styles/why-choose.css">
     <link rel="stylesheet" href="/styles/courses.css">
     <link rel="stylesheet" href="/styles/teachers.css">
+    <link rel="stylesheet" href="/styles/testimonials.css">
     <!-- Tải thư viện jQuery trước để hỗ trợ nạp động -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
     <!-- Tải thư viện Bootstrap 5 JS Bundle -->
@@ -515,6 +516,161 @@
                     </div>
                 </div>
             </div>
+        </section>
+
+        <!-- Testimonials Section - Ý kiến cảm nhận học viên và phụ huynh (Figma Node 1:2460) -->
+        <section class="testimonials-section">
+            <div class="container">
+                <!-- Tiêu đề phần cảm nhận -->
+                <div class="testimonials-header text-center">
+                    <h2 class="testimonials-title">Cảm nhận của <span class="text-highlight">học viên/ phụ huynh</span></h2>
+                    <div class="testimonials-decor-line"></div>
+                </div>
+            </div>
+                
+            <!-- Slider container hỗ trợ kéo trượt ngang -->
+            <div class="testimonials-slider-wrapper">
+                    <div class="testimonials-slider" id="testimonialsSlider">
+                        <!-- Card 1: Chị Nguyễn Minh Anh -->
+                        <div class="testimonial-card-wrapper">
+                            <div class="testimonial-card">
+                                <div class="testimonial-avatar">
+                                    <!-- Ảnh placeholder - người dùng sẽ thay bằng ảnh thực tế sau -->
+                                    <img src="assets/1.webp" alt="Chị Nguyễn Minh Anh" class="testimonial-avatar-img">
+                                </div>
+                                <div class="testimonial-box">
+                                    <h3 class="testimonial-name">Chị Nguyễn Minh Anh</h3>
+                                    <p class="testimonial-subtitle">Phụ huynh cháu Phương Linh (5 tuổi)</p>
+                                    <p class="testimonial-text">
+                                        “Sau 3 tháng học Giáo dục sớm tại trung tâm, con tôi đã có sự tiến bộ rõ rệt. Bé chủ động khám phá, học chữ và số một cách tự nhiên. Giáo trình rất khoa học và thú vị!”
+                                    </p>
+                                    <div class="testimonial-stars">
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star empty">☆</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Card 2: Anh Phạm Minh Đức -->
+                        <div class="testimonial-card-wrapper">
+                            <div class="testimonial-card">
+                                <div class="testimonial-avatar">
+                                    <img src="assets/2.webp" alt="Anh Phạm Minh Đức" class="testimonial-avatar-img">
+                                </div>
+                                <div class="testimonial-box">
+                                    <h3 class="testimonial-name">Anh Phạm Minh Đức</h3>
+                                    <p class="testimonial-subtitle">Phụ huynh cháu Linh Trang (7 tuổi)</p>
+                                    <p class="testimonial-text">
+                                        "Tôi rất ấn tượng với phương pháp giảng dạy tại trung tâm. Con tôi không còn sợ học mà còn hào hứng mỗi ngày. Giáo viên tận tâm, chương trình cá nhân hóa giúp cháu tiến bộ rõ rệt."
+                                    </p>
+                                    <div class="testimonial-stars">
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star empty">☆</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Card 3: Trần Mạnh Hải -->
+                        <div class="testimonial-card-wrapper">
+                            <div class="testimonial-card">
+                                <div class="testimonial-avatar">
+                                    <img src="assets/3.webp" alt="Trần Mạnh Hải" class="testimonial-avatar-img">
+                                </div>
+                                <div class="testimonial-box">
+                                    <h3 class="testimonial-name">Trần Mạnh Hải</h3>
+                                    <p class="testimonial-subtitle">Học viên luyện thi đánh giá năng lực</p>
+                                    <p class="testimonial-text">
+                                        "Hệ thống luyện đề thông minh giúp mình phát hiện điểm yếu và cải thiện nhanh chóng. Nhờ đó, mình đạt điểm cao hơn hẳn so với trước đây!"
+                                    </p>
+                                    <div class="testimonial-stars">
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star empty">☆</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Card 4: Nguyễn Minh Anh -->
+                        <div class="testimonial-card-wrapper">
+                            <div class="testimonial-card">
+                                <div class="testimonial-avatar">
+                                    <img src="assets/4.webp" alt="Nguyễn Minh Anh" class="testimonial-avatar-img">
+                                </div>
+                                <div class="testimonial-box">
+                                    <h3 class="testimonial-name">Nguyễn Minh Anh</h3>
+                                    <p class="testimonial-subtitle">Học viên luyện thi đánh giá năng lực</p>
+                                    <p class="testimonial-text">
+                                        "Trung tâm không chỉ giúp mình ôn luyện kiến thức mà còn hướng dẫn chiến lược làm bài hiệu quả. Nhờ đó, mình làm bài tự tin hơn và đạt điểm số như mong muốn!"
+                                    </p>
+                                    <div class="testimonial-stars">
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star empty">☆</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Card 5: Chị Nguyễn Minh Anh -->
+                        <div class="testimonial-card-wrapper">
+                            <div class="testimonial-card">
+                                <div class="testimonial-avatar">
+                                    <img src="assets/5.webp" alt="Chị Nguyễn Minh Anh" class="testimonial-avatar-img">
+                                </div>
+                                <div class="testimonial-box">
+                                    <h3 class="testimonial-name">Chị Nguyễn Minh Anh</h3>
+                                    <p class="testimonial-subtitle">Phụ huynh cháu Phương Linh (5 tuổi)</p>
+                                    <p class="testimonial-text">
+                                        "Bé nhà tôi rất thích các bài học tương tác tại trung tâm. Con học mà chơi, chơi mà học, tiếp thu rất nhanh. Tôi hoàn toàn yên tâm khi cho con học tại đây!"
+                                    </p>
+                                    <div class="testimonial-stars">
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star empty">☆</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Card 6: Chị Nguyễn Minh Anh -->
+                        <div class="testimonial-card-wrapper">
+                            <div class="testimonial-card">
+                                <div class="testimonial-avatar">
+                                    <img src="assets/6.webp" alt="Chị Nguyễn Minh Anh" class="testimonial-avatar-img">
+                                </div>
+                                <div class="testimonial-box">
+                                    <h3 class="testimonial-name">Chị Nguyễn Minh Anh</h3>
+                                    <p class="testimonial-subtitle">Phụ huynh cháu Phương Linh (5 tuổi)</p>
+                                    <p class="testimonial-text">
+                                        “Sau 3 tháng học Giáo dục sớm tại trung tâm, con tôi đã có sự tiến bộ rõ rệt. Bé chủ động khám phá, học chữ và số một cách tự nhiên. Giáo trình rất khoa học và thú vị!”
+                                    </p>
+                                    <div class="testimonial-stars">
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star empty">☆</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
         </section>
     </main>
 

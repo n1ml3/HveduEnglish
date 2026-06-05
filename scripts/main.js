@@ -25,4 +25,54 @@ $(document).ready(function() {
   if ($(".faq-accordion").length) {
     initFaqAccordion();
   }
+
+  // 5. Khởi tạo tính năng kéo trượt chuột (drag scroll) cho khối cảm nhận nếu tồn tại
+  if ($("#testimonialsSlider").length) {
+    initTestimonialsSlider();
+  }
 });
+
+/**
+ * Khởi tạo tính năng kéo trượt slider (drag scroll) bằng chuột cho phần cảm nhận ý kiến.
+ * Hỗ trợ người dùng nhấn giữ chuột và kéo ngang tương tự thao tác vuốt trên di động.
+ */
+function initTestimonialsSlider() {
+  const slider = document.getElementById('testimonialsSlider');
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+
+  // Bắt đầu nhấn giữ chuột xuống slider
+  slider.addEventListener('mousedown', (e) => {
+    isDown = true;
+    slider.classList.add('active');
+    slider.style.scrollBehavior = 'auto'; // Tắt smooth scroll để phản hồi kéo tức thời theo con trỏ
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+  });
+
+  // Khi chuột rời khỏi vùng slider
+  slider.addEventListener('mouseleave', () => {
+    if (isDown) {
+      isDown = false;
+      slider.classList.remove('active');
+      slider.style.scrollBehavior = 'smooth'; // Khôi phục smooth scroll khi dừng kéo
+    }
+  });
+
+  // Khi nhả chuột
+  slider.addEventListener('mouseup', () => {
+    isDown = false;
+    slider.classList.remove('active');
+    slider.style.scrollBehavior = 'smooth'; // Khôi phục smooth scroll khi nhả chuột
+  });
+
+  // Khi di chuyển chuột để kéo trượt slider
+  slider.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX) * 1.5; // Tỷ lệ nhân tốc độ kéo cuộn
+    slider.scrollLeft = scrollLeft - walk;
+  });
+}
