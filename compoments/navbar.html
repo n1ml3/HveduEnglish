@@ -1,0 +1,52 @@
+<!-- Thanh điều hướng đầu trang (Navbar) - Thiết kế tinh giản, hỗ trợ đa thiết bị và tải động qua JS -->
+<div class="navbar-inner">
+  <!-- Khu vực hiển thị Logo thương hiệu, liên kết về trang chủ -->
+  <div class="navbar-logo">
+    <a href="/index.html" class="logo-text">HVG.</a>
+  </div>
+
+  <!-- Nút bấm Hamburger hiển thị riêng trên di động để chuyển đổi menu mở/đóng -->
+  <button class="navbar-toggle" id="mobile-menu-btn" aria-label="Mở menu điều hướng">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+
+  <!-- Menu chứa các liên kết điều hướng chính -->
+  <nav class="navbar-links" id="navbar-links">
+    <ul>
+      <li><a href="/index.html" class="nav-link" data-page="home">Trang chủ</a></li>
+      <li><a href="/pages/gioi-thieu.html" class="nav-link" data-page="about">Giới thiệu</a></li>
+      
+      <!-- Mục Khoá học có menu thả xuống (Dropdown) chứa các chương trình đào tạo -->
+      <li class="dropdown">
+        <a href="#" class="nav-link dropdown-toggle" data-page="courses">
+          Khoá học 
+          <!-- Icon mũi tên chỉ xuống, quay ngược lên khi mở dropdown -->
+          <svg class="arrow-icon" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a href="/index.html#chuong-trinh">Tiếng Anh Mầm Non (3-6 tuổi)</a></li>
+          <li><a href="/index.html#chuong-trinh">Tiếng Anh Thiếu Nhi (6-11 tuổi)</a></li>
+          <li><a href="/index.html#chuong-trinh">Tiếng Anh Thiếu Niên (11-15 tuổi)</a></li>
+        </ul>
+      </li>
+
+      <li><a href="/index.html#lich-khai-giang" class="nav-link" data-page="schedule">Lịch khai giảng</a></li>
+      <li><a href="/index.html#blog" class="nav-link" data-page="blog">Thư viện</a></li>
+      <li><a href="/index.html#lien-he" class="nav-link" data-page="contact">Liên hệ</a></li>
+    </ul>
+
+    <!-- Nút hành động kêu gọi tư vấn hiển thị trong thanh menu di động hoặc cạnh menu trên máy tính -->
+    <div class="navbar-cta-mobile">
+      <a href="/index.html#lien-he" class="btn btn-primary btn-consult">Nhận tư vấn miễn phí</a>
+    </div>
+  </nav>
+
+  <!-- Nút hành động kêu gọi tư vấn hiển thị trên máy tính (ẩn trên di động) -->
+  <div class="navbar-cta">
+    <a href="/index.html#lien-he" class="btn btn-primary btn-consult">Nhận tư vấn miễn phí</a>
+  </div>
+</div>

@@ -1,0 +1,219 @@
+/* Nhập các phông chữ từ Google Fonts để giao diện hiển thị chuyên nghiệp và đồng bộ */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@800&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap');
+
+:root {
+  /* Thiết lập các biến CSS toàn cục để dễ quản lý bảng màu và thay đổi chủ đề sau này */
+  --primary-color: #00aeef;       /* Xanh dương tươi sáng - màu nhận diện cốt lõi của HVG, dùng cho nút chính và điểm nhấn */
+  --secondary-color: #0d307a;     /* Xanh dương đậm - màu tạo sự tin cậy học thuật, dùng cho tiêu đề lớn và liên kết điều hướng */
+  --accent-color: #ffb800;        /* Vàng cam - màu nhấn nổi bật dùng cho các nút quan trọng như gửi biểu mẫu/đăng ký */
+  --text-dark: #323232;           /* Xám đậm gần đen - màu chữ nội dung giúp người đọc không bị mỏi mắt */
+  --text-darker: #0f0f0f;         /* Đen thuần - dùng cho các tiêu đề phụ cần độ tập trung cực cao */
+  --text-light: #ffffff;          /* Trắng - dùng cho văn bản trên nền tối để tối ưu độ tương phản */
+  --text-sub-light: #f7eaea;      /* Trắng ngà - dùng cho chữ mô tả trong footer giúp phân cấp thông tin */
+  --bg-soft: #edf7fd;             /* Xanh nhạt - nền dịu mắt dùng cho phần Hero và các phần cần phân tách thị giác */
+  --bg-card: #fafeff;             /* Trắng ánh xanh - tạo khối nổi bật cho các thẻ khi đi kèm bóng đổ nhẹ */
+  
+  /* Cấu hình phông chữ theo đúng thiết kế của Figma */
+  --font-logo: 'Playfair Display', serif;
+  --font-menu: 'Plus Jakarta Sans', sans-serif;
+  --font-main: 'Inter', sans-serif;
+  
+  /* Các thông số đổ bóng và chuyển động dùng chung để giao diện có chiều sâu và mượt mà */
+  --shadow-card: 0px 4px 15px rgba(14, 42, 52, 0.08);
+  --shadow-button: 0px 4px 10px rgba(0, 174, 239, 0.2);
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Reset CSS cơ bản để đảm bảo hiển thị nhất quán trên mọi trình duyệt */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* Tránh tình trạng cuộn ngang ngoài ý muốn do tràn layout */
+  font-family: var(--font-main);
+  color: var(--text-dark);
+  background-color: #ffffff;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition-smooth);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+/* Các lớp tiện ích cấu trúc để xây dựng bố cục trang nhanh chóng */
+.container {
+  width: 100%;
+  max-width: 1440px; /* Độ rộng giới hạn tối đa theo chiều ngang thiết kế Figma */
+  margin: 0 auto;
+  padding: 0 80px; /* Padding hai bên lề theo chuẩn lề 80px trong Figma */
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 40px; /* Giảm khoảng cách lề trên thiết bị máy tính bảng */
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px; /* Giảm khoảng cách lề tối đa trên thiết bị di động */
+  }
+}
+
+/* Nút bấm tiêu chuẩn hóa */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+}
+
+.btn-primary:hover {
+  background-color: #009ad4; /* Màu xanh đậm hơn một chút khi hover để phản hồi tương tác */
+  transform: translateY(-2px); /* Hiệu ứng nổi nhẹ */
+  box-shadow: 0px 6px 15px rgba(0, 174, 239, 0.3);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(0, 174, 239, 0.05);
+  transform: translateY(-2px);
+}
+
+.btn-accent {
+  background-color: var(--accent-color);
+  color: var(--text-light);
+  font-weight: 700;
+}
+
+.btn-accent:hover {
+  background-color: #e5a500;
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 15px rgba(255, 184, 0, 0.3);
+}
+
+/* Kiểu dáng cửa sổ thông báo thành công (Success Modal Popup) nạp động qua JS */
+.success-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(13, 48, 122, 0.6); /* Nền tối mờ màu xanh đặc trưng làm nổi bật modal */
+  backdrop-filter: blur(5px); /* Làm mờ hậu cảnh để người dùng tập trung vào thông báo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000; /* Nằm trên tất cả các lớp khác bao gồm cả navbar */
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.success-modal-content {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 480px;
+  text-align: center;
+  box-shadow: 0px 15px 40px rgba(13, 48, 122, 0.2);
+  transform: translateY(20px);
+  animation: slideUp 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28) forwards;
+}
+
+.success-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background-color: rgba(0, 174, 239, 0.1);
+  color: var(--primary-color);
+  border-radius: 50%;
+  margin-bottom: 24px;
+}
+
+.success-title {
+  font-family: var(--font-main);
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--secondary-color);
+  margin-bottom: 12px;
+}
+
+.success-message {
+  font-family: var(--font-main);
+  font-size: 16px;
+  color: var(--text-dark);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.success-close-btn {
+  width: 100%;
+  height: 48px;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+/* Các lớp hoạt ảnh chuyển động mềm mại */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.success-modal.fade-out {
+  animation: fadeOut 0.3s ease-out forwards;
+}
+
+.success-modal.fade-out .success-modal-content {
+  transform: translateY(0);
+  transition: transform 0.3s ease-out;
+  transform: translateY(20px);
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
