@@ -1,0 +1,177 @@
+/* ==========================================================================
+   Courses Section - Các chương trình học (Figma Node 1:2459)
+   ========================================================================== */
+
+.courses-section {
+  background-color: #ffffff; /* Nền trắng sạch sẽ */
+  padding: 80px 0;
+  position: relative;
+}
+
+/* --- Danh sách thẻ khóa học --- */
+.courses-cards-row {
+  margin-top: 40px;
+}
+
+/* Thẻ khóa học */
+.course-card {
+  position: relative;
+  width: 100%;
+  max-width: 383px; /* Chiều rộng chuẩn Figma */
+  height: 510px;    /* Chiều cao chuẩn Figma */
+  border-radius: 30px; /* Bo góc tròn lớn 30px chuẩn Figma */
+  overflow: hidden;
+  margin: 0 auto;   /* Căn giữa cột khi xếp dọc trên mobile */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 10;
+}
+
+/* Hiệu ứng di chuột nổi bật cho cả thẻ */
+.course-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Ảnh nền khóa học --- */
+.course-bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.course-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* Hiệu ứng phóng nhẹ ảnh nền khi hover */
+.course-card:hover .course-img {
+  transform: scale(1.06);
+}
+
+/* Overlay tối mờ đè lên ảnh nền */
+.course-img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3); /* Phủ mờ tối 30% từ Figma */
+  z-index: 2;
+}
+
+/* --- Nút Khám phá nổi bật --- */
+.course-discover-btn {
+  position: absolute;
+  bottom: 127px; /* Tọa độ Figma: Cách dải xanh (banner) đúng 10px */
+  left: 11px;
+  width: 121px;
+  height: 38px;
+  border-radius: 10px; /* Bo góc 10px từ Figma */
+  background-color: #1b136a; /* Màu xanh đậm từ Figma */
+  color: #ffffff;
+  z-index: 5;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  text-decoration: none;
+  font-family: var(--font-main), sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.course-discover-btn .btn-arrow {
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* Hiệu ứng di chuột cho nút Khám phá */
+.course-discover-btn:hover {
+  background-color: #0f0a45;
+  transform: scale(1.05);
+  color: #ffffff;
+}
+
+/* --- Dải màu xanh ở đáy chứa tiêu đề --- */
+.course-banner-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 117px; /* Chiều cao dải xanh từ Figma */
+  background-color: rgba(0, 174, 239, 0.9); /* Màu xanh dương 90% opacity */
+  padding: 20px 24px;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+}
+
+.course-card-title {
+  font-family: var(--font-main), sans-serif;
+  font-weight: 600;
+  font-size: 28px; /* Cỡ chữ tiêu đề 28px chuẩn Figma */
+  color: #ffffff;
+  line-height: 1.25;
+  margin: 0;
+  text-align: left;
+}
+
+.see-more-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+}
+
+.btn-see-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  background-color: #00AEEF;
+  border: 1px solid #007EFF;
+  color: #fff;
+  border-radius: 15px;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 13px 50px;
+}
+
+/* --- Responsive CSS --- */
+@media (max-width: 991px) {
+  .courses-section {
+    padding: 60px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .course-card {
+    height: 480px; /* Giảm nhẹ chiều cao trên mobile để thon gọn hơn */
+  }
+  
+  .course-discover-btn {
+    bottom: 127px;
+  }
+}
+
+@media (max-width: 576px) {
+  .courses-section {
+    padding: 40px 0;
+  }
+  
+  .course-card {
+    height: 420px;
+    max-width: 320px;
+  }
+  
+  .course-card-title {
+    font-size: 24px; /* Giảm nhẹ font size trên màn hình rất nhỏ */
+  }
+}
