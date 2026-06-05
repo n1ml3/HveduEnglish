@@ -1,0 +1,278 @@
+/* ==========================================================================
+   Khối Tư vấn & Liên hệ (Contact/Consultation Section - Figma Node 1:2645)
+   ========================================================================== */
+
+.contact-section {
+    position: relative;
+    padding: 100px 0;
+    background-image: url('../assets/contactbg.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+/* Lớp phủ màu xanh ngọc bán trong suốt theo chuẩn Figma */
+.contact-bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 160, 222, 0.85); /* Tông màu xanh của HVG với độ mờ 85% */
+    z-index: 1;
+}
+
+/* Đảm bảo nội dung nằm phía trên lớp phủ màu */
+.contact-container {
+    position: relative;
+    z-index: 2;
+}
+
+.contact-row {
+    align-items: center;
+}
+
+/* ==========================================================================
+   Cột Trái: Thông tin liên hệ
+   ========================================================================== */
+
+.contact-info-col {
+    padding-right: 48px;
+}
+
+.contact-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 32px;
+    line-height: 100%;
+}
+
+.contact-desc {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: white;
+    margin-bottom: 52px;
+}
+
+/* Đường gạch phân cách mảnh */
+.contact-info-divider {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.4);
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 525px;
+}
+
+/* Danh sách chi tiết liên hệ */
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.contact-detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.contact-detail-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    color: #ffffff;
+    flex-shrink: 0;
+}
+
+.contact-detail-text {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0;
+    line-height: 1.5;
+}
+
+.contact-detail-text .detail-label {
+    font-weight: 700;
+    color: #ffffff;
+    margin-right: 4px;
+}
+
+
+/* ==========================================================================
+   Cột Phải: Biểu mẫu tư vấn (Form)
+   ========================================================================== */
+
+.contact-form-col {
+    padding-left: 24px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Bọc các trường nhập liệu */
+.form-group-custom {
+    position: relative;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+/* Dòng chứa hai trường nhập liệu nằm song song (Email & SĐT) */
+.form-row-custom {
+    display: flex;
+    gap: 24px;
+    width: 100%;
+}
+
+/* Ô nhập liệu & ô select tối giản */
+.form-input-custom,
+.form-select-custom {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    color: #ffffff;
+    font-size: 16px;
+    padding: 10px 0 10px 10px;
+    border-radius: 0;
+    transition: border-color 0.3s ease;
+    outline: none;
+}
+
+/* Hiệu ứng nổi bật khi người dùng nhấp chọn hoặc di chuột */
+.form-input-custom:focus,
+.form-select-custom:focus {
+    border-bottom: 1px solid #ffffff;
+}
+
+/* Màu chữ placeholder của ô nhập liệu */
+.form-input-custom::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+    opacity: 1; /* Hỗ trợ Firefox */
+}
+
+/* Tùy chỉnh ô Select để khớp với thiết kế Figma */
+.form-select-custom {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+}
+
+/* Đổi màu nền của dropdown option để người dùng có thể đọc chữ trắng trên nền tối */
+.form-select-custom option {
+    background-color: var(--secondary-color);
+    color: #ffffff;
+    padding: 10px;
+}
+
+/* Vùng chứa và mũi tên dropdown tuỳ biến */
+.select-wrapper-custom {
+    position: relative;
+}
+
+.select-arrow-custom {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* Tránh cản trở sự kiện nhấp của select */
+    color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+}
+
+/* Nút bấm Gửi mẫu */
+.btn-contact-submit {
+    background-color: var(--accent-color); /* Màu vàng cam nhấn */
+    color: #ffffff;
+    border: none;
+    border-radius: 25px;
+    height: 48px;
+    width: 192px;
+    font-size: 20px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease,
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+    margin-top: 10px;
+}
+
+/* Hiệu ứng tương tác Hover cho nút Gửi */
+.btn-contact-submit:hover {
+    background-color: #ffa600; /* Màu vàng cam đậm hơn */
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 184, 0, 0.35);
+}
+
+.btn-contact-submit:active {
+    transform: translateY(0);
+}
+
+.submit-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ==========================================================================
+   Thiết kế tương thích (Responsive Media Queries)
+   ========================================================================== */
+
+/* Trình duyệt từ 992px trở xuống (Tablet & Mobile) */
+@media (max-width: 992px) {
+    .contact-section {
+        padding: 80px 0;
+    }
+
+    .contact-info-col {
+        padding-right: 0;
+        margin-bottom: 50px; /* Thêm khoảng cách giữa 2 cột khi xếp chồng */
+    }
+
+    .contact-form-col {
+        padding-left: 0;
+    }
+
+    .contact-title {
+        font-size: 32px;
+    }
+
+    /* Đổi hai ô Email & SĐT song song thành xếp chồng dọc */
+    .form-row-custom {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Trình duyệt dưới 576px (Điện thoại nhỏ) */
+@media (max-width: 576px) {
+    .contact-section {
+        padding: 60px 0;
+    }
+
+    .contact-title {
+        font-size: 28px;
+    }
+
+    .contact-info-divider {
+        margin-bottom: 30px;
+    }
+
+    .btn-contact-submit {
+        width: 100%; /* Cho nút bấm chiếm hết chiều rộng trên Mobile để dễ bấm */
+    }
+}

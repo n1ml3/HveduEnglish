@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="/styles/teachers.css">
     <link rel="stylesheet" href="/styles/testimonials.css">
     <link rel="stylesheet" href="/styles/gallery.css">
+    <link rel="stylesheet" href="/styles/contact.css">
     <!-- Tải thư viện jQuery trước để hỗ trợ nạp động -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
     <!-- Tải thư viện Bootstrap 5 JS Bundle -->
@@ -739,6 +740,101 @@
                                 <img src="assets/activit1.webp" alt="Hoạt động lớp học 7" class="gallery-img">
                             </div>
                         </div>
+                    </div>
+        </section>
+
+        <!-- Contact Section - Bạn có điều cần thắc mắc? (Figma Node 1:2645) -->
+        <section class="contact-section">
+            <div class="contact-bg-overlay"></div>
+            <div class="container contact-container">
+                <div class="row contact-row">
+                    <!-- Cột trái: Thông tin liên hệ -->
+                    <div class="col-lg-6 col-12 contact-info-col">
+                        <h2 class="contact-title">Bạn có điều cần thắc mắc?</h2>
+                        <p class="contact-desc">
+                            Đội ngũ chuyên gia của chúng tôi luôn sẵn sàng lắng nghe và tư vấn miễn phí để giúp bạn chọn được chương trình phù hợp nhất!
+                        </p>
+                        <div class="contact-info-divider"></div>
+                        
+                        <div class="contact-details">
+                            <!-- Địa chỉ -->
+                            <div class="contact-detail-item">
+                                <div class="contact-detail-icon">
+                                    <img src="assets/location.svg">
+                                </div>
+                                <p class="contact-detail-text">
+                                    <span class="detail-label">Địa chỉ:</span> 33 Trung Kính, Cầu Giấy, Hà Nội
+                                </p>
+                            </div>
+
+                            <!-- Hotline -->
+                            <div class="contact-detail-item">
+                                <div class="contact-detail-icon">
+                                    <img src="assets/telephone.svg">
+                                </div>
+                                <p class="contact-detail-text">
+                                    <span class="detail-label">Hotline:</span> Mobile: (+84)846020703 / Tel: (+84)12346789
+                                </p>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="contact-detail-item">
+                                <div class="contact-detail-icon">
+                                    <img src="assets/message.svg">
+                                </div>
+                                <p class="contact-detail-text">
+                                    <span class="detail-label">Email:</span> 123dadas@gmail.com
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cột phải: Form tư vấn -->
+                    <div class="col-lg-6 col-12 contact-form-col">
+                        <form class="contact-form">
+                            <!-- Trường Họ và Tên -->
+                            <div class="form-group-custom">
+                                <input type="text" class="form-input-custom" placeholder="Họ và tên của bạn" required>
+                            </div>
+
+                            <!-- Email và Số điện thoại nằm ngang -->
+                            <div class="form-row-custom">
+                                <div class="form-group-custom flex-grow-1">
+                                    <input type="email" class="form-input-custom" placeholder="Email" required>
+                                </div>
+                                <div class="form-group-custom flex-grow-1">
+                                    <input type="tel" class="form-input-custom" placeholder="Số điện thoại" required>
+                                </div>
+                            </div>
+
+                            <!-- Nội dung quan tâm (Select dropdown tùy biến) -->
+                            <div class="form-group-custom select-wrapper-custom">
+                                <select class="form-select-custom" required>
+                                    <option value="" disabled selected hidden>Nội dung bạn quan tâm</option>
+                                    <option value="tieng-anh-mam-non">Tiếng Anh Mầm Non (3-6 tuổi)</option>
+                                    <option value="tieng-anh-tieu-hoc">Tiếng Anh Tiểu Học (6-11 tuổi)</option>
+                                    <option value="tieng-anh-thcs">Tiếng Anh THCS (11-15 tuổi)</option>
+                                    <option value="luyen-thi-ielts">Luyện thi IELTS</option>
+                                    <option value="khac">Yêu cầu khác</option>
+                                </select>
+                                <span class="select-arrow-custom">
+                                    <img src="assets/arrow-down.svg">
+                                </span>
+                            </div>
+
+                            <!-- Lời nhắn -->
+                            <div class="form-group-custom">
+                                <input type="text" class="form-input-custom" placeholder="Lời nhắn">
+                            </div>
+
+                            <!-- Nút Gửi HVG -->
+                            <button type="submit" class="btn-contact-submit">
+                                <span class="submit-icon">
+                                    <img src="assets/mailsend.svg">
+                                </span>
+                                <span class="submit-text">Gửi HVG!</span>
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
