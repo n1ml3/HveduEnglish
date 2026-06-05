@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="/styles/about-us.css">
     <link rel="stylesheet" href="/styles/vision-mission.css">
     <link rel="stylesheet" href="/styles/lms-system.css">
+    <link rel="stylesheet" href="/styles/teachers.css">
+    <link rel="stylesheet" href="/styles/gallery.css">
 
     <!-- Tải thư viện jQuery trước để hỗ trợ nạp động -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
@@ -219,6 +221,159 @@
                     <div class="col-lg-6 col-12 lms-visual-col">
                         <div class="lms-image-wrapper">
                             <img src="/assets/teacher-introduce.webp" alt="Học viên học qua hệ thống LMS">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Teachers Section - Đội ngũ giảng viên đỉnh cao (Figma Node 1:2472)
+             Lý do chèn: Tái sử dụng khối giảng viên chất lượng cao đã có sẵn từ trang chủ để đồng bộ nội dung giới thiệu của trường. -->
+        <section class="teachers-section">
+            <img src="/assets/teacher-bg.webp" alt="" class="teacher-bg-shape">
+            <div class="container">
+                <!-- Tiêu đề phần giảng viên -->
+                <div class="teachers-header text-center">
+                    <h2 class="teachers-title">Đội ngũ giảng viên <span class="text-highlight">đỉnh cao</span></h2>
+                    <div class="teachers-decor-line"></div>
+                </div>
+
+                <!-- Bố cục lưới 4 cột bằng Bootstrap Grid, hiển thị ngang trên Desktop và tự xếp chồng khi màn hình nhỏ -->
+                <div class="row g-4 justify-content-center teachers-row">
+                    <!-- Giảng viên 1: Hạnh Ngân -->
+                    <div class="col-lg-3 col-md-6 col-12 text-center">
+                        <div class="teacher-card">
+                            <div class="teacher-avatar-container">
+                                <!-- Vòng tròn trang trí viền ngoài -->
+                                <div class="teacher-decor-circle">
+                                    <img src="/assets/teacher-decor-line.svg">
+                                </div>
+                                <!-- Khung chứa ảnh giảng viên -->
+                                <div class="teacher-avatar">
+                                    <img src="/assets/ngan.webp" alt="Hạnh Ngân" class="avatar-img">
+                                </div>
+                            </div>
+                            <h3 class="teacher-name">Hạnh Ngân</h3>
+                            <p class="teacher-role">Giảng viên</p>
+                        </div>
+                    </div>
+
+                    <!-- Giảng viên 2: Đức Mạnh -->
+                    <div class="col-lg-3 col-md-6 col-12 text-center">
+                        <div class="teacher-card">
+                            <div class="teacher-avatar-container">
+                                <div class="teacher-decor-circle">
+                                    <img src="/assets/teacher-decor-line.svg">
+                                </div>
+                                <div class="teacher-avatar">
+                                    <img src="/assets/manh.webp" alt="Đức Mạnh" class="avatar-img">
+                                </div>
+                            </div>
+                            <h3 class="teacher-name">Đức Mạnh</h3>
+                            <p class="teacher-role">Giảng viên</p>
+                        </div>
+                    </div>
+
+                    <!-- Giảng viên 3: Phương Linh -->
+                    <div class="col-lg-3 col-md-6 col-12 text-center">
+                        <div class="teacher-card">
+                            <div class="teacher-avatar-container">
+                                <div class="teacher-decor-circle">
+                                    <img src="/assets/teacher-decor-line.svg">
+                                </div>
+                                <div class="teacher-avatar">
+                                    <img src="/assets/linh.webp" alt="Phương Linh" class="avatar-img">
+                                </div>
+                            </div>
+                            <h3 class="teacher-name">Phương Linh</h3>
+                            <p class="teacher-role">Giảng viên</p>
+                        </div>
+                    </div>
+
+                    <!-- Giảng viên 4: Đức Mạnh -->
+                    <div class="col-lg-3 col-md-6 col-12 text-center">
+                        <div class="teacher-card">
+                            <div class="teacher-avatar-container">
+                                <div class="teacher-decor-circle">
+                                    <img src="/assets/teacher-decor-line.svg">
+                                </div>
+                                <div class="teacher-avatar">
+                                    <img src="/assets/manh2.webp" alt="Đức Mạnh" class="avatar-img">
+                                </div>
+                            </div>
+                            <h3 class="teacher-name">Đức Mạnh</h3>
+                            <p class="teacher-role">Giảng viên</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section - Hoạt động nổi bật tại HVG Education (Figma Node 1:2501)
+             Lý do chèn: Tái sử dụng khối hoạt động thực tế của học viên từ trang chủ để thể hiện môi trường học tập sinh động. -->
+        <section class="gallery-section">
+            <div class="container">
+                <!-- Tiêu đề phần hoạt động nổi bật -->
+                <div class="gallery-header text-center">
+                    <h2 class="gallery-title">Hoạt động nổi bật tại <span class="text-highlight">HVG Education</span></h2>
+                    <div class="gallery-decor-line"></div>
+                </div>
+
+                <!-- Khung lưới chứa 3 cột hoạt động -->
+                <div class="gallery-grid">
+                    <!-- Cột trái (Cột 1) -->
+                    <div class="gallery-col gallery-col-left">
+                        <!-- Ảnh lớn phía trên -->
+                        <div class="gallery-item item-large">
+                            <div class="gallery-img-wrapper">
+                                <img src="/assets/activit1.webp" alt="Hoạt động lớp học 1" class="gallery-img">
+                            </div>
+                        </div>
+                        <!-- 2 ảnh nhỏ phía dưới -->
+                        <div class="gallery-row">
+                            <div class="gallery-item item-small">
+                                <div class="gallery-img-wrapper">
+                                    <img src="/assets/activit2.webp" alt="Hoạt động lớp học 2" class="gallery-img">
+                                </div>
+                            </div>
+                            <div class="gallery-item item-small">
+                                <div class="gallery-img-wrapper">
+                                    <img src="/assets/activit2.webp" alt="Hoạt động lớp học 3" class="gallery-img">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cột giữa (Cột 2) -->
+                    <div class="gallery-col gallery-col-middle">
+                        <!-- 1 ảnh đứng siêu cao -->
+                        <div class="gallery-item item-tall">
+                            <div class="gallery-img-wrapper">
+                                <img src="/assets/activit3.webp" alt="Hoạt động lớp học 4" class="gallery-img">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cột phải (Cột 3) -->
+                    <div class="gallery-col gallery-col-right">
+                        <!-- 2 ảnh nhỏ phía trên -->
+                        <div class="gallery-row">
+                            <div class="gallery-item item-small">
+                                <div class="gallery-img-wrapper">
+                                    <img src="/assets/activit2.webp" alt="Hoạt động lớp học 5" class="gallery-img">
+                                </div>
+                            </div>
+                            <div class="gallery-item item-small">
+                                <div class="gallery-img-wrapper">
+                                    <img src="/assets/activit2.webp" alt="Hoạt động lớp học 6" class="gallery-img">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Ảnh lớn phía dưới -->
+                        <div class="gallery-item item-large">
+                            <div class="gallery-img-wrapper">
+                                <img src="/assets/activit1.webp" alt="Hoạt động lớp học 7" class="gallery-img">
+                            </div>
                         </div>
                     </div>
                 </div>

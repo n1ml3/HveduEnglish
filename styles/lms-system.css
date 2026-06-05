@@ -8,6 +8,7 @@
    Lý do thiết kế: Khối giới thiệu tính năng hệ thống LMS có hình ảnh đè bóng màu cyan lệch, 
    thiết lập padding lớn 100px 0 để phân biệt với khối Tầm nhìn ở trên */
 .lms-section {
+  padding-bottom: 100px;
   background-color: #ffffff;
   position: relative;
 }
