@@ -1,0 +1,195 @@
+/* ==========================================================================
+   Khối Gallery Hoạt động nổi bật tại HVG Education (Figma Node 1:2501)
+   ========================================================================== */
+
+/* Nền phần gallery và thiết lập khoảng cách */
+.gallery-section {
+    padding: 67px 0;
+    background-color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Định dạng tiêu đề chính của Gallery */
+.gallery-header {
+    margin-bottom: 48px;
+}
+
+.gallery-title {
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--secondary-color); /* Sử dụng màu xanh navy đậm */
+    line-height: 1.2;
+}
+
+.gallery-title .text-highlight {
+    color: var(--primary-color); /* Chữ HVG Education màu xanh ngọc sáng */
+}
+
+/* Đường gạch ngang trang trí dưới tiêu đề */
+.gallery-decor-line {
+    width: 120px;
+    height: 4px;
+    background-color: var(--secondary-color);
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+/* Bố cục lưới 3 cột chính song song */
+.gallery-grid {
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
+    align-items: stretch; /* Đảm bảo các cột có chiều cao bằng nhau */
+    width: 100%;
+}
+
+/* Định cấu hình chung cho từng cột */
+.gallery-col {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Cột bên trái và bên phải chiếm khoảng 36% độ rộng */
+.gallery-col-left,
+.gallery-col-right {
+    flex: 36 36 36%;
+    max-width: 461px;
+}
+
+/* Cột ở giữa chiếm khoảng 28% độ rộng */
+.gallery-col-middle {
+    flex: 28 28 28%;
+    max-width: 342px;
+}
+
+/* Dòng chứa 2 ảnh nhỏ nằm ngang */
+.gallery-row {
+    display: flex;
+    gap: 24px;
+    width: 100%;
+}
+
+/* Cấu trúc của từng thẻ ảnh hoạt động */
+.gallery-item {
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05);
+    background: linear-gradient(135deg, #e6f7ff, #bae6fd); /* Gradient làm nền tạm thời khi ảnh đang tải */
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Định nghĩa tỷ lệ khung hình (Aspect Ratio) để giữ bố cục luôn cân đối trên mọi độ phân giải */
+.item-large {
+    aspect-ratio: 461 / 241; /* Tỷ lệ ảnh ngang lớn của Figma */
+}
+
+.item-small {
+    flex: 1;
+    aspect-ratio: 1; /* Ảnh nhỏ dạng hình vuông */
+}
+
+/* Ảnh đứng ở cột giữa co giãn chiếm toàn bộ chiều cao cột */
+.item-tall {
+    height: 100%;
+    flex: 1;
+}
+
+/* Container bọc ảnh bên trong thẻ */
+.gallery-img-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Ảnh hoạt động thực tế */
+.gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ==========================================================================
+   Hiệu ứng Tương tác Hover (Micro-animations)
+   ========================================================================== */
+
+/* Phóng to ảnh nhẹ nhàng bên trong khi hover */
+.gallery-item:hover .gallery-img {
+    transform: scale(1.05);
+}
+
+/* Nâng nhẹ thẻ ảnh lên và tăng cường bóng đổ tạo cảm giác 3D */
+.gallery-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+
+/* ==========================================================================
+   Thiết kế tương thích (Responsive Media Queries)
+   ========================================================================== */
+
+/* Giao diện trên thiết bị Tablet (màn hình dưới 992px) */
+@media (max-width: 992px) {
+    .gallery-section {
+        padding: 60px 0;
+    }
+    
+    .gallery-title {
+        font-size: 32px;
+    }
+
+    .gallery-grid {
+        flex-direction: column; /* Chuyển thành bố cục 1 cột dọc xếp chồng */
+        align-items: center;
+        gap: 24px;
+    }
+
+    .gallery-col {
+        width: 100%;
+        max-width: 600px; /* Giới hạn chiều rộng tối đa trên Tablet để ảnh không bị quá bè */
+    }
+
+    /* Ở cột giữa, ảnh đứng chuyển sang hiển thị ngang dạng 16:9 */
+    .gallery-col-middle .item-tall {
+        aspect-ratio: 16 / 9;
+        height: auto;
+        flex: none;
+    }
+}
+
+/* Giao diện trên thiết bị Di động (màn hình dưới 576px) */
+@media (max-width: 576px) {
+    .gallery-section {
+        padding: 50px 0;
+    }
+
+    .gallery-title {
+        font-size: 28px;
+    }
+
+    .gallery-decor-line {
+        width: 80px;
+        margin-top: 10px;
+    }
+
+    /* Ở mobile, chuyển 2 ảnh nhỏ nằm ngang thành xếp chồng dọc */
+    .gallery-row {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    /* Quy đồng tất cả các thẻ ảnh về tỷ lệ ngang 4:3 để cuộn mượt và đồng bộ */
+    .gallery-item {
+        aspect-ratio: 4 / 3 !important;
+        height: auto !important;
+    }
+}
