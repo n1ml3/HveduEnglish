@@ -26,7 +26,102 @@
 
     <!-- Phần chứa nội dung chính của trang -->
     <main class="main-content">
-        <!-- Các thành phần khác người dùng sẽ tự thêm sau -->
+        <!-- Hero Section - Phần giới thiệu đầu trang học viện HVG -->
+        <section class="hero-section">
+            <div class="container hero-container">
+                <div class="row align-items-center">
+                    
+                    <!-- Cột bên trái: Nội dung giới thiệu và nút kêu gọi hành động -->
+                    <div class="col-lg-6 col-12 hero-content">
+                        <!-- Tagline đảm bảo đầu ra với giảng viên -->
+                        <div class="hero-tagline-wrapper">
+                            <span class="hero-tagline">ĐẢM BẢO ĐẦU RA CÙNG GIẢNG VIÊN 8.5 IELTS</span>
+                        </div>
+                        
+                        <!-- Tiêu đề chính dạng viên thuốc nổi bật -->
+                        <div class="hero-title-pill-wrapper">
+                            <span class="hero-title-pill">Đạt 7.5++ IELTS</span>
+                        </div>
+                        
+                        <!-- Tiêu đề phụ hiển thị lộ trình tối ưu -->
+                        <h2 class="hero-subtitle">với lộ trình học tối ưu</h2>
+                        
+                        <!-- Đoạn văn mô tả có vạch kẻ dọc bên trái làm điểm nhấn -->
+                        <div class="hero-desc-container d-flex align-items-start gap-3">
+                            <img src="assets/decorline.svg" class="hero-decorline shrink-0" alt="decorline">
+                            <p class="hero-description">
+                                Đừng để IELTS cản bước bạn – đăng ký ngay hôm nay để bứt phá điểm số nhanh chóng!
+                            </p>
+                        </div>
+                        
+                        <!-- Nhóm các nút tương tác nhận tư vấn và học thử -->
+                        <div class="hero-buttons d-flex flex-wrap gap-3">
+                            <a href="#register" class="btn-hero-primary">Nhận tư vấn ngay</a>
+                            <a href="#trial" class="btn-hero-secondary">Đăng ký học thử miễn phí</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Cột bên phải: Hình ảnh giảng viên và các huy hiệu, điểm trang trí nổi tuyệt đối -->
+                    <div class="col-lg-6 col-12 hero-visual">
+                        <div class="hero-img-wrapper">
+                            <!-- Nền tròn quạt lớn màu xanh đặc trưng -->
+                            <div class="hero-bg-fan">
+                                <img src="./assets/Ellipse-fan.svg">
+                            </div>
+                            
+                            <!-- Hình ảnh giảng viên chính (vừa làm placeholder vừa bám sát layout) -->
+                            <div class="hero-instructor-img">
+                                <img src="./assets/student.webp">
+                            </div>
+                            
+                            <!-- Huy hiệu 1: 50+ Chuyên gia tiếng anh -->
+                            <div class="hero-badge badge-expert d-flex align-items-center gap-2">
+                                <div class="badge-icon">
+                                    <!-- Người dùng tự thêm icon vào sau, ta dùng placeholder rỗng -->
+                                    <span class="teacher-icon-bg">
+                                        <img src="./assets/teacher-icon.svg">
+                                    </span>
+                                </div>
+                                <div class="badge-text">
+                                    <h4 class="badge-num mb-0">50+</h4>
+                                    <p class="badge-desc mb-0">Chuyên gia tiếng anh</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Huy hiệu 2: 1000+ Học viên -->
+                            <div class="hero-badge badge-students d-flex align-items-center gap-2">
+                                <div class="badge-icon bg-cyan-light">
+                                    <span class="teacher-icon-bg">
+                                        <img src="./assets/teacher-icon.svg">
+                                    </span>
+                                </div>
+                                <div class="badge-text">
+                                    <h4 class="badge-num mb-0">1000+</h4>
+                                    <p class="badge-desc mb-0">Học viên</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Hộp trang trí 1: Ô vuông màu vàng cam chứa icon cuốn sách -->
+                            <div class="decor-box decor-box-orange">
+                                <img src="./assets/teaching-icon.svg">
+                            </div>
+                            
+                            <!-- Hộp trang trí 2: Ô vuông màu xanh ngọc chứa icon -->
+                            <div class="decor-box decor-box-teal">
+                                <img src="./assets/student-star.svg">
+                            </div>
+                            
+                            <!-- Các điểm chấm tròn và hình khối trang trí hình học nhỏ xung quanh -->
+                            <div class="decor-dot decor-dot-1"></div>
+                            <div class="decor-dot decor-dot-2"></div>
+                            <div class="decor-shape decor-shape-triangle"></div>
+                            <div class="decor-shape decor-shape-blue-square"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Khung chứa Footer được tải động bằng jQuery -->

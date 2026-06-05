@@ -1,0 +1,368 @@
+/* Bảng phong cách cho trang chủ (Home Page) - Hero Section */
+
+.hero-section {
+  position: relative;
+  background-color: #edf7fd; /* Màu xanh nhạt đặc trưng của Hero theo Figma */
+  padding: 100px 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+/* --- Cột bên trái: Nội dung chữ và Nút bấm --- */
+
+.hero-content {
+  z-index: 10;
+}
+
+/* Tagline Đảm bảo đầu ra */
+.hero-tagline-wrapper {
+  margin-bottom: 24px;
+}
+
+.hero-tagline {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #00aeef;
+  font-family: var(--font-main), sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 8px 20px;
+  border-radius: 10px;
+  letter-spacing: 0.5px;
+  box-shadow: 0px 2px 8px rgba(0, 174, 239, 0.05);
+}
+
+/* Tiêu đề chính dạng viên thuốc */
+.hero-title-pill-wrapper {
+  margin-bottom: 16px;
+}
+
+.hero-title-pill {
+  display: inline-block;
+  background-color: #00aeef;
+  color: #ffffff;
+  font-family: var(--font-main), sans-serif;
+  font-weight: 800;
+  font-size: 36px;
+  padding: 8px 30px;
+  border-radius: 20px;
+  line-height: 1.2;
+}
+
+/* Tiêu đề phụ */
+.hero-subtitle {
+  font-family: var(--font-main), sans-serif;
+  font-weight: 800;
+  font-size: 36px;
+  color: #0d307a;
+  margin-bottom: 25px;
+  line-height: 1.2;
+}
+
+/* Đoạn miêu tả có vạch đứng màu xanh làm điểm nhấn */
+.hero-desc-container {
+  display: flex;
+  align-items: start;
+  gap: 12px;
+  margin-bottom: 40px;
+  max-width: 480px;
+}
+
+.hero-decorline {
+  height: 52px; /* Chiều cao vạch kẻ dọc tương đương chiều cao 2 dòng text */
+  margin-top: 4px; /* Căn chỉnh nhẹ để thẳng hàng với dòng đầu tiên */
+}
+
+.hero-description {
+  font-family: var(--font-main), sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #323232;
+  margin-bottom: 0;
+}
+
+/* Nút kêu gọi hành động */
+.hero-buttons {
+  margin-top: 10px;
+}
+
+.btn-hero-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #00aeef;
+  color: #ffffff;
+  font-family: var(--font-main), sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 14px 32px;
+  border-radius: 15px;
+  border: 1px solid #007eff;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-hero-primary:hover {
+  background-color: #008ece;
+  border-color: #007eff;
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 15px rgba(0, 174, 239, 0.3);
+  color: #ffffff;
+}
+
+.btn-hero-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: #00aeef;
+  font-family: var(--font-main), sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 14px 32px;
+  border-radius: 15px;
+  border: 1px solid #00aeef;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-hero-secondary:hover {
+  background-color: rgba(0, 174, 239, 0.05);
+  transform: translateY(-2px);
+  color: #00aeef;
+}
+
+
+/* --- Cột bên phải: Hình ảnh và Trang trí nổi bật --- */
+
+.hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-img-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 550px;
+  height: 520px;
+}
+
+/* Nền quạt lớn màu xanh bo tròn góc sau lưng giảng viên */
+.hero-bg-fan {
+  position: absolute;
+  bottom: -150px;
+  right: -50px;
+  width: 569px;
+  height: 510px; 
+  z-index: 1;
+}
+
+/* Khối hình ảnh giảng viên */
+.hero-instructor-img {
+  position: absolute;
+  bottom: 55px;
+  right: 25px;
+  z-index: 2;
+  height: 100%;
+  width: auto;
+  display: flex;
+  align-items: flex-end;
+}
+
+.instructor-avatar {
+  max-height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Huy hiệu (Badges) nổi */
+.hero-badge {
+  position: absolute;
+  background-color: #ffffff;
+  border-radius: 34px;
+  padding-top: 3px;
+  padding-right: 17px;
+  padding-bottom: 3px;
+  box-shadow: 0px 4px 15px rgba(193, 238, 255, 0.9);
+  z-index: 5;
+  transition: transform 0.3s ease;
+}
+
+.hero-badge:hover {
+  transform: translateY(-5px); /* Hiệu ứng nổi nhẹ khi di chuột */
+}
+
+
+.badge-num {
+  font-family: var(--font-main), sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: #000000;
+  line-height: 1;
+}
+
+.badge-desc {
+  font-family: var(--font-main), sans-serif;
+  font-size: 13px;
+  color: #555555;
+  line-height: 1.2;
+}
+
+.badge-expert {
+  left: -20px;
+  top: 100px;
+}
+
+.badge-students {
+  right: -20px;
+  bottom: 50px;
+}
+
+/* Hộp trang trí ô vuông nhỏ */
+.decor-box {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.decor-box-orange {
+  left: 80px;
+  top: 250px;
+}
+
+
+.decor-box-teal {
+  background-color: #00b2bd;
+  right: 60px;
+  top: 130px;
+}
+
+.decor-box-teal .icon-placeholder {
+  background-color: #ffffff;
+}
+
+/* Chấm tròn và Hình học nhỏ trang trí nền */
+.decor-dot {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #00aeef;
+  z-index: 1;
+}
+
+.decor-dot-1 {
+  width: 18px;
+  height: 18px;
+  left: 170px;
+  top: 200px;
+  opacity: 0.8;
+}
+
+.decor-dot-2 {
+  width: 22px;
+  height: 22px;
+  right: 140px;
+  top: 80px;
+  opacity: 0.8;
+}
+
+.decor-shape {
+  position: absolute;
+  z-index: 1;
+}
+
+.decor-shape-triangle {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 18px solid #00aeef;
+  left: 230px;
+  top: 70px;
+  transform: rotate(16deg);
+  opacity: 0.8;
+}
+
+.decor-shape-blue-square {
+  background-color: #00aeef;
+  width: 18px;
+  height: 18px;
+  left: 90px;
+  bottom: 120px;
+  transform: rotate(15deg);
+  opacity: 0.8;
+}
+
+/* --- Thiết kế tương thích phản hồi (Responsive CSS) --- */
+
+@media (max-width: 991px) {
+  .hero-section {
+    padding: 60px 0;
+  }
+  
+  .hero-content {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .hero-desc-container {
+    margin: 0 auto 30px;
+    justify-content: center;
+  }
+  
+  .hero-decorline {
+    display: none; /* Ẩn vạch kẻ dọc trên mobile khi text căn giữa để đảm bảo thẩm mỹ */
+  }
+  
+  .hero-description {
+    text-align: center;
+  }
+  
+  .hero-buttons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title-pill {
+    font-size: 28px;
+    padding: 6px 20px;
+  }
+  
+  .hero-subtitle {
+    font-size: 28px;
+  }
+  
+  .hero-img-wrapper {
+    height: 420px;
+  }
+  
+  .hero-bg-fan {
+    width: 320px;
+    height: 250px;
+  }
+  
+  /* Ẩn các điểm trang trí nhỏ trên di động để giao diện gọn gàng */
+  .decor-box, .decor-dot, .decor-shape {
+    display: none;
+  }
+  
+  .badge-expert {
+    left: 0px;
+    top: 50px;
+    padding: 8px 16px;
+  }
+  
+  .badge-students {
+    right: 0px;
+    bottom: 20px;
+    padding: 8px 16px;
+  }
+}
