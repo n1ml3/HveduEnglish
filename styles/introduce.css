@@ -1,0 +1,254 @@
+/* ==========================================================================
+   Introduce Page Stylesheet - Thiết kế riêng cho trang Giới thiệu (Figma Node 1:2804)
+   Lý do tạo tệp riêng: Đảm bảo tính mô-đun hóa, không làm phình tệp global.css
+   và dễ dàng bảo trì hoặc nâng cấp giao diện trang giới thiệu sau này.
+   ========================================================================== */
+
+/* --- Khối nội dung chính của phần Giới thiệu --- */
+.about-dynamic-section {
+  background-color: #ffffff; /* Nền trắng sạch sẽ làm nổi bật các thẻ hình ảnh và khối màu */
+  position: relative;
+  overflow: hidden;
+}
+
+/* --- Khối ảnh Collage nghệ thuật (Bên trái) ---
+   Lý do dùng Flexbox: Giúp kiểm soát chính xác 2 cột ảnh so le và tự động co giãn theo tỷ lệ màn hình */
+.about-collage {
+  display: flex;
+  gap: 18px; /* Khoảng cách ngang giữa hai cột ảnh theo thiết kế Figma (~18px) */
+  width: 100%;
+  max-width: 540px; /* Giới hạn độ rộng tối đa để khối ảnh không bị phóng quá to trên màn hình lớn */
+  margin: 0 auto;
+}
+
+/* Cột trái của Collage */
+.collage-col-left {
+  display: flex;
+  flex-direction: column;
+  gap: 28px; /* Khoảng cách đứng giữa ảnh trên và khối màu dưới (~28px) */
+  width: 50%;
+}
+
+/* Cột phải của Collage - dịch chuyển nhẹ xuống dưới để tạo hiệu ứng so le nghệ thuật */
+.collage-col-right {
+  display: flex;
+  flex-direction: column;
+  gap: 24px; /* Khoảng cách đứng giữa ảnh tròn trên và ảnh dưới (~24px) */
+  width: 50%;
+  margin-top: 40px; /* Dịch chuyển cột phải xuống tạo độ lệch so le bắt mắt */
+}
+
+/* Thẻ chứa hình ảnh để thực hiện bo góc và cắt tràn */
+.collage-card {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background-color: #f0f0f0; /* Nền xám nhẹ làm placeholder khi ảnh chưa kịp tải */
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hiệu ứng hover phóng to nhẹ thẻ ảnh giúp giao diện sinh động và tăng tương tác người dùng */
+.collage-card:hover {
+  transform: translateY(-5px);
+}
+
+.collage-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Đảm bảo ảnh luôn phủ đầy khung chứa mà không bị biến dạng tỷ lệ */
+  display: block;
+}
+
+/* Lớp trên cột trái: Bo 3 góc đặc trưng, chừa góc dưới phải */
+.card-img-top-left {
+  aspect-ratio: 257.4 / 378.9; /* Giữ nguyên tỷ lệ gốc của Figma để ảnh không bị bóp méo khi responsive */
+  border-radius: 60px 60px 0 60px;
+}
+
+/* Lớp dưới cột trái: Khối màu solid xanh cyan đại diện cho thương hiệu HVG */
+.card-solid-teal {
+  aspect-ratio: 257.4 / 109.7; /* Tỷ lệ rộng/cao từ Figma để giữ đúng độ cao tương quan */
+  background-color: var(--primary-color, #00aeef);
+  border-radius: 40px 40px 40px 0; /* Bo 3 góc đặc trưng, chừa góc dưới trái */
+}
+
+/* Lớp trên cột phải: Bo tròn hoàn hảo 50% tạo điểm nhấn hình học */
+.card-img-circle {
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  position: relative;
+  overflow: visible; /* Cho phép pseudo-element vẽ viền ngoài tràn ra ngoài container ảnh */
+  background-color: transparent; /* Loại bỏ màu nền xám mặc định của thẻ ảnh ghép để tạo khoảng trắng sạch sẽ */
+}
+
+.card-img-circle img {
+  /* Lý do: Đảm bảo hình ảnh con bên trong luôn giữ dạng tròn hoàn hảo 50% */
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Tạo đường viền đứt đoạn nằm ngoài hình ảnh chính một khoảng đệm */
+.card-img-circle::after {
+  content: "";
+  position: absolute;
+  /* Đẩy viền đứt đoạn ra phía ngoài ảnh chính 8px */
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  border: 1.5px #00AEEF dashed;
+  border-radius: 50%;
+  pointer-events: none; /* Ngăn cản trở các sự kiện chuột và hover */}
+
+/* Lớp dưới cột phải: Bo 3 góc đặc trưng, chừa góc trên trái */
+.card-img-bottom-right {
+  aspect-ratio: 257.4 / 316.5; /* Khớp tỷ lệ thiết kế để tạo bố cục cân đối */
+  border-radius: 0 60px 60px 60px;
+}
+
+/* --- Khối văn bản và Checklist (Bên phải) --- */
+.dynamic-content-col {
+  padding-left: 20px; /* Tạo khoảng trống nhẹ so với khối ảnh bên trái */
+}
+
+/* Nhãn phụ nhỏ phía trên tiêu đề chính */
+.section-tagline {
+  display: inline-block;
+  font-family: var(--font-main), sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 400;
+  color: var(--secondary-color, #0d307a); /* Sử dụng màu xanh đậm của thương hiệu */
+  margin-bottom: 16px;
+  text-transform: none;
+  letter-spacing: 0.5px;
+}
+
+/* Tiêu đề chính của phần giới thiệu */
+.section-heading {
+  font-family: var(--font-main), sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--text-darker, #0f0f0f);
+  line-height: 1.3;
+  margin-bottom: 24px;
+}
+
+/* Cụm từ nhấn mạnh màu xanh cyan chủ đạo */
+.section-heading .text-highlight {
+  color: var(--primary-color, #00aeef);
+}
+
+/* Khối đoạn văn mô tả */
+.section-desc {
+  font-family: var(--font-main), sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text-dark, #323232);
+  margin-bottom: 32px;
+}
+
+.section-desc p {
+  margin-bottom: 16px;
+}
+
+.section-desc p:last-child {
+  margin-bottom: 0; /* Loại bỏ margin ở đoạn văn cuối để không ảnh hưởng khoảng cách với list bên dưới */
+}
+
+/* --- Danh sách Checklist --- */
+.dynamic-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Khoảng cách đứng đều đặn giữa các dòng checklist */
+}
+
+.dynamic-checklist li {
+  display: flex;
+  align-items: center;
+  gap: 16px; /* Khoảng cách ngang giữa icon tích và văn bản đi kèm */
+}
+
+/* Icon tích xanh hình tròn */
+.checklist-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0; /* Ngăn chặn icon bị bóp méo khi chữ bên phải quá dài */
+}
+
+/* Văn bản hiển thị trong danh sách checklist */
+.checklist-text {
+  font-family: var(--font-main), sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text-dark, #323232);
+}
+
+/* ==========================================================================
+   Tối ưu hóa hiển thị đáp ứng (Responsive Design)
+   Lý do cấu hình: Đảm bảo giao diện hiển thị xuất sắc và không bị lỗi vỡ layout trên các thiết bị di động
+   ========================================================================== */
+
+@media (max-width: 991px) {
+  /* Khi màn hình nhỏ hơn 992px, hai cột sẽ xếp chồng lên nhau */
+  .about-dynamic-section {
+    padding: 60px 0; /* Giảm padding để tiết kiệm không gian trên màn hình nhỏ */
+  }
+  
+  .dynamic-visual-col {
+    margin-bottom: 40px; /* Thêm khoảng trống dưới khối ảnh trước khi đến khối chữ */
+  }
+
+  .dynamic-content-col {
+    padding-left: 0; /* Loại bỏ padding thụt lề vì chữ giờ đã căn đều màn hình */
+  }
+}
+
+@media (max-width: 576px) {
+  /* Cấu hình đặc biệt cho điện thoại thông minh màn hình nhỏ */
+  .section-heading {
+    font-size: 28px; /* Thu nhỏ tiêu đề tránh tràn chữ xuống quá nhiều dòng */
+    margin-bottom: 16px;
+  }
+  
+  .section-desc {
+    font-size: 16px; /* Thu nhỏ chữ mô tả một chút để cải thiện mật độ đọc */
+    margin-bottom: 24px;
+  }
+
+  .checklist-text {
+    font-size: 16px; /* Đồng bộ thu nhỏ chữ checklist */
+  }
+
+  .about-collage {
+    gap: 12px; /* Thu nhỏ khoảng cách giữa hai cột ảnh collage */
+  }
+
+  .collage-col-left {
+    gap: 16px;
+  }
+
+  .collage-col-right {
+    gap: 12px;
+    margin-top: 24px; /* Giảm độ lệch so le để tránh làm khối ảnh quá dài trên điện thoại */
+  }
+
+  /* Thu nhỏ các góc bo tròn trên màn hình nhỏ để cân đối thị giác */
+  .card-img-top-left {
+    border-radius: 30px 30px 0 30px;
+  }
+
+  .card-solid-teal {
+    border-radius: 20px 20px 20px 0;
+  }
+
+  .card-img-bottom-right {
+    border-radius: 0 30px 30px 30px;
+  }
+}

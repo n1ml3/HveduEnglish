@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="/styles/navbar.css">
     <link rel="stylesheet" href="/styles/footer.css">
     <link rel="stylesheet" href="/styles/breadcrumb.css">
+    <!-- Tải stylesheet riêng của trang giới thiệu để định nghĩa vị trí ảnh collage và khối chữ bên phải -->
+    <link rel="stylesheet" href="/styles/introduce.css">
 
     <!-- Tải thư viện jQuery trước để hỗ trợ nạp động -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
@@ -47,9 +49,76 @@
         </div>
     </section>
 
+    
+
     <!-- Phần chứa nội dung chính của trang giới thiệu -->
     <main class="main-content" style="padding: 100px 0; min-height: calc(100vh - 400px);">
-        
+        <!-- Khối Môi trường học tập năng động (Figma Node 1:2804)
+             Lý do chọn bố cục này: Phân tách rõ ràng giữa ảnh ghép nghệ thuật (collage) bên trái và nội dung chữ bên phải 
+             để tận dụng tốt lưới lưới đáp ứng (Responsive Grid) của Bootstrap 5. -->
+        <section class="about-dynamic-section">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <!-- Cột bên trái: Khối ảnh collage so le nghệ thuật.
+                         Mỗi thẻ ảnh được gán một lớp riêng để thiết lập bo góc và định dạng kích thước chính xác theo thiết kế Figma. -->
+                    <div class="col-lg-6 col-12 dynamic-visual-col">
+                        <div class="about-collage">
+                            <div class="collage-col-left">
+                                <!-- Lớp card-img-top-left: Bo 3 góc đặc trưng, chừa góc dưới phải -->
+                                <div class="collage-card card-img-top-left">
+                                    <img src="/assets/kid.webp">
+                                </div>
+                                <!-- Lớp card-solid-teal: Khối hình màu xanh cyan đặc trưng của HVG, bo 3 góc chừa góc dưới trái -->
+                                <div class="collage-card card-solid-teal"></div>
+                            </div>
+                            <div class="collage-col-right">
+                                <!-- Lớp card-img-circle: Ảnh chụp bo góc tròn hoàn hảo 50% ở trên cùng cột phải -->
+                                <div class="collage-card card-img-circle">
+                                    <img src="/assets/activit1.webp" alt="Trẻ em học tập">
+                                </div>
+                                <!-- Lớp card-img-bottom-right: Bo 3 góc đặc trưng, chừa góc trên trái -->
+                                <div class="collage-card card-img-bottom-right">
+                                    <img src="/assets/activit2.webp" alt="Học viên tương tác">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Cột bên phải: Tiêu đề, văn bản giới thiệu và danh sách checklist đi kèm. -->
+                    <div class="col-lg-6 col-12 dynamic-content-col">
+                        <span class="section-tagline">Về chúng tôi</span>
+                        <h2 class="section-heading">Môi trường <span class="text-highlight">học tập năng động</span></h2>
+                        
+                        <div class="section-desc">
+                            <p>Chúng tôi tạo ra không gian học tập năng động, hiện đại với lớp học tương tác cao, tài liệu cập nhật và phương pháp giảng dạy thực tiễn.</p>
+                            <p>Học viên không chỉ được hướng dẫn tận tình bởi giảng viên 8.5+ IELTS mà còn được tham gia các buổi luyện tập chuyên sâu, giúp nâng cao kỹ năng nhanh chóng.</p>
+                        </div>
+                        
+                        <!-- Danh sách checklist: Nhúng mã trực tiếp SVG tích xanh để tối ưu hiệu suất tải trang và hiển thị sắc nét trên màn hình Retina -->
+                        <ul class="dynamic-checklist">
+                            <li>
+                                <span class="checklist-icon">
+                                    <img src="../assets/checked.svg">
+                                </span>
+                                <span class="checklist-text">Khuyến Khích Tư Duy Sáng Tạo</span>
+                            </li>
+                            <li>
+                                <span class="checklist-icon">
+                                    <img src="../assets/checked.svg">
+                                </span>
+                                <span class="checklist-text">Phát Triển Kỹ Năng Xã Hội</span>
+                            </li>
+                            <li>
+                                <span class="checklist-icon">
+                                    <img src="../assets/checked.svg">
+                                </span>
+                                <span class="checklist-text">Giáo viên được cập nhật các kiến thức mới nhất</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Khung chứa Footer được tải động bằng jQuery -->
