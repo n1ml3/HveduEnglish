@@ -1,0 +1,123 @@
+/* ==========================================================================
+   Edu System Section - Hệ thống giáo dục HVG English
+   ========================================================================== */
+
+.edu-system-section {
+  padding: 61px 0;
+  background-color: #ffffff; /* Giữ nền trắng để các thẻ nổi bật rõ ràng */
+  position: relative;
+}
+
+/* Tiêu đề phần (HVG English màu xanh ngọc, còn lại màu xanh navy đậm) */
+.edu-system-section .section-title-wrapper {
+  margin-bottom: 50px;
+}
+
+.edu-system-section .section-title {
+  font-family: var(--font-main), sans-serif;
+  font-weight: 800;
+  font-size: 36px;
+  color: var(--secondary-color); /* Màu xanh navy đậm tạo sự tin cậy học thuật */
+  margin-bottom: 0;
+  line-height: 1.3;
+}
+
+.edu-system-section .text-highlight {
+  color: var(--primary-color); /* Màu xanh dương thương hiệu */
+}
+
+/* Lưới danh sách thẻ thông tin */
+.edu-cards-row {
+  margin-top: 10px;
+}
+
+/* Kiểu dáng thẻ thông tin */
+.edu-card {
+  background-color: var(--bg-card); /* Trắng ánh xanh nhạt tạo sự dịu mắt */
+  border: 1px solid rgba(0, 174, 239, 0.05); /* Viền mờ nhẹ nâng cao chi tiết */
+  border-radius: 40px; /* Bo góc tròn lớn theo đúng Figma */
+  padding: 40px;
+  box-shadow: 0 1px 12px 0 rgba(14, 42, 52, 0.11);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  min-height: 371px; /* Chiều cao tối thiểu đồng bộ thiết kế */
+}
+
+/* Hiệu ứng di chuột nổi bật */
+.edu-card:hover {
+  transform: translateY(-8px); /* Nhấc nhẹ thẻ lên */
+  box-shadow: 0px 8px 24px 0px rgba(14, 42, 52, 0.15); /* Bóng đổ đậm hơn */
+  border-color: rgba(0, 174, 239, 0.2); /* Viền sáng rõ hơn */
+}
+
+/* Khu vực chứa Icon của thẻ */
+.edu-card-icon {
+  width: 69px;
+  height: 69px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.edu-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Tiêu đề của thẻ */
+.edu-card-title {
+  font-family: var(--font-main), sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.3;
+  color: var(--text-dark); /* Màu chữ xám tối tránh mỏi mắt */
+  margin-bottom: 20px;
+}
+
+/* Nội dung mô tả của thẻ */
+.edu-card-desc {
+  font-family: var(--font-main), sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #555555; /* Phân cấp chữ mô tả nhạt hơn tiêu đề chính */
+  margin-bottom: 0;
+}
+
+/* --- Responsive CSS --- */
+@media (max-width: 991px) {
+  .edu-system-section {
+    padding: 60px 0;
+  }
+  
+  .edu-system-section .section-title {
+    font-size: 30px;
+  }
+  
+  .edu-card {
+    min-height: auto; /* Tự động co giãn theo nội dung trên tablet/mobile */
+    padding: 30px;
+    border-radius: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .edu-system-section .section-title {
+    font-size: 26px;
+  }
+  
+  .edu-card {
+    padding: 24px;
+    border-radius: 24px;
+  }
+  
+  .edu-card-title {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+  
+  .edu-card-desc {
+    font-size: 15px;
+  }
+}

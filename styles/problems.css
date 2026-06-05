@@ -1,0 +1,160 @@
+/* ==========================================================================
+   Problems Section - Những khó khăn của học viên (Figma Node 1:614)
+   ========================================================================== */
+
+.problems-section {
+  background-color: var(--bg-soft); /* Màu xanh nhạt đặc trưng phủ kín section */
+  padding: 80px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+/* --- Cột bên trái: Lưới thẻ khó khăn sắp xếp so le (asymmetric grid) --- */
+
+.problems-grid {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Từng hàng chứa các thẻ */
+.problem-row {
+  width: 100%;
+}
+
+/* Phong cách thẻ khó khăn */
+.problem-card {
+  background-color: #ffffff; /* Thẻ nền trắng thuần */
+  border-radius: 28px; /* Bo tròn góc 28px theo Figma */
+  padding: 24px 32px;
+  box-shadow: 0px 4px 4px rgba(19, 15, 56, 0.2); /* Bóng đổ tạo độ sâu từ Figma */
+  min-height: 122px; /* Chiều cao cố định theo Figma */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hiệu ứng di chuột nhẹ giúp thẻ sinh động hơn */
+.problem-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 8px 16px rgba(19, 15, 56, 0.25);
+}
+
+/* Căn chỉnh tỷ lệ độ rộng so le cho các thẻ trên desktop */
+.card-w-1 {
+  flex: 1 1 275px;
+  max-width: 320px;
+}
+
+.card-w-2 {
+  flex: 1.2 1 340px;
+  max-width: 380px;
+}
+
+.card-w-3 {
+  flex: 1.2 1 337px;
+  max-width: 380px;
+}
+
+.card-w-4 {
+  flex: 1 1 282px;
+  max-width: 320px;
+}
+
+/* Văn bản hiển thị trong thẻ */
+.problem-text {
+  font-family: var(--font-main), sans-serif;
+  font-weight: 400;
+  font-size: 18px; /* Cỡ chữ 18px theo Figma */
+  line-height: 1.4;
+  color: var(--text-dark); /* Màu chữ xám tối tránh mỏi mắt */
+  text-align: center;
+}
+
+/* --- Cột bên phải: Ảnh học sinh và Lấp lánh (Sparkling) --- */
+
+.problems-visual {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+  height: 507px;
+  margin: 0 auto;
+}
+
+/* Căn vị trí lấp lánh đè lên ảnh học sinh */
+.sparkling-decor {
+  position: absolute;
+  top: -11px; /* Khoảng cách lệch âm theo toạ độ Figma (67px - 78px) */
+  left: 64px;  /* Khoảng cách lệch trái theo toạ độ Figma (865px - 801px) */
+  width: 81px;
+  height: 81px;
+  z-index: 5;
+}
+
+.decor-sparkle {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Ảnh minh họa học sinh */
+.problems-illustration {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.illustration-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* --- Responsive CSS cho thiết bị di động --- */
+@media (max-width: 991px) {
+  .problems-section {
+    padding: 60px 0;
+  }
+  
+  .problems-visual {
+    height: 400px;
+    max-width: 360px;
+    margin-bottom: 40px;
+  }
+  
+  .sparkling-decor {
+    width: 60px;
+    height: 60px;
+    top: -8px;
+    left: 50px;
+  }
+  
+  .problem-card {
+    min-height: auto; /* Cho phép co giãn tự do theo nội dung trên màn hình nhỏ */
+    padding: 20px 24px;
+  }
+  
+  .card-w-1, .card-w-2, .card-w-3, .card-w-4 {
+    flex: 1 1 100%; /* Đưa các thẻ về full width trên mobile/tablet */
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .problems-section {
+    padding: 40px 0;
+  }
+  
+  .problems-visual {
+    height: 320px;
+    max-width: 280px;
+  }
+  
+  .sparkling-decor {
+    width: 48px;
+    height: 48px;
+    top: -6px;
+    left: 40px;
+  }
+  
+  .problem-text {
+    font-size: 16px; /* Giảm nhẹ cỡ chữ trên di động */
+  }
+}
