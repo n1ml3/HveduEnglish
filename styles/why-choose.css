@@ -1,0 +1,196 @@
+/* ==========================================================================
+   Why Choose Section - Lý do chọn HVG Education (Figma Node 1:2366)
+   ========================================================================== */
+
+.why-choose-section {
+  background-color: #ffffff; /* Nền trắng thuần khiết theo lưu ý của bạn */
+  padding: 80px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+/* --- Tiêu đề và Phụ đề phần --- */
+.why-choose-header {
+  margin-bottom: 60px;
+}
+
+.why-title {
+  font-family: var(--font-main), sans-serif;
+  font-weight: 800;
+  font-size: 36px;
+  color: #323232F2;
+  margin-bottom: 0;
+  line-height: 1.3;
+}
+
+.why-title .text-highlight {
+  color: var(--primary-color);
+}
+
+/* Đường gạch ngang trang trí ngắn giữa tiêu đề và phụ đề */
+.why-decor-line {
+  width: 120px;
+  height: 4px;
+  background-color: #0D307A;
+  margin: 16px auto;
+  border-radius: 10px;
+}
+
+.why-subtitle {
+  font-family: var(--font-main), sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: var(--text-dark);
+  margin-bottom: 0;
+  line-height: 1.4;
+}
+
+/* --- Bố cục nội dung đồng tâm --- */
+
+.why-content-row {
+  margin-top: 20px;
+}
+
+/* Các tính năng */
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.left-features .feature-item {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.right-features .feature-item {
+  align-items: flex-start;
+  text-align: left;
+}
+
+/* Icon tính năng */
+.feature-icon {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 24px; /* Figma: y=104 - height=80 = 24px */
+  transition: transform 0.3s ease;
+}
+
+/* Tiêu đề tính năng */
+.feature-title {
+  font-family: var(--font-main), sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--text-dark);
+  margin-bottom: 16px; /* Figma: y=144 - y=104 - height=24 = 16px */
+  line-height: 1.3;
+}
+
+.feature-title .text-highlight {
+  color: var(--primary-color);
+}
+
+/* Mô tả tính năng */
+.feature-desc {
+  font-family: var(--font-main), sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #555555;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+/* --- Vòng tròn minh họa trung tâm --- */
+.center-visual-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.why-center-visual {
+  position: relative;
+  width: 100%;
+  max-width: 448px;
+  aspect-ratio: 1 / 1;
+  height: auto;
+  border-radius: 50%;
+  background-color: #fafeff;
+  border: 2px dashed #67676780; /* Đường viền đứt nét nghệ thuật bao quanh */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+}
+
+.center-circle-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+/* --- Responsive CSS (Tương thích màn hình nhỏ) --- */
+
+@media (max-width: 991px) {
+  .why-choose-section {
+    padding: 60px 0;
+  }
+  
+  .why-title {
+    font-size: 30px;
+  }
+  
+  .why-subtitle {
+    font-size: 18px;
+  }
+  
+  /* Ẩn vòng tròn trung tâm trên mobile/tablet để tránh chật chội */
+  .center-visual-col {
+    display: none !important;
+  }
+  
+  /* Cấu trúc cột xếp dọc */
+  .left-features, .right-features {
+    width: 100% !important;
+  }
+  
+  .left-features {
+    margin-bottom: 2rem;
+  }
+  
+  /* Căn lề trái toàn bộ tính năng ở cột bên trái khi ở màn hình nhỏ */
+  .left-features .feature-item {
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .why-choose-section {
+    padding: 40px 0;
+  }
+  
+  .why-title {
+    font-size: 26px;
+  }
+  
+  .why-subtitle {
+    font-size: 16px;
+  }
+  
+  .feature-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 16px;
+  }
+  
+  .feature-title {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  
+  .feature-desc {
+    font-size: 15px;
+  }
+}
