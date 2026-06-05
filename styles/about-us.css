@@ -1,7 +1,7 @@
 /* ==========================================================================
-   Introduce Page Stylesheet - Thiết kế riêng cho trang Giới thiệu (Figma Node 1:2804)
-   Lý do tạo tệp riêng: Đảm bảo tính mô-đun hóa, không làm phình tệp global.css
-   và dễ dàng bảo trì hoặc nâng cấp giao diện trang giới thiệu sau này.
+   About Us Section Stylesheet - Khối "Môi trường học tập năng động" (Figma Node 1:2804)
+   Lý do tách tệp riêng: Giúp dễ dàng quản lý mã nguồn, giảm thời gian tải trang của các trang khác
+   bằng cách chỉ tải CSS này khi thực sự cần thiết.
    ========================================================================== */
 
 /* --- Khối nội dung chính của phần Giới thiệu --- */
@@ -9,6 +9,7 @@
   background-color: #ffffff; /* Nền trắng sạch sẽ làm nổi bật các thẻ hình ảnh và khối màu */
   position: relative;
   overflow: hidden;
+  padding: 100px 0;
 }
 
 /* --- Khối ảnh Collage nghệ thuật (Bên trái) ---
@@ -100,7 +101,8 @@
   bottom: -8px;
   border: 1.5px #00AEEF dashed;
   border-radius: 50%;
-  pointer-events: none; /* Ngăn cản trở các sự kiện chuột và hover */}
+  pointer-events: none; /* Ngăn cản trở các sự kiện chuột và hover */
+}
 
 /* Lớp dưới cột phải: Bo 3 góc đặc trưng, chừa góc trên trái */
 .card-img-bottom-right {
@@ -182,6 +184,12 @@
   flex-shrink: 0; /* Ngăn chặn icon bị bóp méo khi chữ bên phải quá dài */
 }
 
+.checklist-icon img {
+  width: 27px;
+  height: 27px;
+  object-fit: contain;
+}
+
 /* Văn bản hiển thị trong danh sách checklist */
 .checklist-text {
   font-family: var(--font-main), sans-serif;
@@ -192,7 +200,6 @@
 
 /* ==========================================================================
    Tối ưu hóa hiển thị đáp ứng (Responsive Design)
-   Lý do cấu hình: Đảm bảo giao diện hiển thị xuất sắc và không bị lỗi vỡ layout trên các thiết bị di động
    ========================================================================== */
 
 @media (max-width: 991px) {

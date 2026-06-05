@@ -14,8 +14,10 @@
     <link rel="stylesheet" href="/styles/navbar.css">
     <link rel="stylesheet" href="/styles/footer.css">
     <link rel="stylesheet" href="/styles/breadcrumb.css">
-    <!-- Tải stylesheet riêng của trang giới thiệu để định nghĩa vị trí ảnh collage và khối chữ bên phải -->
-    <link rel="stylesheet" href="/styles/introduce.css">
+    <!-- Tải các stylesheet riêng lẻ của từng thành phần để dễ dàng quản lý và tối ưu hóa tải trang -->
+    <link rel="stylesheet" href="/styles/about-us.css">
+    <link rel="stylesheet" href="/styles/vision-mission.css">
+    <link rel="stylesheet" href="/styles/lms-system.css">
 
     <!-- Tải thư viện jQuery trước để hỗ trợ nạp động -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
@@ -115,6 +117,109 @@
                                 <span class="checklist-text">Giáo viên được cập nhật các kiến thức mới nhất</span>
                             </li>
                         </ul>
+                    </div>
+                </div>
+        </section>
+
+        <!-- Khối Tầm nhìn và Sứ mệnh (Figma Node 1:2864)
+             Lý do chọn cấu trúc này: Căn giữa tiêu đề chính để tạo điểm nhấn đối xứng và phân chia đều 2 card lớn bằng lưới Bootstrap 5. -->
+        <section class="vision-mission-section">
+            <div class="container">
+                <!-- Tiêu đề phần căn giữa kèm vạch kẻ trang trí dưới chân -->
+                <div class="section-header-centered text-center">
+                    <h2 class="vision-mission-title">
+                        <span class="text-highlight">Tầm nhìn</span> và <span class="text-highlight">Sứ mệnh</span>
+                    </h2>
+                    <div class="vision-mission-decor-line"></div>
+                </div>
+                
+                <!-- Lưới chứa 2 card Tầm nhìn & Sứ mệnh -->
+                <div class="row g-4 justify-content-center vision-mission-row">
+                    <!-- Thẻ Tầm nhìn -->
+                    <div class="col-lg-6 col-md-10 col-12">
+                        <div class="vision-mission-card">
+                            <div class="card-icon-wrapper vision-icon">
+                                <img src="/assets/vision.svg" alt="Tầm nhìn Icon">
+                            </div>
+                            <h3 class="card-title">Tầm nhìn</h3>
+                            <p class="card-desc">
+                                Trở thành trung tâm đào tạo IELTS hàng đầu, giúp hàng nghìn học viên chinh phục mục tiêu tiếng Anh và mở rộng cơ hội toàn cầu.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Thẻ Sứ mệnh -->
+                    <div class="col-lg-6 col-md-10 col-12">
+                        <div class="vision-mission-card">
+                            <div class="card-icon-wrapper mission-icon">
+                                <img src="/assets/target.svg" alt="Sứ mệnh Icon">
+                            </div>
+                            <h3 class="card-title">Sứ mệnh</h3>
+                            <p class="card-desc">
+                                Cung cấp lộ trình học tối ưu, giảng viên chất lượng và môi trường học tập truyền cảm hứng, cam kết đầu ra để mỗi học viên đạt được thành công vượt mong đợi.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <!-- Khối Hệ thống LMS hiện đại (Figma Node 1:2923)
+             Lý do chọn cấu trúc này: Tận dụng lưới Bootstrap 5 để tách biệt thông tin checklist bên trái và hình ảnh trực quan bên phải. -->
+        <section class="lms-section">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <!-- Cột trái: Tiêu đề và 6 checklist tính năng -->
+                    <div class="col-lg-6 col-12 lms-content-col">
+                        <h2 class="lms-title">
+                            Chinh phục <span class="text-highlight">IELTS</span> dễ dàng<br>
+                            Với hệ thống <span class="text-highlight">LMS</span> hiện đại!
+                        </h2>
+                        
+                        <ul class="lms-checklist">
+                            <li>
+                                <span class="lms-check-icon">
+                                    <img src="/assets/checked.svg" alt="Check Icon">
+                                </span>
+                                <span class="lms-check-text">100+ video bài giảng full lộ trình từ 0 đến 7.0+</span>
+                            </li>
+                            <li>
+                                <span class="lms-check-icon">
+                                    <img src="/assets/checked.svg" alt="Check Icon">
+                                </span>
+                                <span class="lms-check-text">1000+ Tài liệu tự học miễn phí</span>
+                            </li>
+                            <li>
+                                <span class="lms-check-icon">
+                                    <img src="/assets/checked.svg" alt="Check Icon">
+                                </span>
+                                <span class="lms-check-text">10,000+ Từ vựng cơ bản đến nâng cao trong IELTS</span>
+                            </li>
+                            <li>
+                                <span class="lms-check-icon">
+                                    <img src="/assets/checked.svg" alt="Check Icon">
+                                </span>
+                                <span class="lms-check-text">10,000+ đề luyện tập kèm bài giải mô phỏng giống 100% bài thi thật</span>
+                            </li>
+                            <li>
+                                <span class="lms-check-icon">
+                                    <img src="/assets/checked.svg" alt="Check Icon">
+                                </span>
+                                <span class="lms-check-text">Theo dõi lộ trình học và thời gian biểu chi tiết</span>
+                            </li>
+                            <li>
+                                <span class="lms-check-icon">
+                                    <img src="/assets/checked.svg" alt="Check Icon">
+                                </span>
+                                <span class="lms-check-text">Bài test đánh giá trình độ định kỳ</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Cột phải: Khung ảnh minh họa kèm khối màu bóng đổ lệch phía sau -->
+                    <div class="col-lg-6 col-12 lms-visual-col">
+                        <div class="lms-image-wrapper">
+                            <img src="/assets/teacher-introduce.webp" alt="Học viên học qua hệ thống LMS">
+                        </div>
                     </div>
                 </div>
             </div>

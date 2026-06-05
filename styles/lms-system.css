@@ -1,0 +1,141 @@
+/* ==========================================================================
+   LMS System Section Stylesheet - Khối "Hệ thống LMS hiện đại" (Figma Node 1:2923)
+   Lý do tách tệp riêng: Giúp dễ dàng quản lý mã nguồn, tăng tính mô-đun hóa
+   và nâng cao hiệu suất tải trang của các khối giao diện khác.
+   ========================================================================== */
+
+/* --- Khối Hệ thống LMS hiện đại (Figma Node 1:2923) ---
+   Lý do thiết kế: Khối giới thiệu tính năng hệ thống LMS có hình ảnh đè bóng màu cyan lệch, 
+   thiết lập padding lớn 100px 0 để phân biệt với khối Tầm nhìn ở trên */
+.lms-section {
+  background-color: #ffffff;
+  position: relative;
+}
+
+.lms-title {
+  font-family: var(--font-main), sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--text-darker, #0f0f0f);
+  line-height: 1.3;
+  margin-bottom: 32px;
+}
+
+.lms-title .text-highlight {
+  color: var(--primary-color, #00aeef);
+}
+
+/* Danh sách checklist LMS */
+.lms-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.lms-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.lms-check-icon {
+  width: 27px;
+  height: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.lms-check-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.lms-check-text {
+  font-family: var(--font-main), sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text-dark, #323232);
+  line-height: 1.5;
+}
+
+/* Khối ảnh minh họa với bóng màu xanh cyan lệch góc */
+.lms-image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 564px;
+  aspect-ratio: 563.7 / 376; /* Tỷ lệ khớp Figma để tránh làm méo khung hình */
+  margin: 0 auto;
+}
+
+/* Khối màu xanh cyan làm bóng lệch ở phía sau (Rectangle 140997) */
+.lms-image-wrapper::before {
+  content: "";
+  position: absolute;
+  /* Thông số dịch chuyển: Dịch lên trên 21px và dịch sang phải 24px theo Figma */
+  top: -21px;
+  right: -24px;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color, #00aeef);
+  border-radius: 20px;
+  z-index: 1; /* Đảm bảo nằm dưới ảnh chụp */
+}
+
+.lms-image-wrapper img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  z-index: 2; /* Nằm bên trên bóng màu xanh */
+  display: block;
+}
+
+/* ==========================================================================
+   Tối ưu hóa hiển thị đáp ứng (Responsive Design)
+   ========================================================================== */
+
+@media (max-width: 991px) {
+  .lms-section {
+    padding: 60px 0;
+  }
+
+  .lms-content-col {
+    margin-bottom: 60px; /* Thêm khoảng trống khi xếp chồng trên Tablet */
+  }
+
+  /* Thu nhỏ tỉ lệ lệch bóng đổ để tránh tràn lề phải màn hình tablet */
+  .lms-image-wrapper::before {
+    top: -12px;
+    right: -12px;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Responsive LMS trên mobile nhỏ */
+  .lms-title {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+
+  .lms-check-text {
+    font-size: 16px;
+  }
+
+  .lms-image-wrapper::before {
+    /* Mobile nhỏ thì ẩn bóng hoặc giảm tối thiểu để tránh tràn lề */
+    top: -8px;
+    right: -8px;
+    border-radius: 12px;
+  }
+
+  .lms-image-wrapper img {
+    border-radius: 12px;
+  }
+}
