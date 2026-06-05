@@ -1,0 +1,208 @@
+/* ==========================================================================
+   Khối Blog và tin tức (Blog & News Section - Figma Node 1:2511)
+   ========================================================================== */
+
+.blog-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+    position: relative;
+}
+
+/* Tiêu đề phần blog tin tức kèm thanh đánh dấu bên trái */
+.blog-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 48px;
+}
+
+.blog-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--primary-color); /* Chữ màu xanh ngọc sáng */
+    margin: 0;
+    line-height: 1;
+}
+
+/* Lưới chứa các thẻ bài viết */
+.blog-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* Thẻ tin tức đơn lẻ */
+.blog-card {
+    flex: 1 1 290px; /* Tự động co giãn theo chiều ngang, chiều rộng cơ sở 290px */
+    max-width: 305px; /* Giới hạn chiều rộng tối đa theo Figma */
+    height: 420px;
+    background-color: #FAFAFA;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Khung chứa ảnh bìa tin tức */
+.blog-card-img-wrapper {
+    position: relative;
+    width: 100%;
+    height: 168px;
+    overflow: hidden;
+}
+
+.blog-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Nhãn ngày tháng (Date Badge) đè lên ảnh */
+.blog-card-date {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background-color: var(--accent-color); /* Màu vàng cam của HVG */
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 15px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+    z-index: 2;
+}
+
+/* Nội dung của thẻ tin tức */
+.blog-card-body {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Tự động lấp đầy phần chiều cao còn lại của thẻ */
+}
+
+/* Tiêu đề tin tức */
+.blog-card-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #2a2a2a;
+    line-height: 1.4;
+    margin-bottom: 12px;
+    /* Giới hạn hiển thị tối đa 2 dòng tiêu đề */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Nội dung tóm tắt */
+.blog-card-desc {
+    font-size: 14px;
+    color: rgba(38, 38, 38, 0.8);
+    line-height: 1.5;
+    margin-bottom: 20px;
+    /* Giới hạn hiển thị tối đa 3 dòng nội dung tóm tắt */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Phần chân của thẻ tin tức chứa liên kết Xem thêm */
+.blog-card-footer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: auto; /* Đẩy chân thẻ xuống sát đáy */
+}
+
+.blog-card-link {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--primary-color);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* Nút tròn chứa mũi tên */
+.blog-card-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    color: #ffffff;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.blog-card-arrow svg {
+    display: block;
+    width: 12px;
+    height: 12px;
+}
+/* ==========================================================================
+   Thiết kế tương thích (Responsive Media Queries)
+   ========================================================================== */
+
+/* Trình duyệt từ 1200px trở xuống */
+@media (max-width: 1200px) {
+    .blog-grid {
+        justify-content: center; /* Căn giữa các thẻ khi không đủ chỗ dàn hàng ngang */
+        gap: 24px;
+    }
+}
+
+/* Trình duyệt từ 992px trở xuống (Tablet) */
+@media (max-width: 992px) {
+    .blog-section {
+        padding: 60px 0;
+    }
+
+    .blog-header {
+        margin-bottom: 36px;
+    }
+
+    .blog-title {
+        font-size: 28px;
+    }
+
+    .blog-title-marker {
+        height: 32px;
+    }
+
+    .blog-card {
+        flex: 0 1 calc(50% - 12px); /* Hiển thị 2 cột trên Tablet */
+        max-width: 340px; /* Tăng nhẹ chiều rộng tối đa để cân đối hơn */
+    }
+}
+
+/* Trình duyệt từ 576px trở xuống (Mobile) */
+@media (max-width: 576px) {
+    .blog-section {
+        padding: 50px 0;
+    }
+
+    .blog-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .blog-card {
+        flex: 1 1 auto;
+        width: 100%;
+        max-width: 100%; /* Giãn rộng tối đa trên màn hình di động */
+        height: auto; /* Chiều cao tự động dựa theo nội dung */
+        min-height: 400px;
+    }
+
+    .blog-card-img-wrapper {
+        height: 180px; /* Tăng nhẹ chiều cao ảnh bìa trên mobile */
+    }
+}
