@@ -1,0 +1,106 @@
+/* ==========================================================================
+   Khối Breadcrumb Header Banner (Introduce Page Header - Figma Node 1:2858)
+   ========================================================================== */
+
+.breadcrumb-banner {
+    background-color: var(--bg-soft); /* Sử dụng nền xanh nhạt dịu mát #edf7fd */
+    padding: 140px 0 80px; /* Bù chiều cao của navbar fixed (80px) + 60px khoảng cách Figma */
+    position: relative;
+    width: 100%;
+}
+
+.breadcrumb-title {
+    font-family: var(--font-main), sans-serif;
+    font-size: 46px; /* Cỡ chữ 46px theo thiết kế gốc của Figma */
+    font-weight: 800;
+    color: #323232; /* Tông màu xám tối #323232 */
+    margin: 0 0 20px 0;
+    line-height: 1.2;
+}
+
+/* Danh sách breadcrumbs hiển thị ngang */
+.breadcrumb-list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 16px; /* Khoảng cách lề giữa các liên kết và mũi tên phân tách */
+}
+
+.breadcrumb-item {
+    font-family: var(--font-main), sans-serif;
+    font-size: 28px; /* Cỡ chữ 28px theo Figma thiết kế */
+    font-weight: 400;
+    color: #323232;
+    line-height: 1.4;
+}
+
+/* Định dạng liên kết breadcrumb */
+.breadcrumb-link {
+    color: rgba(50, 50, 50, 0.7); /* Chữ xám nhạt hơn cho mục chưa hoạt động */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Hiệu ứng hover đổi màu xanh ngọc thương hiệu */
+.breadcrumb-link:hover {
+    color: var(--primary-color);
+}
+
+/* Thẻ hiện tại (active) */
+.breadcrumb-item.active {
+    color: #323232;
+}
+
+/* Icon mũi tên ngăn cách ở giữa */
+.breadcrumb-separator {
+    display: flex;
+    align-items: center;
+    color: rgba(50, 50, 50, 0.6);
+}
+
+.breadcrumb-separator svg {
+    display: block;
+}
+
+
+/* ==========================================================================
+   Thiết kế tương thích (Responsive Media Queries)
+   ========================================================================== */
+
+/* Trình duyệt màn hình trung bình (dưới 992px) */
+@media (max-width: 992px) {
+    .breadcrumb-banner {
+        padding: 120px 0 60px; /* Bù chiều cao navbar (80px) + 40px khoảng trống */
+    }
+
+    .breadcrumb-title {
+        font-size: 36px;
+        margin-bottom: 16px;
+    }
+
+    .breadcrumb-item {
+        font-size: 20px; /* Thu nhỏ breadcrumb để cân đối trên Tablet */
+    }
+}
+
+/* Trình duyệt màn hình nhỏ (dưới 576px) */
+@media (max-width: 576px) {
+    .breadcrumb-banner {
+        padding: 110px 0 50px; /* Bù chiều cao navbar (80px) + 30px khoảng trống */
+    }
+
+    .breadcrumb-title {
+        font-size: 28px;
+        margin-bottom: 12px;
+    }
+
+    .breadcrumb-item {
+        font-size: 16px; /* Thu nhỏ hơn nữa trên màn hình Mobile */
+    }
+
+    .breadcrumb-list {
+        gap: 10px; /* Rút gọn gap */
+    }
+}
