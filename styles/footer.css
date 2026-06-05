@@ -6,6 +6,7 @@ footer {
   color: var(--text-light);
   padding: 80px 0 30px; /* Padding lớn để phân tách nội dung chân trang rộng rãi */
   overflow: hidden;
+  isolation: isolate; /* Tạo Stacking Context độc lập để mix-blend-mode hoạt động chính xác bên trong footer */
 }
 
 /* Ảnh nền họa tiết hoa văn mờ nhạt nằm đè lên nền xanh để tăng tính mỹ thuật */
@@ -18,11 +19,9 @@ footer {
   background-image: url('../assets/footer-background.webp');
   background-size: cover;
   background-position: center;
-  mix-blend-mode: multiply; /* Hòa trộn nhân màu giúp họa tiết chìm sâu vào nền xanh */
-  opacity: 0.8; /* Tăng độ mờ lên 0.8 để các đường sóng hiện rõ nét hơn */
+  mix-blend-mode: multiply; /* Hòa trộn nhân màu giúp họa tiết chìm sâu vào nền xanh */ 
   pointer-events: none; /* Tránh cản trở tương tác nhấp chuột của người dùng */
   z-index: 1;
-  filter: contrast(220%) brightness(105%); /* Chỉnh độ tương phản và độ sáng cao để khớp thiết kế Figma */
 }
 
 .footer-inner {
