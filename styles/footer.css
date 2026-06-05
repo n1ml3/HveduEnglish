@@ -2,7 +2,7 @@
 
 footer {
   position: relative;
-  background-color: var(--primary-color); /* Nền xanh dương đặc trưng bao phủ chân trang */
+  background-color: #00aeef; /* Nền xanh da trời sáng đặc trưng theo thiết kế Figma */
   color: var(--text-light);
   padding: 80px 0 30px; /* Padding lớn để phân tách nội dung chân trang rộng rãi */
   overflow: hidden;
@@ -15,27 +15,19 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('http://localhost:3845/assets/7e8610c421db8bac18091ecfc7e1e9e4fcdb4d69.png');
+  background-image: url('../assets/footer-background.webp');
   background-size: cover;
   background-position: center;
   mix-blend-mode: multiply; /* Hòa trộn nhân màu giúp họa tiết chìm sâu vào nền xanh */
-  opacity: 0.6; /* Làm mờ để không tranh chấp thị giác với văn bản */
+  opacity: 0.8; /* Tăng độ mờ lên 0.8 để các đường sóng hiện rõ nét hơn */
   pointer-events: none; /* Tránh cản trở tương tác nhấp chuột của người dùng */
   z-index: 1;
+  filter: contrast(220%) brightness(105%); /* Chỉnh độ tương phản và độ sáng cao để khớp thiết kế Figma */
 }
 
 .footer-inner {
   position: relative;
   z-index: 2; /* Đẩy nội dung chữ lên trên ảnh nền mờ */
-  display: flex;
-  justify-content: space-between;
-  gap: 60px; /* Khoảng cách hợp lý tránh dính văn bản khi thu nhỏ màn hình */
-  flex-wrap: wrap; /* Hỗ trợ tự động xuống hàng trên màn hình nhỏ */
-}
-
-/* Khối thông tin liên hệ và cơ sở học viện */
-.footer-info {
-  flex: 1 1 600px; /* Chiếm tối đa 600px chiều rộng, tự co giãn linh hoạt */
 }
 
 .footer-brand {
@@ -60,26 +52,35 @@ footer {
 
 /* Lưới phân chia danh sách cơ sở thành hai cột để cân đối trang web */
 .footer-branches-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
+  /* Loại bỏ grid custom vì đã được thay thế bằng Bootstrap row/col */
   margin-bottom: 35px;
 }
 
 .branches-column h4 {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
-  margin-bottom: 12px;
-  border-left: 3px solid var(--accent-color); /* Đường gạch nhỏ màu vàng cam đánh dấu đầu dòng */
-  padding-left: 10px;
-  text-transform: uppercase;
+  margin-bottom: 8px;
+  color: #f7eaea;
+  border-left: none; /* Bỏ border custom cũ để khớp với Figma */
+  padding-left: 0;
+  text-transform: none;
 }
 
 .branches-column p {
-  font-size: 15px;
-  line-height: 1.8;
-  color: var(--text-sub-light);
-  margin-bottom: 8px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #f7eaea;
+  margin-bottom: 0px;
+}
+
+.branches-column-right {
+  margin-top: 0px;
+}
+
+@media (min-width: 576px) {
+  .branches-column-right {
+    margin-top: 31px; /* Thụt lề trên cho cột phải để thẳng hàng với CS1 */
+  }
 }
 
 /* Danh sách Hotline và Email có chèn icon minh họa */
@@ -99,21 +100,18 @@ footer {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.15); /* Nền tròn mờ tăng nét hiện đại */
-  color: var(--text-light);
+  color: #ffffff; /* Biểu tượng đứng độc lập, không có vòng tròn mờ bao quanh */
 }
 
 .contact-item p {
   font-size: 16px;
-  color: var(--text-sub-light);
+  color: #f7eaea;
+  margin-bottom: 0;
 }
 
 /* Khối đăng ký và kết nối mạng xã hội ở bên phải */
 .footer-newsletter {
-  flex: 1 1 400px; /* Chiếm tối thiểu 400px chiều rộng */
+  /* Loại bỏ thuộc tính flex custom vì đã được thay thế bằng col-lg-5 của Bootstrap */
   display: flex;
   flex-direction: column;
 }
@@ -125,48 +123,46 @@ footer {
   margin-bottom: 25px;
 }
 
-/* Ô nhập email và nút gửi liền nhau theo dạng thanh tìm kiếm */
+/* Ô nhập email và nút gửi tách rời có khoảng cách gap 8px */
 .newsletter-input-group {
   display: flex;
-  background-color: #f5f5f5; /* Màu xám nhạt làm nổi bật ô nhập trên nền xanh */
-  border-radius: 6px;
-  padding: 4px;
   margin-bottom: 35px;
   width: 100%;
-  max-width: 420px; /* Giới hạn độ rộng ô nhập cân đối với nút bấm */
-  border: 1px solid rgba(13, 48, 122, 0.1);
+  max-width: 420px;
 }
 
-.newsletter-input-group input {
-  flex: 1;
-  padding: 12px 16px;
+.newsletter-input {
+  width: 260px;
+  height: 44px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  border: none;
+  padding: 10px 20px;
   color: var(--text-dark);
   font-size: 14px;
-  background-color: transparent;
 }
 
-.newsletter-input-group input::placeholder {
+.newsletter-input::placeholder {
   color: rgba(10, 31, 68, 0.4);
   font-style: italic;
 }
 
 .btn-send-email {
-  background-color: var(--secondary-color); /* Nút gửi màu xanh đậm tương phản */
-  color: var(--text-light);
-  padding: 0 24px;
+  width: 100px;
+  height: 44px;
+  background-color: #0d307a; /* Màu nút gửi xanh đậm theo Figma */
+  color: #ffffff;
   border-radius: 4px;
   font-weight: 800;
   font-size: 14px;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  border: none;
+  box-shadow: 2px 4px 8px 0px rgba(0, 0, 0, 0.1);
   transition: var(--transition-smooth);
 }
 
 .btn-send-email:hover {
   background-color: #0b2661;
-  transform: scale(1.02); /* Phóng nhẹ nút để phản hồi tương tác */
 }
 
 /* Danh sách các nút liên kết mạng xã hội theo quy chuẩn Figma */
@@ -219,33 +215,17 @@ footer {
 .footer-bottom .divider {
   width: 100%;
   height: 1px;
-  background-color: rgba(255, 255, 255, 0.2); /* Đường viền mờ màu trắng ngăn cách */
+  background-color: rgba(255, 255, 255, 0.61); /* Đường viền mờ màu trắng ngăn cách theo Figma */
   margin-bottom: 25px;
 }
 
 .copyright-text {
-  font-size: 15px;
-  color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+  color: #ffffff; /* Màu chữ trắng theo Figma */
 }
 
-/* Thiết kế responsive cho Footer trên màn hình máy tính bảng và di động */
-@media (max-width: 1024px) {
-  .footer-inner {
-    flex-direction: column;
-    gap: 40px;
-  }
-  
-  .footer-info, .footer-newsletter {
-    flex: 1 1 100%;
-  }
-}
-
+/* Thiết kế responsive cho các phần tử chữ trong Footer */
 @media (max-width: 600px) {
-  .footer-branches-grid {
-    grid-template-columns: 1fr; /* Chuyển thành 1 cột trên di động nhỏ để dễ đọc */
-    gap: 20px;
-  }
-  
   .footer-brand .brand-name {
     font-size: 26px;
   }
