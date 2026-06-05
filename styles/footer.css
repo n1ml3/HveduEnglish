@@ -42,11 +42,12 @@ footer {
   margin-bottom: 5px;
 }
 
-.footer-brand .brand-name {
+.brand-name {
   font-family: var(--font-main);
   font-weight: 700;
   font-size: 32px;
   letter-spacing: -0.5px;
+  margin-bottom: 25px; /* Giãn cách 25px xuống địa chỉ để cân xứng với cột đăng ký email */
 }
 
 /* Lưới phân chia danh sách cơ sở thành hai cột để cân đối trang web */
