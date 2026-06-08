@@ -103,13 +103,50 @@
 }
 
 @media (max-width: 576px) {
+  .edu-system-section {
+    /* Giảm padding của phần hệ thống giáo dục trên mobile để gọn gàng hơn */
+    padding: 30px 0 !important;
+  }
+
+  .edu-system-section .section-title-wrapper {
+    /* Giảm khoảng cách dưới tiêu đề */
+    margin-bottom: 30px !important;
+  }
+
+  .edu-cards-row {
+    /* Tạo thanh cuộn ngang mượt mà cho các edu-card trên màn hình mobile */
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 20px !important; /* Khoảng trống cho bóng đổ của card */
+    margin-left: -20px !important; /* Tràn sát mép màn hình di động */
+    margin-right: -20px !important;
+    padding-left: 20px !important; /* Tạo lề đệm bên trong cho phần tử đầu và cuối */
+    padding-right: 20px !important;
+    scrollbar-width: none; /* Ẩn thanh cuộn vật lý */
+  }
+
+  .edu-cards-row::-webkit-scrollbar {
+    display: none; /* Ẩn thanh cuộn trên Webkit */
+  }
+
+  .edu-cards-row > div {
+    /* Giữ cố định kích thước thẻ khi cuộn ngang */
+    flex: 0 0 280px !important;
+    max-width: 280px !important;
+  }
+
+  .edu-card {
+    /* Giảm nhẹ padding của card và điều chỉnh min-height cho phù hợp khi nằm ngang */
+    padding: 24px !important;
+    border-radius: 24px !important;
+    min-height: 280px !important;
+  }
+
   .edu-system-section .section-title {
     font-size: 26px;
-  }
-  
-  .edu-card {
-    padding: 24px;
-    border-radius: 24px;
   }
   
   .edu-card-title {

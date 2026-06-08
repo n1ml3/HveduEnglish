@@ -137,6 +137,54 @@
   }
 }
 
+/* Tối ưu hóa phần khó khăn của học viên cho các màn hình từ laptop 1024px trở xuống 
+   để ẩn phần ảnh minh họa và đưa toàn bộ các thẻ hiển thị trên lưới so le đẹp mắt */
+@media (max-width: 1024px) {
+  /* Loại bỏ cột ảnh minh họa và lấp lánh trang trí */
+  .problems-section .col-lg-5,
+  .problems-visual {
+    display: none !important;
+  }
+
+  /* Căng rộng cột chứa các thẻ khó khăn ra toàn bộ 100% chiều ngang */
+  .problems-section .col-lg-7 {
+    width: 100% !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+
+  .problems-grid {
+    padding-bottom: 30px;
+  }
+
+  /* Căn giữa các thẻ khó khăn trong hàng để phân bổ bố cục cân đối khi ẩn ảnh minh họa bên phải */
+  .problem-row {
+    justify-content: center !important;
+  }
+
+  /* Khôi phục lại thiết kế grid so le (asymmetric grid) giống như trên màn hình lớn 1440px */
+  .card-w-1 {
+    flex: 1 1 275px !important;
+    max-width: 320px !important;
+  }
+
+  .card-w-2 {
+    flex: 1.2 1 340px !important;
+    max-width: 380px !important;
+  }
+
+  .card-w-3 {
+    flex: 1.2 1 337px !important;
+    max-width: 380px !important;
+  }
+
+  .card-w-4 {
+    flex: 1 1 282px !important;
+    max-width: 320px !important;
+  }
+}
+
+/* Tối ưu hóa cho màn hình di động (Mobile L, M, S) để các thẻ khó khăn có độ rộng bằng nhau */
 @media (max-width: 576px) {
   .problems-section {
     padding: 40px 0;
@@ -156,5 +204,11 @@
   
   .problem-text {
     font-size: 16px; /* Giảm nhẹ cỡ chữ trên di động */
+  }
+
+  /* Đưa toàn bộ các thẻ khó khăn về độ rộng bằng nhau (100%) trên thiết bị di động */
+  .card-w-1, .card-w-2, .card-w-3, .card-w-4 {
+    flex: 1 1 100% !important;
+    max-width: 100% !important;
   }
 }

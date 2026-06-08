@@ -299,7 +299,8 @@
 
 @media (max-width: 991px) {
   .hero-section {
-    padding: 60px 0;
+    padding-top: 30px;
+    padding-bottom: 0px;
   }
   
   .hero-content {
@@ -334,30 +335,68 @@
   .hero-subtitle {
     font-size: 28px;
   }
-  
-  .hero-img-wrapper {
-    height: 420px;
+
+  .hero-content {
+    margin-bottom: 0px;
+  }
+
+  .hero-visual {
+    margin-bottom: 30px;
   }
   
-  .hero-bg-fan {
-    width: 320px;
-    height: 250px;
+  /* Ẩn quạt trang trí và hình ảnh giảng viên trên mobile theo yêu cầu */
+  .hero-bg-fan,
+  .hero-instructor-img {
+    display: none !important;
+  }
+  
+  /* Chuyển wrapper thành flexbox để xếp chồng các badge chỉ số cân đối */
+  .hero-img-wrapper {
+    height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 12px !important;
+    margin-top: 20px !important;
+  }
+  
+  /* Chuyển các badge về hiển thị tĩnh bình thường thay vì absolute */
+  .hero-badge {
+    position: static !important;
+    width: fit-content !important;
+    padding: 8px 16px !important;
   }
   
   /* Ẩn các điểm trang trí nhỏ trên di động để giao diện gọn gàng */
   .decor-box, .decor-dot, .decor-shape {
+    display: none !important;
+  }
+}
+
+/* Tối ưu hóa phần hình ảnh và họa tiết trang trí của Hero Section trên màn hình laptop từ 992px đến 1200px (bao gồm màn hình 1024px) 
+   để không gian hiển thị không bị tràn và các thành phần đè lên nhau chuẩn xác */
+@media (min-width: 992px) and (max-width: 1200px) {
+  .hero-section {
+    padding: 0px;
+  }
+
+  .hero-bg-fan {
+    /* Giảm kích thước quạt trang trí để cân đối với khung hình laptop nhỏ hơn */
+    width: 400px !important;
+    height: 440px !important;
+    top: 170px !important;
+    right: 0px !important;
+  }
+
+  .hero-instructor-img {
+    /* Điều chỉnh vị trí và tỷ lệ để hình giảng viên đè lên quạt trang trí một cách chính xác */
+    top: 80px !important;
+    left: 30px !important;
+    scale: 1.3 !important;
+    z-index: 3 !important;
+  }
+
+  .decor-shape-blue-square {
     display: none;
-  }
-  
-  .badge-expert {
-    left: 0px;
-    top: 50px;
-    padding: 8px 16px;
-  }
-  
-  .badge-students {
-    right: 0px;
-    bottom: 20px;
-    padding: 8px 16px;
   }
 }

@@ -234,3 +234,26 @@ footer {
     font-size: 26px;
   }
 }
+
+/* Tối ưu hóa cho màn hình di động siêu nhỏ (s: 320px) để không bị tràn ô input và đưa tên thương hiệu về 1 dòng */
+@media (max-width: 320px) {
+  .brand-name {
+    /* Giảm cỡ chữ để đảm bảo dòng tên thương hiệu hiển thị gọn trên một dòng */
+    font-size: 20px !important;
+  }
+
+  .newsletter-input {
+    /* Giảm chiều ngang của ô input và cho phép tự động co giãn theo container */
+    flex: 1 !important;
+    width: auto !important;
+    min-width: 0 !important;
+    padding: 10px 12px !important;
+  }
+
+  .btn-send-email {
+    /* Giữ độ rộng vừa đủ cho nút gửi để hiển thị trọn vẹn icon và chữ GỬI */
+    flex-shrink: 0 !important;
+    width: 90px !important;
+    font-size: 13px !important;
+  }
+}
