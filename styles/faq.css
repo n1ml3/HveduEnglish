@@ -5,7 +5,7 @@
  */
 
 .faq-section {
-  padding: 80px 0;
+  padding-bottom: 80px;
   background-color: #ffffff;
 }
 
@@ -77,15 +77,20 @@
   flex-shrink: 0;
 }
 
-/* Sử dụng phần tử giả để xử lý xoay và chuyển đổi ký tự + thành - */
+/* Định dạng khối bao ngoài của icon SVG */
 .faq-toggle-icon {
-  display: inline-block;
-  line-height: 1;
-  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.faq-toggle-icon::before {
-  content: "+";
+/* Trạng thái mặc định: hiện cộng, ẩn trừ */
+.faq-toggle-icon .faq-icon-plus {
+  display: block;
+}
+
+.faq-toggle-icon .faq-icon-minus {
+  display: none;
 }
 
 /* Định cấu trúc wrapper câu trả lời có max-height và opacity chuyển động mượt */
@@ -119,12 +124,13 @@
   background-color: var(--accent-color); /* Nền hộp chứa icon chuyển màu cam */
 }
 
-.faq-item.active .faq-toggle-icon {
-  transform: rotate(180deg);
+/* Khi accordion được mở ra: ẩn cộng, hiện trừ (loại bỏ hiệu ứng quay) */
+.faq-item.active .faq-toggle-icon .faq-icon-plus {
+  display: none;
 }
 
-.faq-item.active .faq-toggle-icon::before {
-  content: "−"; /* Dấu trừ Unicode thanh lịch */
+.faq-item.active .faq-toggle-icon .faq-icon-minus {
+  display: block;
 }
 
 .faq-item.active .faq-answer-wrapper {
