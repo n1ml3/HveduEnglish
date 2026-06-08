@@ -64,6 +64,21 @@
     display: block;
 }
 
+/* Đảm bảo container của breadcrumb-banner có relative để định vị ảnh minh họa bên phải */
+.breadcrumb-banner .container {
+    position: relative;
+}
+
+/* Định dạng ảnh minh họa ở góc phải banner theo thiết kế */
+.breadcrumb-img {
+    position: absolute;
+    right: 80px;
+    bottom: -120px; /* Đẩy sát xuống cạnh dưới do padding-bottom của banner là 160px */
+    max-height: 280px; /* Giới hạn chiều cao để cân đối với banner */
+    width: auto;
+    object-fit: contain;
+    z-index: 1;
+}
 
 /* ==========================================================================
    Thiết kế tương thích (Responsive Media Queries)
@@ -82,6 +97,13 @@
 
     .breadcrumb-item {
         font-size: 20px; /* Thu nhỏ breadcrumb để cân đối trên Tablet */
+    }
+
+    /* Thu nhỏ ảnh minh họa trên màn hình Tablet */
+    .breadcrumb-img {
+        max-height: 200px;
+        right: 40px;
+        bottom: -60px; /* Cập nhật bottom khớp với padding-bottom: 60px */
     }
 }
 
@@ -102,5 +124,10 @@
 
     .breadcrumb-list {
         gap: 10px; /* Rút gọn gap */
+    }
+
+    /* Ẩn hẳn ảnh minh họa trên màn hình Mobile để tránh đè chữ */
+    .breadcrumb-img {
+        display: none;
     }
 }
