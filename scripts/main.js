@@ -76,3 +76,47 @@ function initTestimonialsSlider() {
     slider.scrollLeft = scrollLeft - walk;
   });
 }
+
+/**
+ * Khởi tạo tính năng câu hỏi thường gặp (FAQ) Accordion.
+ * Điều khiển việc đóng/mở câu trả lời một cách mượt mà và chuyển đổi các trạng thái active.
+ * Giải thích chi tiết bằng tiếng Việt theo yêu cầu của dự án.
+ */
+function initFaqAccordion() {
+  const $faqItems = $('.faq-item');
+
+  $faqItems.find('.faq-header').on('click', function() {
+    const $currentItem = $(this).closest('.faq-item');
+    const $currentWrapper = $currentItem.find('.faq-answer-wrapper');
+    const isActive = $currentItem.hasClass('active');
+
+    // 1. Đóng toàn bộ các câu hỏi khác đang mở để giữ bố cục gọn gàng
+    $faqItems.each(function() {
+      const $item = $(this);
+      if (!$item.is($currentItem) && $item.hasClass('active')) {
+        $item.removeClass('active');
+        $item.find('.faq-answer-wrapper').css({
+          'max-height': '0',
+          'opacity': '0'
+        });
+      }
+    });
+
+    // 2. Chuyển đổi trạng thái đóng/mở của câu hỏi hiện tại
+    if (isActive) {
+      $currentItem.removeClass('active');
+      $currentWrapper.css({
+        'max-height': '0',
+        'opacity': '0'
+      });
+    } else {
+      $currentItem.addClass('active');
+      // Đo chiều cao thực tế của phần tử con để thiết lập max-height động
+      const contentHeight = $currentItem.find('.faq-answer').outerHeight();
+      $currentWrapper.css({
+        'max-height': contentHeight + 'px',
+        'opacity': '1'
+      });
+    }
+  });
+}

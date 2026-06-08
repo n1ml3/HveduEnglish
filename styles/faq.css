@@ -1,0 +1,166 @@
+/**
+ * Stylesheet cho phần Câu hỏi thường gặp (FAQ)
+ * Thiết kế sạch sẽ, hiện đại và phản hồi tốt trên mọi kích thước màn hình.
+ * Các bình luận bằng tiếng Việt giải thích lý do kỹ thuật chi tiết.
+ */
+
+.faq-section {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.faq-title {
+  font-family: var(--font-main);
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--text-darker);
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 650px; /* Độ rộng tối đa 646px tương đương Figma */
+  width: 100%;
+}
+
+.faq-item {
+  border: 0.8px solid rgba(71, 71, 71, 0.3);
+  border-radius: 10px;
+  background-color: #ffffff;
+  overflow: hidden;
+  transition: var(--transition-smooth);
+  width: 100%;
+}
+
+/* Hiệu ứng hover tạo độ nổi và bóng mờ nhẹ */
+.faq-item:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0px 4px 15px rgba(0, 174, 239, 0.08);
+}
+
+.faq-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16.2px 15.2px; /* Kích thước tương ứng với padding Figma */
+  cursor: pointer;
+  user-select: none;
+  transition: var(--transition-smooth);
+}
+
+.faq-question {
+  font-family: var(--font-main);
+  font-size: 18px;
+  font-weight: 600;
+  color: rgba(22, 22, 22, 0.88);
+  margin: 0;
+  padding-right: 20px;
+  line-height: 22px; /* Tương đương Figma line-height */
+  transition: var(--transition-smooth);
+}
+
+.faq-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  font-size: 20px;
+  font-weight: 700;
+  transition: var(--transition-smooth);
+  flex-shrink: 0;
+}
+
+/* Sử dụng phần tử giả để xử lý xoay và chuyển đổi ký tự + thành - */
+.faq-toggle-icon {
+  display: inline-block;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+.faq-toggle-icon::before {
+  content: "+";
+}
+
+/* Định cấu trúc wrapper câu trả lời có max-height và opacity chuyển động mượt */
+.faq-answer-wrapper {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+}
+
+.faq-answer {
+  padding: 0 15.2px 20px 15.2px;
+  font-family: var(--font-main);
+  font-size: 16px;
+  font-weight: 400;
+  color: #ff9000; /* Màu cam ấm từ Figma */
+  line-height: 24px;
+}
+
+/* TRẠNG THÁI ACTIVE (Khi câu hỏi được mở ra) */
+.faq-item.active {
+  border-color: var(--accent-color);
+}
+
+.faq-item.active .faq-question {
+  color: var(--accent-color); /* Đổi màu tiêu đề câu hỏi sang cam */
+  font-weight: 700;
+}
+
+.faq-item.active .faq-icon-box {
+  background-color: var(--accent-color); /* Nền hộp chứa icon chuyển màu cam */
+}
+
+.faq-item.active .faq-toggle-icon {
+  transform: rotate(180deg);
+}
+
+.faq-item.active .faq-toggle-icon::before {
+  content: "−"; /* Dấu trừ Unicode thanh lịch */
+}
+
+.faq-item.active .faq-answer-wrapper {
+  max-height: 300px; /* Đặt chiều cao tối đa lớn hơn một chút để chứa được câu trả lời */
+  opacity: 1;
+}
+
+/* Xử lý tương thích hiển thị trên di động */
+@media (max-width: 768px) {
+  .faq-section {
+    padding: 60px 0;
+  }
+  
+  .faq-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  
+  .faq-header {
+    padding: 12px;
+  }
+  
+  .faq-question {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  
+  .faq-icon-box {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+  }
+  
+  .faq-answer {
+    padding: 0 12px 16px 12px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
