@@ -87,8 +87,8 @@
 /* Trình duyệt màn hình trung bình (dưới 992px) */
 @media (max-width: 992px) {
     .breadcrumb-banner {
-        /* Giảm padding trên tablet để cân đối giao diện và bù chiều cao navbar (80px) */
-        padding: 100px 0 40px;
+        /* Giảm padding trên tablet để phần breadcrumb gọn gàng và cân đối hơn */
+        padding: 60px 0 30px;
     }
 
     .breadcrumb-title {
@@ -104,15 +104,15 @@
     .breadcrumb-img {
         max-height: 200px;
         right: 40px;
-        bottom: -60px; /* Cập nhật bottom khớp với padding-bottom: 60px */
+        bottom: -30px; /* Cập nhật bottom khớp với padding-bottom: 30px */
     }
 }
 
 /* Trình duyệt màn hình nhỏ (dưới 576px) */
 @media (max-width: 576px) {
     .breadcrumb-banner {
-        /* Giảm thêm padding trên di động để gọn gàng hơn */
-        padding: 90px 0 30px;
+        /* Giảm tối đa padding trên di động để tối ưu không gian hiển thị */
+        padding: 40px 0 20px;
     }
 
     .breadcrumb-title {
