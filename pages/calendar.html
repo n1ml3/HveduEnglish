@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/styles/navbar.css">
     <link rel="stylesheet" href="/styles/footer.css">
     <link rel="stylesheet" href="/styles/breadcrumb.css">
+    <link rel="stylesheet" href="/styles/calendar.css">
 
     <!-- Tải thư viện jQuery trước để hỗ trợ nạp động -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
@@ -45,6 +46,96 @@
                 <img src="../assets/bread-thumb 1.webp" alt="Minh họa lịch khai giảng" class="breadcrumb-img">
             </div>
         </section>
+
+        <!-- Phần Lịch khai giảng (Figma Node 1:3232) -->
+        <section class="schedule-section">
+            <div class="container">
+                <!-- Tiêu đề chính và gạch chân trang trí -->
+                <div class="schedule-header">
+                    <h2 class="schedule-title">Lịch khai giảng tháng 4 tại <span class="text-highlight">HVG Education</span></h2>
+                    <div class="schedule-decor-line"></div>
+                </div>
+
+                <!-- Bọc bảng trong thẻ responsive của Bootstrap để hỗ trợ thanh cuộn ngang trên di động tránh tràn khung -->
+                <div class="schedule-table-card">
+                    <div class="table-responsive">
+                        <table class="table schedule-table align-middle">
+                        <thead>
+                            <tr>
+                                <th scope="col">Mã lớp</th>
+                                <th scope="col">Cơ sở</th>
+                                <th scope="col">Đầu vào</th>
+                                <th scope="col">Đầu ra</th>
+                                <th scope="col">Khai giảng</th>
+                                <th scope="col">Lịch học</th>
+                                <th scope="col">Thời lượng</th>
+                                <th scope="col">Tình trạng</th>
+                                <th scope="col" class="col-register">Đăng ký</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Hàng lớp học 1 -->
+                            <tr>
+                                <td>THH100</td>
+                                <td>Cơ sở 1</td>
+                                <td>Toeic &lt; 400</td>
+                                <td>Toeic 650+</td>
+                                <td>2025-04-20</td>
+                                <td>17h30-19h30</td>
+                                <td>2h</td>
+                                <td>Còn 8 slot</td>
+                                <td class="col-register">
+                                    <a href="/index.html#lien-he" class="btn-register-table">Đăng ký</a>
+                                </td>
+                            </tr>
+                            <!-- Hàng lớp học 2 -->
+                            <tr>
+                                <td>THH100</td>
+                                <td>Cơ sở 1</td>
+                                <td>Toeic &lt; 400</td>
+                                <td>Toeic 650+</td>
+                                <td>2025-04-20</td>
+                                <td>17h30-19h30</td>
+                                <td>2h</td>
+                                <td>Còn 8 slot</td>
+                                <td class="col-register">
+                                    <a href="/index.html#lien-he" class="btn-register-table">Đăng ký</a>
+                                </td>
+                            </tr>
+                            <!-- Hàng lớp học 3 -->
+                            <tr>
+                                <td>THH100</td>
+                                <td>Cơ sở 1</td>
+                                <td>Toeic &lt; 400</td>
+                                <td>Toeic 650+</td>
+                                <td>2025-04-20</td>
+                                <td>17h30-19h30</td>
+                                <td>2h</td>
+                                <td>Còn 8 slot</td>
+                                <td class="col-register">
+                                    <a href="/index.html#lien-he" class="btn-register-table">Đăng ký</a>
+                                </td>
+                            </tr>
+                            <!-- Hàng lớp học 4 -->
+                            <tr>
+                                <td>THH100</td>
+                                <td>Cơ sở 1</td>
+                                <td>Toeic &lt; 400</td>
+                                <td>Toeic 650+</td>
+                                <td>2025-04-20</td>
+                                <td>17h30-19h30</td>
+                                <td>2h</td>
+                                <td>Còn 8 slot</td>
+                                <td class="col-register">
+                                    <a href="/index.html#lien-he" class="btn-register-table">Đăng ký</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
     </main>
     <!-- Khung chứa Footer được tải động bằng jQuery -->
     <footer id="footer-placeholder"></footer>

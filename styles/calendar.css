@@ -1,0 +1,322 @@
+/* ==========================================================================
+   Schedule Section - Phần Lịch khai giảng (Figma Node 1:3232)
+   ========================================================================== */
+
+/* Thiết lập khoảng cách trên dưới cho phần lịch khai giảng */
+.schedule-section {
+  padding: 80px 0;
+  background-color: #ffffff; /* Nền trắng sạch sẽ để làm nổi bật khối bảng */
+}
+
+/* Căn giữa tiêu đề chính của phần lịch khai giảng */
+.schedule-header {
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+/* Tiêu đề chính sử dụng font Inter dày dặn, cỡ chữ 36px giống trang khóa học */
+.schedule-title {
+  font-family: var(--font-main), sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--text-darker);
+  line-height: 1.25;
+  margin-bottom: 0;
+}
+
+/* Highlight tên thương hiệu HVG Education bằng màu xanh dương thương hiệu */
+.schedule-title .text-highlight {
+  color: var(--primary-color);
+}
+
+/* Đường gạch ngang trang trí màu xanh đậm dưới tiêu đề rộng 120px theo đúng Figma */
+.schedule-decor-line {
+  width: 120px;
+  height: 3px;
+  background-color: var(--secondary-color);
+  margin: 16px auto 0;
+  border-radius: 20px; /* Bo tròn các đầu đường kẻ cho cảm giác mềm mại */
+}
+
+/* Khung bọc bảng bo góc tròn lớn 20px và viền mờ xanh dương theo thiết kế Figma */
+.schedule-table-card {
+  border: 1px solid rgba(0, 174, 239, 0.4);
+  border-radius: 20px;
+  background-color: #ffffff;
+  padding: 16px;
+}
+
+/* Đảm bảo khung cuộn ngang không chứa viền hoặc lề thừa thãi làm lệch padding */
+.schedule-table-card .table-responsive {
+  margin: 0;
+  border: none;
+  border-radius: 10px; /* Bo góc nhẹ cho khung cuộn để khớp với góc tròn của header */
+}
+
+/* Bảng lịch học tùy chỉnh */
+.table.schedule-table {
+  width: 100%;
+  border-collapse: separate; /* Dùng separate để kích hoạt thuộc tính bo góc border-radius cho các ô */
+  border-spacing: 0; /* Đưa các ô sát lại nhau không có khoảng cách trống */
+  margin: 0;
+  background-color: #ffffff;
+}
+
+/* Header của bảng màu xanh tím đậm theo Figma */
+.table.schedule-table thead th {
+  background-color: #1b136a;
+  color: #ffffff;
+  font-family: var(--font-main), sans-serif;
+  font-size: 15px; /* Giảm cỡ chữ để bảng gọn gàng hơn, tránh tràn khung */
+  font-weight: 500; /* Font medium chuẩn thiết kế */
+  padding: 14px 12px; /* Giảm padding trên dưới và trái phải */
+  text-align: left;
+  border: none;
+  box-shadow: none; /* Triệt tiêu bóng đổ chèn của Bootstrap */
+  white-space: nowrap; /* Ngăn chặn xuống dòng gây méo bảng */
+}
+
+
+/* Tinh chỉnh riêng cho cột đăng ký để nút bấm được căn giữa */
+.table.schedule-table th.col-register,
+.table.schedule-table td.col-register {
+  text-align: center;
+  width: 140px; /* Giảm độ rộng cột đăng ký để tiết kiệm không gian */
+}
+
+/* Các ô dữ liệu trong bảng */
+.table.schedule-table td {
+  padding: 12px 10px; /* Giảm padding ô dữ liệu */
+  font-family: var(--font-main), sans-serif;
+  font-size: 15px; /* Giảm cỡ chữ ô dữ liệu */
+  font-weight: 500; /* Chữ đậm vừa phải chuẩn thiết kế */
+  color: rgba(50, 50, 50, 0.95); /* Tông xám đậm dễ nhìn */
+  border-bottom: 1px solid rgba(0, 174, 239, 0.1); /* Đường viền ngang mờ phân chia các hàng */
+  vertical-align: middle; /* Căn giữa nội dung theo chiều dọc */
+  background-color: #ffffff;
+  box-shadow: none; /* Triệt tiêu màu phủ nền mặc định của Bootstrap */
+  white-space: normal; /* Cho phép tự động xuống dòng khi màn hình hẹp */
+  border-bottom: none;
+}
+
+/* Giữ không cho xuống dòng ở các cột chứa thông tin ngắn/cố định để bảo toàn định dạng */
+.table.schedule-table td:nth-child(1), /* Mã lớp */
+.table.schedule-table td:nth-child(5), /* Khai giảng */
+.table.schedule-table td:nth-child(7), /* Thời lượng */
+.table.schedule-table td:nth-child(9)  /* Đăng ký */ {
+  white-space: nowrap;
+}
+
+/* Xóa viền dòng cuối cùng của bảng để đảm bảo không bị răng cưa với góc bo tròn */
+.table.schedule-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Hiệu ứng highlight nhẹ hàng khi di chuột để tăng tính tương tác */
+.table.schedule-table tbody tr:hover td {
+  background-color: rgba(0, 174, 239, 0.02);
+}
+
+/* Nút đăng ký màu xanh dương bên trong bảng */
+.btn-register-table {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 123px; /* Kích thước cố định từ Figma */
+  height: 42px;
+  border-radius: 10px; /* Bo góc 10px chuẩn Figma */
+  background-color: var(--primary-color);
+  border: 1px solid rgba(0, 174, 239, 0.74);
+  color: #ffffff !important;
+  font-family: var(--font-main), sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+/* Hiệu ứng tương tác khi di chuột lên nút đăng ký */
+.btn-register-table:hover {
+  background-color: #009ad4; /* Tông màu xanh dương đậm hơn */
+  transform: translateY(-2px); /* Hiệu ứng nổi nhẹ */
+  box-shadow: var(--shadow-button);
+}
+
+/* ==========================================================================
+   Responsive CSS - Thích ứng màn hình di động
+   ========================================================================== */
+
+/* Trình duyệt màn hình desktop nhỏ và trung bình (từ 992px đến 1200px) */
+@media (min-width: 992px) and (max-width: 1200px) {
+  .schedule-table-card {
+    padding: 12px; /* Tiết kiệm không gian viền card */
+  }
+
+  .table.schedule-table thead th {
+    padding: 12px 8px; /* Thu hẹp padding tiêu đề */
+    font-size: 14px; /* Giảm cỡ chữ tiêu đề */
+  }
+
+  .table.schedule-table td {
+    padding: 10px 8px; /* Thu hẹp padding ô dữ liệu */
+    font-size: 14px; /* Giảm cỡ chữ ô dữ liệu */
+  }
+
+  .table.schedule-table th.col-register,
+  .table.schedule-table td.col-register {
+    width: 130px; /* Thu hẹp cột đăng ký */
+  }
+
+  .btn-register-table {
+    width: 110px; /* Thu nhỏ nút đăng ký tương ứng */
+    height: 38px;
+    font-size: 14px;
+  }
+}
+
+/* Trình duyệt màn hình trung bình (dưới 992px) */
+@media (max-width: 992px) {
+  .schedule-section {
+    padding: 60px 0;
+  }
+  
+  .schedule-title {
+    font-size: 30px; /* Thu nhỏ cỡ chữ tiêu đề trên tablet */
+  }
+
+  /* Giảm padding cho thẻ bọc ngoài bảng để tăng không gian hiển thị */
+  .schedule-table-card {
+    padding: 10px;
+  }
+
+  /* Thu nhỏ ô dữ liệu để khớp màn hình máy tính bảng và tránh cuộn ngang */
+  .table.schedule-table thead th {
+    padding: 8px 5px; /* Giảm thêm padding tiêu đề bảng */
+    font-size: 13px; /* Giảm cỡ chữ tiêu đề bảng */
+    white-space: normal; /* Cho phép tiêu đề xuống dòng khi cột quá hẹp */
+  }
+  
+  .table.schedule-table td {
+    padding: 8px 5px; /* Giảm thêm padding ô dữ liệu */
+    font-size: 13px; /* Giảm cỡ chữ ô dữ liệu */
+  }
+
+  /* Giảm chiều rộng của cột đăng ký trên màn hình tablet */
+  .table.schedule-table th.col-register,
+  .table.schedule-table td.col-register {
+    width: 110px;
+  }
+
+  .btn-register-table {
+    width: 100px;
+    height: 36px;
+    font-size: 14px;
+    border-radius: 8px;
+  }
+}
+
+/* Trình duyệt di động (dưới 768px) - Chuyển sang dạng thẻ dọc để triệt tiêu hoàn toàn thanh cuộn ngang */
+@media (max-width: 768px) {
+  .schedule-table-card {
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .schedule-table-card .table-responsive {
+    border-radius: 0;
+    overflow: visible; /* Cho phép hiển thị tự nhiên */
+  }
+
+  .table.schedule-table {
+    display: block;
+    background-color: transparent;
+  }
+
+  /* Ẩn tiêu đề cột nằm ngang */
+  .table.schedule-table thead {
+    display: none;
+  }
+
+  .table.schedule-table tbody,
+  .table.schedule-table tr {
+    display: block;
+    width: 100%;
+  }
+
+  /* Biến mỗi hàng dữ liệu thành một thẻ độc lập */
+  .table.schedule-table tr {
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 174, 239, 0.25);
+    border-radius: 16px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    box-shadow: 0px 4px 15px rgba(13, 48, 122, 0.03);
+  }
+
+  .table.schedule-table tr:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Định dạng các ô thành hàng ngang song song (label bên trái, value bên phải) */
+  .table.schedule-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    font-size: 16px;
+    border-bottom: 1px dashed rgba(0, 174, 239, 0.1);
+    white-space: normal; /* Cho phép xuống dòng nếu chữ quá dài */
+    background-color: transparent;
+  }
+
+  /* Ô đăng ký cuối cùng căn giữa nút bấm */
+  .table.schedule-table td.col-register {
+    border-bottom: none;
+    padding-top: 16px;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .btn-register-table {
+    width: 100%; /* Cho nút đăng ký kéo dài hết chiều ngang thẻ di động */
+    height: 44px;
+    font-size: 16px;
+    border-radius: 10px;
+  }
+
+  /* Chèn nhãn tiêu đề trước dữ liệu bằng CSS pseudo-element để giữ HTML sạch sẽ */
+  .table.schedule-table td:nth-of-type(1)::before { content: "Mã lớp"; font-weight: 700; color: var(--secondary-color); }
+  .table.schedule-table td:nth-of-type(2)::before { content: "Cơ sở"; font-weight: 700; color: var(--secondary-color); }
+  .table.schedule-table td:nth-of-type(3)::before { content: "Đầu vào"; font-weight: 700; color: var(--secondary-color); }
+  .table.schedule-table td:nth-of-type(4)::before { content: "Đầu ra"; font-weight: 700; color: var(--secondary-color); }
+  .table.schedule-table td:nth-of-type(5)::before { content: "Khai giảng"; font-weight: 700; color: var(--secondary-color); }
+  .table.schedule-table td:nth-of-type(6)::before { content: "Lịch học"; font-weight: 700; color: var(--secondary-color); }
+  .table.schedule-table td:nth-of-type(7)::before { content: "Thời lượng"; font-weight: 700; color: var(--secondary-color); }
+  .table.schedule-table td:nth-of-type(8)::before { content: "Tình trạng"; font-weight: 700; color: var(--secondary-color); }
+}
+
+/* Màn hình điện thoại nhỏ (dưới 576px) */
+@media (max-width: 576px) {
+  .schedule-section {
+    padding: 40px 0;
+  }
+  
+  .schedule-title {
+    font-size: 24px;
+  }
+
+  .schedule-header {
+    margin-bottom: 32px;
+  }
+
+  .table.schedule-table tr {
+    padding: 16px;
+  }
+
+  .table.schedule-table td {
+    font-size: 15px;
+    padding: 10px 0;
+  }
+}
