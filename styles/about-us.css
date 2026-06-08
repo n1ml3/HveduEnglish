@@ -200,7 +200,8 @@
 @media (max-width: 991px) {
   /* Khi màn hình nhỏ hơn 992px, hai cột sẽ xếp chồng lên nhau */
   .about-dynamic-section {
-    padding: 60px 0; /* Giảm padding để tiết kiệm không gian trên màn hình nhỏ */
+    /* Giảm padding trên màn hình tablet */
+    padding: 40px 0;
   }
   
   .dynamic-visual-col {
@@ -208,11 +209,18 @@
   }
 
   .dynamic-content-col {
-    padding-left: 0; /* Loại bỏ padding thụt lề vì chữ giờ đã căn đều màn hình */
+    /* Tạo khoảng đệm hai bên để phần nội dung không bị sát mép màn hình khi xếp chồng dưới ảnh */
+    padding-left: 20px !important;
+    padding-right: 20px !important;
   }
 }
 
 @media (max-width: 576px) {
+  .about-dynamic-section {
+    /* Giảm padding trên màn hình di động */
+    padding: 25px 0 !important;
+  }
+
   /* Cấu hình đặc biệt cho điện thoại thông minh màn hình nhỏ */
   .section-heading {
     font-size: 28px; /* Thu nhỏ tiêu đề tránh tràn chữ xuống quá nhiều dòng */

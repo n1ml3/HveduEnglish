@@ -88,7 +88,8 @@
 /* --- Responsive CSS --- */
 @media (max-width: 991px) {
   .edu-system-section {
-    padding: 60px 0;
+    /* Giảm padding trên màn hình tablet để tối ưu khoảng trống và đồng bộ hệ thống khoảng cách */
+    padding: 40px 0;
   }
   
   .edu-system-section .section-title {
@@ -104,8 +105,8 @@
 
 @media (max-width: 576px) {
   .edu-system-section {
-    /* Giảm padding của phần hệ thống giáo dục trên mobile để gọn gàng hơn */
-    padding: 30px 0 !important;
+    /* Giảm padding của phần hệ thống giáo dục trên mobile để gọn gàng hơn và tránh chiếm dụng nhiều diện tích */
+    padding: 25px 0 !important;
   }
 
   .edu-system-section .section-title-wrapper {

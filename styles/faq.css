@@ -139,11 +139,14 @@
 }
 
 /* Xử lý tương thích hiển thị trên di động */
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   .faq-section {
-    padding: 60px 0;
+    /* Giảm padding của phần FAQ trên tablet để cân đối khoảng trống */
+    padding: 40px 0;
   }
-  
+}
+
+@media (max-width: 768px) {
   .faq-title {
     font-size: 28px;
     margin-bottom: 30px;
@@ -170,3 +173,11 @@
     line-height: 20px;
   }
 }
+
+@media (max-width: 576px) {
+  .faq-section {
+    /* Giảm padding trên màn hình di động nhỏ để tối ưu hóa không gian hiển thị */
+    padding: 25px 0 !important;
+  }
+}
+

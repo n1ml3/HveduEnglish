@@ -122,6 +122,13 @@ header {
   }
 }
 
+@media (max-width: 576px) {
+  .navbar-inner-container {
+    /* Đồng bộ khoảng cách lề hai bên với container chính trên màn hình mobile nhỏ */
+    padding: 0 15px;
+  }
+}
+
 /* Tối ưu hóa kích thước menu điều hướng trên màn hình laptop từ 992px đến 1200px (bao gồm màn hình 1024px) 
    để các liên kết không bị xuống dòng hoặc tràn màn hình do không gian ngang hẹp */
 @media (min-width: 992px) and (max-width: 1200px) {

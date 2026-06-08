@@ -87,7 +87,8 @@
 /* Trình duyệt màn hình trung bình (dưới 992px) */
 @media (max-width: 992px) {
     .breadcrumb-banner {
-        padding: 120px 0 60px; /* Bù chiều cao navbar (80px) + 40px khoảng trống */
+        /* Giảm padding trên tablet để cân đối giao diện và bù chiều cao navbar (80px) */
+        padding: 100px 0 40px;
     }
 
     .breadcrumb-title {
@@ -110,7 +111,8 @@
 /* Trình duyệt màn hình nhỏ (dưới 576px) */
 @media (max-width: 576px) {
     .breadcrumb-banner {
-        padding: 110px 0 50px; /* Bù chiều cao navbar (80px) + 30px khoảng trống */
+        /* Giảm thêm padding trên di động để gọn gàng hơn */
+        padding: 90px 0 30px;
     }
 
     .breadcrumb-title {

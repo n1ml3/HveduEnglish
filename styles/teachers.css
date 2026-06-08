@@ -183,7 +183,8 @@
 
 @media (max-width: 480px) {
     .teachers-section {
-        padding: 60px 0;
+        /* Giảm padding trên màn hình di động */
+        padding: 25px 0 !important;
     }
     .teachers-title {
         font-size: 28px;
@@ -209,6 +210,11 @@
 }
 
 @media (max-width: 991px) {
+    .teachers-section {
+        /* Giảm padding trên màn hình tablet */
+        padding: 40px 0 !important;
+    }
+
     .teacher-bg-shape {
         /* Loại bỏ ảnh nền trang trí phía sau trên màn hình máy tính bảng và điện thoại di động */
         display: none !important;

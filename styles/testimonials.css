@@ -158,6 +158,11 @@
    ========================================================================== */
 
 @media (max-width: 1024px) {
+    .testimonials-section {
+        /* Giảm padding-top trên màn hình tablet */
+        padding-top: 40px !important;
+    }
+
     .testimonials-slider {
         padding-left: 40px;
         padding-right: 40px;
@@ -165,6 +170,11 @@
 }
 
 @media (max-width: 768px) {
+    .testimonials-section {
+        /* Giảm padding-top trên màn hình di động */
+        padding-top: 25px !important;
+    }
+
     .testimonials-slider {
         padding-top: 56px;
         padding-left: 20px;

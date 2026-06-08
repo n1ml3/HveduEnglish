@@ -105,7 +105,8 @@
 
 @media (max-width: 991px) {
   .vision-mission-section {
-    padding: 60px 0;
+    /* Giảm padding trên màn hình tablet */
+    padding: 40px 0;
   }
 
   .section-header-centered {
@@ -114,6 +115,11 @@
 }
 
 @media (max-width: 576px) {
+  .vision-mission-section {
+    /* Giảm padding trên màn hình di động */
+    padding: 25px 0 !important;
+  }
+
   /* Cấu hình Responsive cho Tầm nhìn và Sứ mệnh */
   .vision-mission-title {
     font-size: 28px;

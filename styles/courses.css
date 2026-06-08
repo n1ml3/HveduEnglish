@@ -221,7 +221,8 @@
 /* --- Responsive CSS --- */
 @media (max-width: 991px) {
   .courses-section {
-    padding: 60px 0;
+    /* Giảm padding trên màn hình tablet */
+    padding: 40px 0;
   }
 
   .courses-cards-row {
@@ -270,7 +271,8 @@
 
 @media (max-width: 576px) {
   .courses-section {
-    padding: 40px 0;
+    /* Giảm padding trên màn hình di động */
+    padding: 25px 0;
   }
 
   .courses-cards-row > div {

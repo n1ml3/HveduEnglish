@@ -359,7 +359,8 @@
 /* Trình duyệt màn hình máy tính bảng (dưới 992px) */
 @media (max-width: 992px) {
   .library-section {
-    padding: 60px 0;
+    /* Giảm padding trên màn hình tablet */
+    padding: 40px 0;
   }
 
   .library-toolbar {
@@ -396,7 +397,8 @@
 /* Trình duyệt màn hình điện thoại di động (dưới 768px) */
 @media (max-width: 768px) {
   .library-section {
-    padding: 40px 0;
+    /* Giảm padding trên màn hình di động */
+    padding: 25px 0;
   }
 
   .library-toolbar {

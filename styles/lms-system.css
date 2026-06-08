@@ -104,7 +104,8 @@
 
 @media (max-width: 991px) {
   .lms-section {
-    padding: 60px 0;
+    /* Giảm padding trên màn hình tablet */
+    padding: 40px 0;
   }
 
   .lms-content-col {
@@ -119,6 +120,11 @@
 }
 
 @media (max-width: 576px) {
+  .lms-section {
+    /* Giảm padding trên màn hình di động */
+    padding: 25px 0 !important;
+  }
+
   /* Responsive LMS trên mobile nhỏ */
   .lms-title {
     font-size: 28px;

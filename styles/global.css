@@ -81,6 +81,13 @@ button, input, select, textarea {
   }
 }
 
+@media (max-width: 576px) {
+  .container {
+    padding: 0 15px; /* Giảm khoảng cách lề hơn nữa trên di động siêu nhỏ để tăng diện tích hiển thị nội dung */
+  }
+}
+
+
 /* Nút bấm tiêu chuẩn hóa */
 .btn {
   display: inline-flex;

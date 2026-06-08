@@ -177,7 +177,8 @@
 /* Trình duyệt màn hình trung bình (dưới 992px) */
 @media (max-width: 992px) {
   .schedule-section {
-    padding: 60px 0;
+    /* Giảm padding trên màn hình tablet */
+    padding: 40px 0;
   }
   
   .schedule-title {
@@ -300,7 +301,8 @@
 /* Màn hình điện thoại nhỏ (dưới 576px) */
 @media (max-width: 576px) {
   .schedule-section {
-    padding: 40px 0;
+    /* Giảm padding trên màn hình di động */
+    padding: 25px 0;
   }
   
   .schedule-title {

@@ -134,7 +134,8 @@
 
 @media (max-width: 991px) {
   .why-choose-section {
-    padding: 60px 0;
+    /* Giảm padding trên màn hình tablet để tối ưu khoảng trống */
+    padding: 40px 0;
   }
   
   .why-title {
@@ -168,7 +169,8 @@
 
 @media (max-width: 576px) {
   .why-choose-section {
-    padding: 40px 0;
+    /* Giảm padding trên màn hình di động nhỏ để gọn gàng hơn */
+    padding: 25px 0;
   }
   
   .why-title {

@@ -110,7 +110,8 @@
 /* --- Responsive CSS cho thiết bị di động --- */
 @media (max-width: 991px) {
   .problems-section {
-    padding: 60px 0;
+    /* Giảm padding trên màn hình tablet */
+    padding: 40px 0;
   }
   
   .problems-visual {
@@ -187,7 +188,8 @@
 /* Tối ưu hóa cho màn hình di động (Mobile L, M, S) để các thẻ khó khăn có độ rộng bằng nhau */
 @media (max-width: 576px) {
   .problems-section {
-    padding: 40px 0;
+    /* Giảm padding trên màn hình di động */
+    padding: 25px 0 !important;
   }
   
   .problems-visual {

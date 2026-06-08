@@ -125,7 +125,8 @@
 /* --- Responsive CSS --- */
 @media (max-width: 991px) {
   .cta-banner-section {
-    padding: 50px 0;
+    /* Giảm padding trên màn hình tablet */
+    padding: 35px 0;
   }
 
   .cta-title {
@@ -150,7 +151,8 @@
 
 @media (max-width: 576px) {
   .cta-banner-section {
-    padding: 40px 0;
+    /* Giảm padding trên màn hình di động */
+    padding: 25px 0;
   }
 
   .cta-title {

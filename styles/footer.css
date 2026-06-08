@@ -257,3 +257,19 @@ footer {
     font-size: 13px !important;
   }
 }
+
+/* Điều chỉnh giảm padding chân trang cho các màn hình responsive từ tablet trở xuống */
+@media (max-width: 991px) {
+  footer {
+    /* Giảm padding chân trang trên tablet để cân xứng với tỷ lệ màn hình */
+    padding: 40px 0 25px;
+  }
+}
+
+@media (max-width: 576px) {
+  footer {
+    /* Giảm thêm padding chân trang trên di động nhỏ để tối ưu khoảng trống */
+    padding: 25px 0 15px !important;
+  }
+}
+

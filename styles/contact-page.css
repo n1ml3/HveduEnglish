@@ -237,13 +237,20 @@ body {
 
 @media (max-width: 991px) {
   .contact-form-container {
-    padding: 20px;
+    /* Giảm padding của form container trên tablet để tiết kiệm diện tích */
+    padding: 35px 25px;
     margin-top: 10px;
+  }
+
+  .info-card {
+    /* Giảm padding của thẻ thông tin trên tablet để gọn gàng hơn */
+    padding: 30px 20px;
   }
 }
 
 @media (max-width: 768px) {
   .info-card {
+    /* Thu gọn thêm padding và đổi bố cục xếp dọc trên thiết bị di động */
     padding: 20px;
     flex-direction: column;
     text-align: center;
@@ -266,6 +273,19 @@ body {
     gap: 20px;
   }
 }
+
+@media (max-width: 576px) {
+  .info-card {
+    /* Giảm tối đa padding của thẻ trên màn hình di động nhỏ */
+    padding: 15px !important;
+  }
+
+  .contact-form-container {
+    /* Giảm tối đa padding của form trên di động nhỏ để tăng khoảng trống nhập liệu */
+    padding: 25px 15px !important;
+  }
+}
+
 
 @media (max-width: 321px) {
   .info-icon {
