@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết khóa học - HVG English</title>
+    
+    <!-- Tải thư viện Bootstrap 5 (CSS) để xây dựng lưới layout và responsive -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Tải các tệp style cốt lõi để đồng bộ giao diện toàn trang -->
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/navbar.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="/styles/breadcrumb.css">
+    <link rel="stylesheet" href="/styles/course-detail.css">
+
+    <!-- Tải thư viện jQuery hỗ trợ nạp động Navbar và Footer -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+    
+    <!-- Tải thư viện Bootstrap 5 JS Bundle phục vụ các hiệu ứng tương tác -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"
+        defer></script>
+        
+    <!-- Tải script chính nạp động phần header và footer của trang -->
+    <script src="/scripts/main.js" defer></script>
+</head>
+
+<body>
+    <!-- Khung chứa Navbar được tải động tự động bằng jQuery -->
+    <header id="navbar-placeholder"></header>
+
+    <main>
+        <!-- Banner Breadcrumb (Tái sử dụng thiết kế Figma Node 1:2858) -->
+        <section class="breadcrumb-banner">
+            <div class="container">
+                <h1 class="breadcrumb-title">Khoá học</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb-list">
+                        <li class="breadcrumb-item"><a href="/index.html" class="breadcrumb-link">Trang chủ</a></li>
+                        <li class="breadcrumb-separator">
+                            <img src="../assets/arrow-right-filled.svg" alt="arrow right">
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">Chi tiết khoá học</li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Phần thông tin chi tiết khóa học: Sử dụng hệ lưới Bootstrap chia 2 cột -->
+        <section class="course-detail-section py-3 py-lg-5">
+            <div class="container">
+                <div class="row g-4 g-lg-5">
+                    
+                    <!-- Cột trái (Chiếm 8/12 phần): Thông tin giới thiệu khóa học chính -->
+                    <div class="col-lg-8">
+                        <!-- Ảnh đại diện/Ảnh nổi bật của khóa học -->
+                        <div class="course-feature-image-wrapper">
+                            <img src="../assets/course-detail-banner.webp" alt="Lớp học Toeic 650+" class="course-feature-image">
+                        </div>
+                        
+                        <!-- Tiêu đề và đường gạch chân phân tách theo thiết kế Figma -->
+                        <h2 class="course-detail-title">Lớp học Toeic 650+</h2>
+                        <div class="course-detail-divider"></div>
+                        
+                        <!-- Khối thông tin "Mô tả" -->
+                        <div class="course-detail-block">
+                            <h3 class="course-block-title">Mô tả</h3>
+                            <p class="course-block-text">
+                                Lớp học kỹ năng sống cho trẻ là một chương trình giáo dục thực tiễn giúp trẻ phát triển tư duy độc lập, giao tiếp tự tin, và khả năng xử lý tình huống trong cuộc sống. Thông qua các hoạt động thực hành, trẻ học cách tự chăm sóc bản thân, làm việc nhóm, kiểm soát cảm xúc và ứng xử lịch sự.
+                            </p>
+                        </div>
+                        
+                        <!-- Khối thông tin "Mục tiêu lớp học" -->
+                        <div class="course-detail-block">
+                            <h3 class="course-block-title">Mục tiêu lớp học</h3>
+                            <ul class="course-block-list">
+                                <li>Giúp trẻ tự tin giao tiếp và thể hiện suy nghĩ của mình.</li>
+                                <li>Rèn luyện kỹ năng tự lập, biết tự chăm sóc bản thân.</li>
+                                <li>Phát triển tư duy giải quyết vấn đề và ra quyết định đúng đắn.</li>
+                                <li>Học cách kiểm soát cảm xúc và ứng xử tích cực.</li>
+                                <li>Xây dựng tinh thần hợp tác và kỹ năng làm việc nhóm.</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Khối thông tin "Nội dung chương trình" -->
+                        <div class="course-detail-block">
+                            <h3 class="course-block-title">Nội dung chương trình</h3>
+                            <ul class="course-block-list">
+                                <li>Kỹ năng giao tiếp & ứng xử</li>
+                                <li>Kỹ năng tự lập & quản lý bản thân</li>
+                                <li>Kiểm soát cảm xúc & tư duy tích cực</li>
+                                <li>Tư duy giải quyết vấn đề</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Khối thông tin "Lợi ích sau khóa học" -->
+                        <div class="course-detail-block">
+                            <h3 class="course-block-title">Lợi ích sau khoá học</h3>
+                            <p class="course-block-text">
+                                Sau khi hoàn thành khóa học, học viên sẽ được trang bị nền tảng kiến thức vững chắc, tự tin giao tiếp hiệu quả bằng tiếng Anh và phát triển các kỹ năng mềm cần thiết để áp dụng trực tiếp vào học tập và cuộc sống hàng ngày.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Cột phải (Chiếm 4/12 phần): Card thông tin tổng hợp lớp học -->
+                    <div class="col-lg-4">
+                        <div class="course-info-card">
+                            <h3 class="info-card-title">Thông tin lớp học:</h3>
+                            
+                            <!-- Hàng thông tin: Độ tuổi -->
+                            <div class="info-card-item">
+                                <span class="info-item-key">Độ tuổi:</span>
+                                <span class="info-item-value">3-18 tuổi</span>
+                            </div>
+                            
+                            <!-- Hàng thông tin: Thời gian buổi học -->
+                            <div class="info-card-item">
+                                <span class="info-item-key">Thời gian buổi học:</span>
+                                <span class="info-item-value">2 giờ</span>
+                            </div>
+                            
+                            <!-- Hàng thông tin: Số buổi học -->
+                            <div class="info-card-item">
+                                <span class="info-item-key">Số buổi học:</span>
+                                <span class="info-item-value">20 buổi</span>
+                            </div>
+                            
+                            <!-- Hàng thông tin: Số học viên -->
+                            <div class="info-card-item">
+                                <span class="info-item-key">Số học viên:</span>
+                                <span class="info-item-value">20 người</span>
+                            </div>
+                            
+                            <!-- Hàng thông tin: Chứng chỉ đi kèm -->
+                            <div class="info-card-item">
+                                <span class="info-item-key">Chứng chỉ:</span>
+                                <span class="info-item-value">Có</span>
+                            </div>
+                            
+                            <!-- Hàng thông tin: Ngôn ngữ đào tạo -->
+                            <div class="info-card-item mb-4">
+                                <span class="info-item-key">Ngôn ngữ</span>
+                                <span class="info-item-value">Tiếng Việt</span>
+                            </div>
+                            
+                            <!-- Nút kêu gọi hành động Đăng ký khóa học -->
+                            <button class="btn btn-register">Đăng ký ngay</button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Khung chứa Footer được tải động tự động bằng jQuery -->
+    <footer id="footer-placeholder"></footer>
+</body>
+
+</html>
