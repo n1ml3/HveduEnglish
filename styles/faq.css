@@ -144,10 +144,26 @@
     /* Giảm padding của phần FAQ trên tablet để cân đối khoảng trống */
     padding: 40px 0;
   }
+  
+  .faq-title {
+    /* Giảm cỡ chữ tiêu đề trên tablet */
+    font-size: 30px;
+  }
+  
+  .faq-question {
+    /* Giảm cỡ chữ câu hỏi trên tablet */
+    font-size: 17px;
+  }
+  
+  .faq-answer {
+    /* Giảm cỡ chữ câu trả lời trên tablet */
+    font-size: 15px;
+  }
 }
 
 @media (max-width: 768px) {
   .faq-title {
+    /* Giảm cỡ chữ tiêu đề trên thiết bị di động trung bình */
     font-size: 28px;
     margin-bottom: 30px;
   }
@@ -157,6 +173,7 @@
   }
   
   .faq-question {
+    /* Giảm cỡ chữ câu hỏi trên di động trung bình */
     font-size: 16px;
     line-height: 20px;
   }
@@ -169,6 +186,7 @@
   
   .faq-answer {
     padding: 0 12px 16px 12px;
+    /* Giảm cỡ chữ câu trả lời trên di động trung bình */
     font-size: 14px;
     line-height: 20px;
   }
@@ -178,6 +196,21 @@
   .faq-section {
     /* Giảm padding trên màn hình di động nhỏ để tối ưu hóa không gian hiển thị */
     padding: 25px 0 !important;
+  }
+
+  .faq-title {
+    /* Giảm tối đa cỡ chữ tiêu đề trên di động nhỏ */
+    font-size: 24px !important;
+  }
+
+  .faq-question {
+    /* Giảm tối đa cỡ chữ câu hỏi trên di động nhỏ */
+    font-size: 15px !important;
+  }
+
+  .faq-answer {
+    /* Giảm tối đa cỡ chữ câu trả lời trên di động nhỏ */
+    font-size: 13px !important;
   }
 }
 

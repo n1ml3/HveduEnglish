@@ -225,6 +225,26 @@
     padding: 40px 0;
   }
 
+  .courses-title {
+    /* Giảm cỡ chữ tiêu đề trên tablet */
+    font-size: 30px;
+  }
+
+  .courses-subtitle {
+    /* Giảm cỡ chữ mô tả trên tablet */
+    font-size: 15px;
+  }
+
+  .course-tab {
+    /* Giảm cỡ chữ tab lọc trên tablet */
+    font-size: 15px;
+  }
+
+  .course-card-title {
+    /* Giảm cỡ chữ tiêu đề card trên tablet */
+    font-size: 24px;
+  }
+
   .courses-cards-row {
     /* Tạo thanh cuộn ngang mượt mà cho các thẻ khoá học trên tablet và di động */
     display: flex !important;
@@ -275,6 +295,21 @@
     padding: 25px 0;
   }
 
+  .courses-title {
+    /* Giảm thêm cỡ chữ tiêu đề trên di động nhỏ */
+    font-size: 26px !important;
+  }
+
+  .courses-subtitle {
+    /* Giảm thêm cỡ chữ mô tả trên di động nhỏ */
+    font-size: 14px !important;
+  }
+
+  .course-tab {
+    /* Giảm thêm cỡ chữ tab lọc trên di động nhỏ */
+    font-size: 14px !important;
+  }
+
   .courses-cards-row > div {
     /* Giảm nhẹ chiều ngang thẻ trên di động để hiển thị hé lộ thẻ tiếp theo kích thích cuộn */
     flex: 0 0 290px !important;
@@ -286,6 +321,7 @@
   }
 
   .course-card-title {
-    font-size: 24px; /* Giảm nhẹ font size trên màn hình rất nhỏ */
+    /* Giảm thêm cỡ chữ tiêu đề card trên di động nhỏ */
+    font-size: 20px !important;
   }
 }

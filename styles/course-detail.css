@@ -162,17 +162,40 @@
   }
   
   .course-detail-title {
+    /* Giảm cỡ chữ tiêu đề chính khóa học trên tablet */
     font-size: 28px;
   }
   
   .course-block-title {
+    /* Giảm cỡ chữ tiêu đề khối trên tablet */
     font-size: 28px;
+  }
+
+  .course-block-text,
+  .course-block-list li {
+    /* Giảm nhẹ cỡ chữ nội dung mô tả trên tablet */
+    font-size: 17px;
   }
   
   /* Đẩy sidebar cách xa phần nội dung phía trên khi bị dồn cột dọc và giảm nhẹ padding */
   .course-info-card {
     padding: 35px 25px;
     margin-top: 20px;
+  }
+
+  .info-card-title {
+    /* Giảm cỡ chữ tiêu đề thẻ thông tin trên tablet */
+    font-size: 24px;
+  }
+
+  .info-item-key {
+    /* Giảm cỡ chữ nhãn thông tin trên tablet */
+    font-size: 17px;
+  }
+
+  .info-item-value {
+    /* Giảm cỡ chữ giá trị thông tin trên tablet */
+    font-size: 16px;
   }
 }
 
@@ -182,16 +205,19 @@
   }
   
   .course-detail-title {
-    font-size: 24px;
+    /* Giảm thêm cỡ chữ tiêu đề trên di động nhỏ */
+    font-size: 22px !important;
   }
   
   .course-block-title {
-    font-size: 24px;
+    /* Giảm thêm cỡ chữ tiêu đề khối trên di động nhỏ */
+    font-size: 22px !important;
   }
   
   .course-block-text,
   .course-block-list li {
-    font-size: 16px;
+    /* Giảm thêm cỡ chữ mô tả trên di động nhỏ */
+    font-size: 15px !important;
     line-height: 26px;
   }
   
@@ -200,11 +226,13 @@
   }
   
   .info-card-title {
-    font-size: 22px;
+    /* Giảm thêm cỡ chữ tiêu đề thẻ thông tin trên di động nhỏ */
+    font-size: 20px !important;
   }
   
   .info-item-key,
   .info-item-value {
-    font-size: 16px;
+    /* Giảm thêm cỡ chữ các nhãn giá trị trên di động nhỏ */
+    font-size: 15px !important;
   }
 }

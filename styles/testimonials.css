@@ -163,6 +163,21 @@
         padding-top: 40px !important;
     }
 
+    .testimonials-title {
+        /* Giảm cỡ chữ tiêu đề chính trên tablet */
+        font-size: 30px;
+    }
+
+    .testimonial-name {
+        /* Giảm cỡ chữ tên người phản hồi trên tablet */
+        font-size: 20px;
+    }
+
+    .testimonial-subtitle {
+        /* Giảm cỡ chữ phụ đề trên tablet */
+        font-size: 15px;
+    }
+
     .testimonials-slider {
         padding-left: 40px;
         padding-right: 40px;
@@ -173,6 +188,11 @@
     .testimonials-section {
         /* Giảm padding-top trên màn hình di động */
         padding-top: 25px !important;
+    }
+
+    .testimonials-title {
+        /* Giảm cỡ chữ tiêu đề trên di động trung bình */
+        font-size: 28px;
     }
 
     .testimonials-slider {
@@ -201,6 +221,25 @@
     }
     .testimonial-text {
         font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .testimonials-title {
+        /* Giảm thêm cỡ chữ tiêu đề chính trên di động nhỏ */
+        font-size: 24px !important;
+    }
+    .testimonial-name {
+        /* Giảm thêm cỡ chữ tên người phản hồi trên di động nhỏ */
+        font-size: 16px !important;
+    }
+    .testimonial-subtitle {
+        /* Giảm thêm cỡ chữ phụ đề trên di động nhỏ */
+        font-size: 13px !important;
+    }
+    .testimonial-text {
+        /* Giảm thêm cỡ chữ nội dung phản hồi trên di động nhỏ */
+        font-size: 13px !important;
     }
 }
 

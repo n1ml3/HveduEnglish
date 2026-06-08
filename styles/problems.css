@@ -114,6 +114,11 @@
     padding: 40px 0;
   }
   
+  .problem-text {
+    /* Giảm cỡ chữ khó khăn trên tablet */
+    font-size: 17px;
+  }
+  
   .problems-visual {
     height: 400px;
     max-width: 360px;
@@ -205,7 +210,8 @@
   }
   
   .problem-text {
-    font-size: 16px; /* Giảm nhẹ cỡ chữ trên di động */
+    /* Giảm thêm cỡ chữ khó khăn trên di động nhỏ */
+    font-size: 15px !important;
   }
 
   /* Đưa toàn bộ các thẻ khó khăn về độ rộng bằng nhau (100%) trên thiết bị di động */

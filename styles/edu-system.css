@@ -93,7 +93,18 @@
   }
   
   .edu-system-section .section-title {
+    /* Giảm cỡ chữ tiêu đề trên tablet để cân xứng */
     font-size: 30px;
+  }
+  
+  .edu-card-title {
+    /* Giảm cỡ chữ tiêu đề thẻ trên tablet */
+    font-size: 19px;
+  }
+  
+  .edu-card-desc {
+    /* Giảm nhẹ cỡ chữ mô tả trên tablet */
+    font-size: 15.5px;
   }
   
   .edu-card {
@@ -152,15 +163,18 @@
   }
 
   .edu-system-section .section-title {
-    font-size: 26px;
+    /* Giảm thêm cỡ chữ tiêu đề trên di động nhỏ */
+    font-size: 24px !important;
   }
   
   .edu-card-title {
-    font-size: 18px;
+    /* Giảm thêm cỡ chữ tiêu đề thẻ trên di động nhỏ */
+    font-size: 17px !important;
     margin-bottom: 12px;
   }
   
   .edu-card-desc {
-    font-size: 15px;
+    /* Giảm thêm cỡ chữ mô tả trên di động nhỏ */
+    font-size: 14px !important;
   }
 }

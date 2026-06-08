@@ -171,7 +171,18 @@
     }
 
     .blog-title {
+        /* Giảm cỡ chữ tiêu đề chính trên tablet */
         font-size: 28px;
+    }
+
+    .blog-card-title {
+        /* Giảm cỡ chữ tiêu đề bài viết trên tablet */
+        font-size: 15px;
+    }
+
+    .blog-card-link {
+        /* Giảm cỡ chữ liên kết xem thêm trên tablet */
+        font-size: 15px;
     }
 
     .blog-title-marker {
@@ -189,6 +200,26 @@
     .blog-section {
         /* Giảm padding trên màn hình di động */
         padding: 25px 0;
+    }
+
+    .blog-title {
+        /* Giảm thêm cỡ chữ tiêu đề chính trên di động nhỏ */
+        font-size: 24px !important;
+    }
+
+    .blog-card-title {
+        /* Giảm thêm cỡ chữ tiêu đề bài viết trên di động nhỏ */
+        font-size: 14px !important;
+    }
+
+    .blog-card-desc {
+        /* Giảm thêm cỡ chữ mô tả bài viết trên di động nhỏ */
+        font-size: 13px !important;
+    }
+
+    .blog-card-link {
+        /* Giảm thêm cỡ chữ liên kết xem thêm trên di động nhỏ */
+        font-size: 14px !important;
     }
 
     .blog-grid {

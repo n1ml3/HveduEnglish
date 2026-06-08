@@ -181,13 +181,41 @@
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 991px) {
+    .teachers-section {
+        /* Giảm padding trên màn hình tablet */
+        padding: 40px 0 !important;
+    }
+
+    .teachers-title {
+        /* Giảm cỡ chữ tiêu đề chính trên tablet */
+        font-size: 30px;
+    }
+
+    .teacher-name {
+        /* Giảm cỡ chữ tên giáo viên trên tablet */
+        font-size: 22px;
+    }
+
+    .teacher-role {
+        /* Giảm cỡ chữ chức danh trên tablet */
+        font-size: 17px;
+    }
+
+    .teacher-bg-shape {
+        /* Loại bỏ ảnh nền trang trí phía sau trên màn hình máy tính bảng và điện thoại di động */
+        display: none !important;
+    }
+}
+
+@media (max-width: 576px) {
     .teachers-section {
         /* Giảm padding trên màn hình di động */
         padding: 25px 0 !important;
     }
     .teachers-title {
-        font-size: 28px;
+        /* Giảm thêm cỡ chữ tiêu đề chính trên di động nhỏ */
+        font-size: 24px !important;
     }
     .teacher-avatar-container {
         width: 230px;
@@ -202,21 +230,11 @@
         height: 230px;
     }
     .teacher-name {
-        font-size: 20px;
+        /* Giảm thêm cỡ chữ tên giáo viên trên di động nhỏ */
+        font-size: 18px !important;
     }
     .teacher-role {
-        font-size: 16px;
-    }
-}
-
-@media (max-width: 991px) {
-    .teachers-section {
-        /* Giảm padding trên màn hình tablet */
-        padding: 40px 0 !important;
-    }
-
-    .teacher-bg-shape {
-        /* Loại bỏ ảnh nền trang trí phía sau trên màn hình máy tính bảng và điện thoại di động */
-        display: none !important;
+        /* Giảm thêm cỡ chữ chức danh trên di động nhỏ */
+        font-size: 15px !important;
     }
 }

@@ -228,6 +228,11 @@ body {
     font-size: 24px;
   }
 
+  .form-subtitle {
+    /* Giảm cỡ chữ mô tả form trên tablet */
+    font-size: 15px;
+  }
+
   .map-container {
     height: auto !important;
     padding: 0px !important;
@@ -245,6 +250,21 @@ body {
   .info-card {
     /* Giảm padding của thẻ thông tin trên tablet để gọn gàng hơn */
     padding: 30px 20px;
+  }
+
+  .info-content h3 {
+    /* Giảm cỡ chữ tiêu đề thông tin trên tablet */
+    font-size: 19px;
+  }
+
+  .info-content p {
+    /* Giảm cỡ chữ nội dung thông tin trên tablet */
+    font-size: 15.5px;
+  }
+
+  .form-title {
+    /* Giảm cỡ chữ tiêu đề form trên tablet */
+    font-size: 23px;
   }
 }
 
@@ -272,6 +292,26 @@ body {
   .contact-info-cards{
     gap: 20px;
   }
+
+  .info-content h3 {
+    /* Giảm cỡ chữ trên di động trung bình */
+    font-size: 18px;
+  }
+
+  .info-content p {
+    /* Giảm cỡ chữ trên di động trung bình */
+    font-size: 15px;
+  }
+
+  .form-title {
+    /* Giảm cỡ chữ form trên di động trung bình */
+    font-size: 22px;
+  }
+
+  .form-subtitle {
+    /* Giảm cỡ chữ mô tả form trên di động trung bình */
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -284,6 +324,26 @@ body {
     /* Giảm tối đa padding của form trên di động nhỏ để tăng khoảng trống nhập liệu */
     padding: 25px 15px !important;
   }
+
+  .info-content h3 {
+    /* Giảm cỡ chữ trên di động nhỏ */
+    font-size: 17px !important;
+  }
+
+  .info-content p {
+    /* Giảm cỡ chữ trên di động nhỏ */
+    font-size: 14px !important;
+  }
+
+  .form-title {
+    /* Giảm cỡ chữ form trên di động nhỏ */
+    font-size: 20px !important;
+  }
+
+  .form-subtitle {
+    /* Giảm cỡ chữ mô tả form trên di động nhỏ */
+    font-size: 13.5px !important;
+  }
 }
 
 
@@ -294,10 +354,14 @@ body {
   }
 
   .info-content h3 {
-    font-size: 16px;
+    font-size: 16px !important;
   }
 
   .info-content p {
-    font-size: 14px;
+    font-size: 13px !important;
+  }
+
+  .form-title {
+    font-size: 18px !important;
   }
 }

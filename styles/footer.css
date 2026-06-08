@@ -225,13 +225,87 @@ footer {
 }
 
 /* Thiết kế responsive cho các phần tử chữ trong Footer */
-@media (max-width: 600px) {
-  .footer-brand .brand-name {
-    font-size: 26px;
+@media (max-width: 991px) {
+  footer {
+    /* Giảm padding chân trang trên tablet để cân xứng với tỷ lệ màn hình */
+    padding: 40px 0 25px;
   }
-  
+
+  .footer-brand .logo-text-light {
+    /* Giảm cỡ chữ logo trên tablet */
+    font-size: 38px;
+  }
+
+  .brand-name {
+    /* Giảm cỡ chữ tên thương hiệu trên tablet */
+    font-size: 28px;
+  }
+
   .newsletter-title {
-    font-size: 26px;
+    /* Giảm cỡ chữ tiêu đề đăng ký trên tablet */
+    font-size: 28px;
+  }
+
+  .branches-column h4 {
+    /* Giảm cỡ chữ tiêu đề chi nhánh trên tablet */
+    font-size: 15px;
+  }
+
+  .branches-column p {
+    /* Giảm cỡ chữ địa chỉ trên tablet */
+    font-size: 15px;
+  }
+
+  .contact-item p {
+    /* Giảm cỡ chữ thông tin liên hệ trên tablet */
+    font-size: 15px;
+  }
+
+  .copyright-text {
+    /* Giảm cỡ chữ bản quyền trên tablet */
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  footer {
+    /* Giảm thêm padding chân trang trên di động nhỏ để tối ưu khoảng trống */
+    padding: 25px 0 15px !important;
+  }
+
+  .footer-brand .logo-text-light {
+    /* Giảm thêm cỡ chữ logo trên di động nhỏ */
+    font-size: 28px !important;
+  }
+
+  .brand-name {
+    /* Giảm thêm cỡ chữ tên thương hiệu trên di động nhỏ */
+    font-size: 24px !important;
+  }
+
+  .newsletter-title {
+    /* Giảm thêm cỡ chữ tiêu đề đăng ký trên di động nhỏ */
+    font-size: 24px !important;
+  }
+
+  .branches-column h4 {
+    /* Giảm thêm cỡ chữ tiêu đề chi nhánh trên di động nhỏ */
+    font-size: 14px !important;
+  }
+
+  .branches-column p {
+    /* Giảm thêm cỡ chữ địa chỉ trên di động nhỏ */
+    font-size: 14px !important;
+  }
+
+  .contact-item p {
+    /* Giảm thêm cỡ chữ thông tin liên hệ trên di động nhỏ */
+    font-size: 14px !important;
+  }
+
+  .copyright-text {
+    /* Giảm thêm cỡ chữ bản quyền trên di động nhỏ */
+    font-size: 14px !important;
   }
 }
 
@@ -258,18 +332,4 @@ footer {
   }
 }
 
-/* Điều chỉnh giảm padding chân trang cho các màn hình responsive từ tablet trở xuống */
-@media (max-width: 991px) {
-  footer {
-    /* Giảm padding chân trang trên tablet để cân xứng với tỷ lệ màn hình */
-    padding: 40px 0 25px;
-  }
-}
-
-@media (max-width: 576px) {
-  footer {
-    /* Giảm thêm padding chân trang trên di động nhỏ để tối ưu khoảng trống */
-    padding: 25px 0 15px !important;
-  }
-}
 

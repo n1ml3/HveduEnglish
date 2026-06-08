@@ -204,6 +204,26 @@
     padding: 40px 0;
   }
   
+  .section-tagline {
+    /* Giảm cỡ chữ nhãn phụ trên tablet */
+    font-size: 18px;
+  }
+
+  .section-heading {
+    /* Giảm cỡ chữ tiêu đề chính trên tablet */
+    font-size: 30px;
+  }
+
+  .section-desc {
+    /* Giảm cỡ chữ mô tả trên tablet */
+    font-size: 17px;
+  }
+
+  .checklist-text {
+    /* Giảm cỡ chữ checklist trên tablet */
+    font-size: 17px;
+  }
+
   .dynamic-visual-col {
     margin-bottom: 40px; /* Thêm khoảng trống dưới khối ảnh trước khi đến khối chữ */
   }
@@ -222,18 +242,26 @@
   }
 
   /* Cấu hình đặc biệt cho điện thoại thông minh màn hình nhỏ */
+  .section-tagline {
+    /* Giảm thêm cỡ chữ nhãn phụ trên di động nhỏ */
+    font-size: 16px !important;
+  }
+
   .section-heading {
-    font-size: 28px; /* Thu nhỏ tiêu đề tránh tràn chữ xuống quá nhiều dòng */
+    /* Giảm thêm cỡ chữ tiêu đề tránh tràn chữ trên di động nhỏ */
+    font-size: 24px !important;
     margin-bottom: 16px;
   }
   
   .section-desc {
-    font-size: 16px; /* Thu nhỏ chữ mô tả một chút để cải thiện mật độ đọc */
+    /* Giảm thêm cỡ chữ mô tả trên di động nhỏ */
+    font-size: 15px !important;
     margin-bottom: 24px;
   }
 
   .checklist-text {
-    font-size: 16px; /* Đồng bộ thu nhỏ chữ checklist */
+    /* Đồng bộ giảm thêm cỡ chữ checklist trên di động nhỏ */
+    font-size: 15px !important;
   }
 
   .about-collage {

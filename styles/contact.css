@@ -249,7 +249,29 @@
     }
 
     .contact-title {
-        font-size: 32px;
+        /* Giảm cỡ chữ tiêu đề trên tablet */
+        font-size: 28px;
+    }
+
+    .contact-desc {
+        /* Giảm cỡ chữ mô tả trên tablet */
+        font-size: 15px;
+    }
+
+    .contact-detail-text {
+        /* Giảm cỡ chữ chi tiết liên hệ trên tablet */
+        font-size: 15px;
+    }
+
+    .form-input-custom,
+    .form-select-custom {
+        /* Giảm cỡ chữ ô nhập liệu trên tablet */
+        font-size: 15px;
+    }
+
+    .btn-contact-submit {
+        /* Giảm cỡ chữ nút gửi trên tablet */
+        font-size: 18px;
     }
 
     /* Đổi hai ô Email & SĐT song song thành xếp chồng dọc */
@@ -267,7 +289,24 @@
     }
 
     .contact-title {
-        font-size: 28px;
+        /* Giảm thêm cỡ chữ tiêu đề trên di động nhỏ */
+        font-size: 24px !important;
+    }
+
+    .contact-desc {
+        /* Giảm thêm cỡ chữ mô tả trên di động nhỏ */
+        font-size: 14px !important;
+    }
+
+    .contact-detail-text {
+        /* Giảm thêm cỡ chữ chi tiết liên hệ trên di động nhỏ */
+        font-size: 14px !important;
+    }
+
+    .form-input-custom,
+    .form-select-custom {
+        /* Giảm thêm cỡ chữ ô nhập liệu trên di động nhỏ */
+        font-size: 14px !important;
     }
 
     .contact-info-divider {
@@ -275,6 +314,8 @@
     }
 
     .btn-contact-submit {
+        /* Giảm thêm cỡ chữ nút gửi trên di động nhỏ */
+        font-size: 16px !important;
         width: 100%; /* Cho nút bấm chiếm hết chiều rộng trên Mobile để dễ bấm */
     }
 }

@@ -363,6 +363,39 @@
     padding: 40px 0;
   }
 
+  .filter-title {
+    /* Giảm cỡ chữ tiêu đề bộ lọc trên tablet */
+    font-size: 18px;
+  }
+
+  .blog-card-title {
+    /* Giảm cỡ chữ tiêu đề thẻ bài viết trên tablet */
+    font-size: 15px;
+  }
+
+  .blog-card-excerpt {
+    /* Giảm cỡ chữ mô tả ngắn trên tablet */
+    font-size: 13.5px;
+  }
+
+  .blog-card-more {
+    /* Giảm cỡ chữ liên kết xem thêm trên tablet */
+    font-size: 15px;
+  }
+
+  .filter-option-item,
+  .option-count {
+    /* Giảm cỡ chữ các tùy chọn lọc trên tablet */
+    font-size: 15px;
+  }
+
+  .sort-label,
+  .sort-btn,
+  .search-input {
+    /* Giảm cỡ chữ thanh công cụ trên tablet */
+    font-size: 15px;
+  }
+
   .library-toolbar {
     margin-bottom: 32px;
   }
@@ -399,6 +432,39 @@
   .library-section {
     /* Giảm padding trên màn hình di động */
     padding: 25px 0;
+  }
+
+  .filter-title {
+    /* Giảm cỡ chữ tiêu đề bộ lọc trên di động trung bình */
+    font-size: 17px;
+  }
+
+  .blog-card-title {
+    /* Giảm cỡ chữ tiêu đề thẻ bài viết trên di động trung bình */
+    font-size: 14.5px;
+  }
+
+  .blog-card-excerpt {
+    /* Giảm cỡ chữ mô tả ngắn trên di động trung bình */
+    font-size: 13px;
+  }
+
+  .blog-card-more {
+    /* Giảm cỡ chữ liên kết xem thêm trên di động trung bình */
+    font-size: 14.5px;
+  }
+
+  .filter-option-item,
+  .option-count {
+    /* Giảm cỡ chữ tùy chọn lọc trên di động trung bình */
+    font-size: 14.5px;
+  }
+
+  .sort-label,
+  .sort-btn,
+  .search-input {
+    /* Giảm cỡ chữ thanh công cụ trên di động trung bình */
+    font-size: 14.5px;
   }
 
   .library-toolbar {
@@ -438,7 +504,41 @@
   }
 
   .filter-title {
-    font-size: 18px;
+    /* Giảm thêm cỡ chữ tiêu đề bộ lọc trên di động nhỏ */
+    font-size: 16px !important;
     margin-bottom: 16px;
+  }
+
+  .blog-card-title {
+    /* Giảm thêm cỡ chữ tiêu đề thẻ bài viết trên di động nhỏ */
+    font-size: 14px !important;
+  }
+
+  .blog-card-excerpt {
+    /* Giảm thêm cỡ chữ mô tả ngắn trên di động nhỏ */
+    font-size: 12.5px !important;
+  }
+
+  .blog-card-more {
+    /* Giảm thêm cỡ chữ liên kết xem thêm trên di động nhỏ */
+    font-size: 14px !important;
+  }
+
+  .filter-option-item,
+  .option-count {
+    /* Giảm thêm cỡ chữ tùy chọn lọc trên di động nhỏ */
+    font-size: 14px !important;
+  }
+
+  .sort-label,
+  .sort-btn,
+  .search-input {
+    /* Giảm thêm cỡ chữ thanh công cụ trên di động nhỏ */
+    font-size: 14px !important;
+  }
+
+  .pagination-link {
+    /* Giảm cỡ chữ nút phân trang trên di động nhỏ */
+    font-size: 14px !important;
   }
 }

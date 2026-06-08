@@ -108,6 +108,16 @@
     padding: 40px 0;
   }
 
+  .lms-title {
+    /* Giảm cỡ chữ tiêu đề chính trên tablet */
+    font-size: 30px;
+  }
+
+  .lms-check-text {
+    /* Giảm cỡ chữ văn bản checklist trên tablet */
+    font-size: 17px;
+  }
+
   .lms-content-col {
     margin-bottom: 60px; /* Thêm khoảng trống khi xếp chồng trên Tablet */
   }
@@ -127,12 +137,14 @@
 
   /* Responsive LMS trên mobile nhỏ */
   .lms-title {
-    font-size: 28px;
+    /* Giảm thêm cỡ chữ tiêu đề trên di động nhỏ */
+    font-size: 24px !important;
     margin-bottom: 24px;
   }
 
   .lms-check-text {
-    font-size: 16px;
+    /* Giảm thêm cỡ chữ văn bản checklist trên di động nhỏ */
+    font-size: 15px !important;
   }
 
   .lms-image-wrapper::before {

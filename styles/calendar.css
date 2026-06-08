@@ -266,7 +266,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 12px 0;
-    font-size: 16px;
+    font-size: 15px;
     border-bottom: 1px dashed rgba(0, 174, 239, 0.1);
     white-space: normal; /* Cho phép xuống dòng nếu chữ quá dài */
     background-color: transparent;
@@ -306,7 +306,8 @@
   }
   
   .schedule-title {
-    font-size: 24px;
+    /* Giảm thêm cỡ chữ tiêu đề trên di động nhỏ */
+    font-size: 22px !important;
   }
 
   .schedule-header {
@@ -318,7 +319,13 @@
   }
 
   .table.schedule-table td {
-    font-size: 15px;
+    /* Giảm thêm cỡ chữ ô dữ liệu trên di động nhỏ */
+    font-size: 14px !important;
     padding: 10px 0;
+  }
+
+  .btn-register-table {
+    /* Giảm thêm cỡ chữ nút đăng ký trên di động nhỏ */
+    font-size: 14px !important;
   }
 }

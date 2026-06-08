@@ -307,6 +307,16 @@
     text-align: center;
     margin-bottom: 50px;
   }
+
+  .hero-title-pill {
+    /* Giảm cỡ chữ tiêu đề dạng viên thuốc trên tablet */
+    font-size: 32px;
+  }
+
+  .hero-subtitle {
+    /* Giảm cỡ chữ phụ đề trên tablet */
+    font-size: 32px;
+  }
   
   .hero-desc-container {
     margin: 0 auto 30px;
@@ -318,22 +328,50 @@
   }
   
   .hero-description {
+    /* Giảm cỡ chữ mô tả trên tablet */
+    font-size: 17px;
     text-align: center;
   }
   
   .hero-buttons {
     justify-content: center;
   }
+
+  .btn-hero-primary,
+  .btn-hero-secondary {
+    /* Giảm nhẹ cỡ chữ nút trên tablet */
+    font-size: 17px;
+    padding: 12px 28px;
+  }
 }
 
 @media (max-width: 576px) {
   .hero-title-pill {
-    font-size: 28px;
+    /* Giảm thêm cỡ chữ tiêu đề dạng viên thuốc trên di động nhỏ */
+    font-size: 24px !important;
     padding: 6px 20px;
   }
   
   .hero-subtitle {
-    font-size: 28px;
+    /* Giảm thêm cỡ chữ phụ đề trên di động nhỏ */
+    font-size: 24px !important;
+  }
+
+  .hero-description {
+    /* Giảm thêm cỡ chữ mô tả trên di động nhỏ */
+    font-size: 15px !important;
+  }
+
+  .btn-hero-primary,
+  .btn-hero-secondary {
+    /* Giảm thêm cỡ chữ nút trên di động nhỏ */
+    font-size: 15px !important;
+    padding: 10px 24px !important;
+  }
+
+  .hero-tagline {
+    /* Giảm cỡ chữ nhãn phụ trên di động nhỏ */
+    font-size: 14px !important;
   }
 
   .hero-content {

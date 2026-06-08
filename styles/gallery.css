@@ -175,7 +175,8 @@
     }
 
     .gallery-title {
-        font-size: 28px;
+        /* Giảm thêm cỡ chữ tiêu đề trên di động nhỏ */
+        font-size: 26px !important;
     }
 
     .gallery-decor-line {

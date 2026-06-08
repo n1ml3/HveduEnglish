@@ -156,11 +156,19 @@
   }
 
   .cta-title {
-    font-size: 24px;
+    /* Giảm thêm cỡ chữ tiêu đề trên di động nhỏ */
+    font-size: 22px !important;
+  }
+
+  .cta-subtitle {
+    /* Giảm thêm cỡ chữ mô tả trên di động nhỏ */
+    font-size: 14px !important;
+    margin-bottom: 16px;
   }
 
   .btn-cta-submit {
-    font-size: 18px;
+    /* Giảm thêm cỡ chữ nút trên di động nhỏ */
+    font-size: 16px !important;
     padding: 10px 30px;
     width: 100%; /* Đưa nút bấm về full width trên mobile để dễ tương tác */
     max-width: 280px;
