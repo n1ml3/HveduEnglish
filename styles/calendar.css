@@ -50,7 +50,7 @@
 .schedule-table-card .table-responsive {
   margin: 0;
   border: none;
-  border-radius: 10px; /* Bo góc nhẹ cho khung cuộn để khớp với góc tròn của header */
+  border-radius: 0; /* Loại bỏ bo góc để dòng tiêu đề và các ô td vuông vức theo yêu cầu */
 }
 
 /* Bảng lịch học tùy chỉnh */
