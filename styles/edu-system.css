@@ -6,6 +6,7 @@
   padding: 61px 0;
   background-color: #ffffff; /* Giữ nền trắng để các thẻ nổi bật rõ ràng */
   position: relative;
+  overflow: hidden; /* Ngăn chặn bất kỳ tràn cột/thanh cuộn ngang nào ra ngoài section */
 }
 
 /* Tiêu đề phần (HVG English màu xanh ngọc, còn lại màu xanh navy đậm) */
@@ -138,10 +139,10 @@
     margin-top: -5px !important; /* Bù trừ khoảng cách 10px gốc (10px - 15px padding-top) */
     padding-bottom: 20px !important; /* Khoảng trống cho bóng đổ của card */
     
-    margin-left: -20px !important; /* Tràn sát mép màn hình di động */
-    margin-right: -20px !important;
-    padding-left: 20px !important; /* Tạo lề đệm bên trong cho phần tử đầu và cuối */
-    padding-right: 20px !important;
+    margin-left: -15px !important; /* Tràn sát mép màn hình di động nhỏ, khớp với lề 15px của container chính */
+    margin-right: -15px !important;
+    padding-left: 15px !important; /* Tạo lề đệm bên trong cho phần tử đầu và cuối */
+    padding-right: 15px !important;
     scrollbar-width: none; /* Ẩn thanh cuộn vật lý */
   }
 

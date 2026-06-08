@@ -6,6 +6,7 @@
   background-color: #ffffff; /* Nền trắng sạch sẽ */
   padding: 80px 0;
   position: relative;
+  overflow: hidden; /* Ngăn chặn bất kỳ tràn cột/thanh cuộn ngang nào ra ngoài section */
 }
 
 /* --- Danh sách thẻ khóa học --- */
@@ -323,5 +324,13 @@
   .course-card-title {
     /* Giảm thêm cỡ chữ tiêu đề card trên di động nhỏ */
     font-size: 20px !important;
+  }
+
+  .courses-cards-row {
+    /* Điều chỉnh lề âm khớp với lề 15px của container trên mobile nhỏ để tránh bị tràn và gây lỗi cuộn ngang trang */
+    margin-left: -15px !important;
+    margin-right: -15px !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
   }
 }
