@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên hệ - HVG English</title>
+    <!-- Tải thư viện Bootstrap 5 (CSS) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Tải các tệp style cốt lõi để đồng bộ giao diện -->
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/navbar.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="/styles/breadcrumb.css">
+    <link rel="stylesheet" href="/styles/contact-page.css">
+
+    <!-- Tải thư viện jQuery trước để hỗ trợ nạp động -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+    <!-- Tải thư viện Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"
+        defer></script>
+    <!-- Tải script chính để thực hiện nạp động header và footer -->
+    <script src="/scripts/main.js" defer></script>
+</head>
+
+<body>
+    <!-- Khung chứa Navbar được tải động bằng jQuery -->
+    <header id="navbar-placeholder"></header>
+    <main>
+        <!-- Breadcrumb Header Banner (Figma Node 1:2858) -->
+        <section class="breadcrumb-banner">
+            <div class="container">
+                <h1 class="breadcrumb-title">Liên hệ với chúng tôi</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb-list">
+                        <li class="breadcrumb-item"><a href="/index.html" class="breadcrumb-link">Trang chủ</a></li>
+                        <li class="breadcrumb-separator">
+                            <img src="../assets/arrow-right-filled.svg" alt="arrow right">
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">Liên hệ</li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+
+        <section>
+            <div class="container py-3 py-lg-5">
+                <div class="row g-4">
+                    <!-- Info Cards -->
+                    <div class="col-lg-5">
+                        <div class="contact-info-cards">
+                            <!-- Address Card -->
+                            <div class="info-card">
+                                <div class="info-icon">
+                                    <img src="../assets/contact-location.svg" alt="">
+                                </div>
+                                <div class="info-content">
+                                    <h3>Địa chỉ</h3>
+                                    <p>33 Trung Kính, Cầu Giấy, Hà Nội</p>
+                                </div>
+                            </div>
+
+                            <!-- Phone Card -->
+                            <div class="info-card">
+                                <div class="info-icon">
+                                    <img src="../assets/contact-phone.svg" alt="">
+                                </div>
+                                <div class="info-content">
+                                    <h3>Số điện thoại</h3>
+                                    <p>0846020704</p>
+                                </div>
+                            </div>
+
+                            <!-- Hours Card -->
+                            <div class="info-card">
+                                <div class="info-icon">
+                                    <img src="../assets/contact-time.svg" alt="">
+                                </div>
+                                <div class="info-content">
+                                    <h3>Thời gian hoạt động</h3>
+                                    <p>Thứ 2 - Thứ 7: 08:30 - 17:30</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="col-lg-7">
+                        <div class="contact-form-container">
+                            <h2 class="form-title">Để lại lời nhắn cho chúng tôi</h2>
+                            <p class="form-subtitle">Chúng tôi sẽ phản hồi bạn một cách nhanh chóng và chuyên nghiệp để
+                                đảm
+                                bảo bạn có trải nghiệm học tập tốt nhất và được hỗ trợ một cách toàn diện.</p>
+
+                            <form action="#" class="contact-form">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="input-group-custom">
+                                            <input type="text" class="form-control" placeholder="Họ và tên*" required>
+                                            <img src="../assets/contact-user.svg" alt="" class="input-icon">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="input-group-custom">
+                                            <input type="email" class="form-control" placeholder="Email*" required>
+                                            <img src="../assets/contact-mail.svg" alt="" class="input-icon">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="input-group-custom">
+                                            <input type="text" class="form-control" placeholder="Chủ đề">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="input-group-custom">
+                                            <input type="tel" class="form-control" placeholder="Số điện thoại*"
+                                                required>
+                                            <img src="../assets/contact-user-phone.svg" alt="" class="input-icon">
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="input-group-custom">
+                                            <textarea class="form-control" rows="5" placeholder="Nội dung*"
+                                                required></textarea>
+                                            <img src="../assets/contact-edit.svg" alt="" class="input-icon">
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-submit">
+                                            Gửi ngay <i class="fa-solid fa-arrow-right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="map-container py-3 py-lg-5">
+                <iframe class="map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.4789775071017!2d105.79828777504348!3d21.01351258063205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab5f40c04bcf%3A0x380a7cb1ea9e658e!2zMiBOZy4gMiBQLiBUcnVuZyBLw61uaCwgVHJ1bmcgSG_DoCwgWcOqbiBIw7JhLCBIw6AgTuG7mWkgMTAwMDAsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1776482737677!5m2!1svi!2s"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+    </main>
+    <!-- Khung chứa Footer được tải động bằng jQuery -->
+    <footer id="footer-placeholder"></footer>
+</body>
+
+</html>
