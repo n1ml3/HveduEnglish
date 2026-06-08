@@ -239,3 +239,46 @@
         height: 180px; /* Tăng nhẹ chiều cao ảnh bìa trên mobile */
     }
 }
+
+/* ==========================================================================
+   Cấu hình cuộn ngang cho phần Blog ở màn hình từ 1024px trở xuống
+   Giúp người dùng có thể vuốt/cuộn ngang để xem danh sách blog một cách mượt mà.
+   ========================================================================== */
+@media (max-width: 1024px) {
+    .blog-grid {
+        flex-direction: row !important; /* Đảm bảo xếp hàng ngang kể cả trên mobile */
+        flex-wrap: nowrap !important; /* Không cho phép xuống dòng */
+        justify-content: flex-start !important; /* Căn lề trái cho các thẻ */
+        align-items: stretch !important; /* Các thẻ cao bằng nhau tự nhiên */
+        overflow-x: auto !important; /* Bật thanh cuộn ngang */
+        overflow-y: hidden !important; /* Ẩn cuộn dọc */
+        padding-bottom: 20px !important; /* Tạo khoảng trống tránh mất bóng đổ của thẻ và chừa chỗ cho thanh cuộn */
+        -webkit-overflow-scrolling: touch; /* Cuộn mượt mà trên thiết bị di động iOS */
+        scrollbar-width: thin; /* Cấu hình thanh cuộn mỏng cho Firefox */
+        scrollbar-color: var(--primary-color) transparent; /* Màu sắc thanh cuộn trên Firefox */
+    }
+
+    /* Tùy chỉnh thanh cuộn ngang trên Chrome, Safari, Edge và các trình duyệt nhân Webkit */
+    .blog-grid::-webkit-scrollbar {
+        height: 6px; /* Chiều cao của thanh cuộn ngang */
+    }
+
+    .blog-grid::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.05); /* Nền thanh cuộn */
+        border-radius: 10px;
+    }
+
+    .blog-grid::-webkit-scrollbar-thumb {
+        background-color: var(--primary-color); /* Màu nút cuộn */
+        border-radius: 10px;
+    }
+
+    .blog-card {
+        flex: 0 0 290px !important; /* Cố định kích thước chiều rộng, không cho phép co lại */
+        max-width: 290px !important;
+        width: 290px !important;
+        height: 420px !important; /* Cố định chiều cao của thẻ bài viết */
+        margin-bottom: 0 !important; /* Loại bỏ khoảng cách dưới */
+    }
+}
+
