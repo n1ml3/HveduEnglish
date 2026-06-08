@@ -120,7 +120,12 @@
     overflow-x: auto !important;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
+    
+    /* Chừa thêm khoảng trống bên trong (padding) ở cả đầu và đáy để các hiệu ứng nổi của card không bị cắt */
+    padding-top: 15px !important;
+    margin-top: -5px !important; /* Bù trừ khoảng cách 10px gốc (10px - 15px padding-top) */
     padding-bottom: 20px !important; /* Khoảng trống cho bóng đổ của card */
+    
     margin-left: -20px !important; /* Tràn sát mép màn hình di động */
     margin-right: -20px !important;
     padding-left: 20px !important; /* Tạo lề đệm bên trong cho phần tử đầu và cuối */

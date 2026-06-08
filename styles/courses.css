@@ -223,11 +223,44 @@
   .courses-section {
     padding: 60px 0;
   }
-}
 
-@media (max-width: 768px) {
+  .courses-cards-row {
+    /* Tạo thanh cuộn ngang mượt mà cho các thẻ khoá học trên tablet và di động */
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    
+    /* Ghi đè justify-content-center của Bootstrap để thanh cuộn bắt đầu từ thẻ đầu tiên bên trái thay vì bị căn giữa cắt mất lề trái */
+    justify-content: flex-start !important;
+    
+    /* Chừa thêm khoảng trống bên trong (padding) ở cả đầu và đáy để các hiệu ứng nổi của card không bị cắt */
+    padding-top: 15px !important;
+    margin-top: 25px !important; /* Bù trừ khoảng cách 40px gốc (40px - 15px padding-top) */
+    padding-bottom: 25px !important;
+    
+    margin-left: -20px !important; /* Tràn sát mép màn hình di động/tablet */
+    margin-right: -20px !important;
+    padding-left: 20px !important; /* Tạo lề đệm bên trong cho phần tử đầu và cuối */
+    padding-right: 20px !important;
+    scrollbar-width: none; /* Ẩn thanh cuộn vật lý */
+  }
+
+  .courses-cards-row::-webkit-scrollbar {
+    display: none; /* Ẩn thanh cuộn trên Chrome/Safari */
+  }
+
+  .courses-cards-row > div {
+    /* Giữ cố định kích thước thẻ khóa học khi cuộn ngang */
+    flex: 0 0 320px !important;
+    max-width: 320px !important;
+  }
+
   .course-card {
-    height: 480px; /* Giảm nhẹ chiều cao trên mobile để thon gọn hơn */
+    margin: 0 !important; /* Bỏ căn giữa margin auto cũ */
+    width: 100% !important;
+    height: 440px !important; /* Đặt chiều cao đồng nhất cho tablet */
   }
   
   .course-discover-btn {
@@ -239,12 +272,17 @@
   .courses-section {
     padding: 40px 0;
   }
-  
-  .course-card {
-    height: 420px;
-    max-width: 320px;
+
+  .courses-cards-row > div {
+    /* Giảm nhẹ chiều ngang thẻ trên di động để hiển thị hé lộ thẻ tiếp theo kích thích cuộn */
+    flex: 0 0 290px !important;
+    max-width: 290px !important;
   }
-  
+
+  .course-card {
+    height: 420px !important;
+  }
+
   .course-card-title {
     font-size: 24px; /* Giảm nhẹ font size trên màn hình rất nhỏ */
   }

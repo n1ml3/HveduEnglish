@@ -159,10 +159,10 @@
     margin-bottom: 2rem;
   }
   
-  /* Căn lề trái toàn bộ tính năng ở cột bên trái khi ở màn hình nhỏ */
-  .left-features .feature-item {
-    align-items: flex-start !important;
-    text-align: left !important;
+  /* Căn giữa toàn bộ tính năng (icon, tiêu đề, mô tả) ở cả hai cột khi ở màn hình máy tính bảng và di động */
+  .feature-item {
+    align-items: center !important;
+    text-align: center !important;
   }
 }
 
