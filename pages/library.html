@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/styles/navbar.css">
     <link rel="stylesheet" href="/styles/footer.css">
     <link rel="stylesheet" href="/styles/breadcrumb.css">
+    <link rel="stylesheet" href="/styles/library.css">
 
     <!-- Tải thư viện jQuery trước để hỗ trợ nạp động -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
@@ -42,6 +43,243 @@
                         <li class="breadcrumb-item active" aria-current="page">Thư viện</li>
                     </ol>
                 </nav>
+            </div>
+        </section>
+
+        <!-- Phần nội dung Thư viện bài viết (Figma Node 1:3383) -->
+        <section class="library-section">
+            <div class="container">
+                
+                <!-- Thanh công cụ: Sắp xếp (bên trái) và Tìm kiếm (bên phải) -->
+                <div class="library-toolbar">
+                    <div class="toolbar-sort">
+                        <span class="sort-label">Sắp xếp theo:</span>
+                        <div class="dropdown sort-dropdown">
+                            <button class="sort-btn" type="button">
+                                Gần đây nhất
+                                <span class="sort-icon-wrapper">
+                                    <img src="../assets/arrow-down.svg" alt="arrow down">
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="toolbar-search">
+                        <div class="search-bar-wrapper">
+                            <input type="text" class="search-input" placeholder="Tìm kiếm">
+                            <button class="search-btn" type="button" aria-label="Tìm kiếm">
+                                <img src="../assets/search.svg"> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bố cục chính 2 cột: Danh sách bài viết bên trái (col-lg-9) và Bộ lọc bên phải (col-lg-3) -->
+                <div class="row g-4">
+                    
+                    <!-- Cột danh sách bài viết -->
+                    <div class="col-lg-9 col-md-12">
+                        <div class="row g-4 blog-grid">
+                            
+                            <!-- Bài viết 1 -->
+                            <div class="col-md-6 col-xl-4 col-sm-12">
+                                <article class="blog-card">
+                                    <div class="blog-card-image">
+                                        <img src="../assets/library-thumb.webp" alt="9 kỹ năng sống cần thiết cho trẻ khi đi học" class="blog-card-img">
+                                    </div>
+                                    <div class="blog-card-content">
+                                        <h3 class="blog-card-title">9 kỹ năng sống cần thiết cho trẻ khi đi học</h3>
+                                        <p class="blog-card-excerpt">STEM là viết tắt của các từ Science (khoa học), Technology (công nghệ), Engineering (kỹ thuật)</p>
+                                        <a href="#" class="blog-card-more">
+                                            Xem thêm
+                                            <span class="more-icon">
+                                                <img src="../assets/arrow-right.svg">
+                                            </span>
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
+                            
+                            <!-- Bài viết 2 -->
+                            <div class="col-md-6 col-xl-4 col-sm-12">
+                                <article class="blog-card">
+                                    <div class="blog-card-image">
+                                        <img src="../assets/library-thumb.webp" alt="9 kỹ năng sống cần thiết cho trẻ khi đi học" class="blog-card-img">
+                                    </div>
+                                    <div class="blog-card-content">
+                                        <h3 class="blog-card-title">9 kỹ năng sống cần thiết cho trẻ khi đi học</h3>
+                                        <p class="blog-card-excerpt">STEM là viết tắt của các từ Science (khoa học), Technology (công nghệ), Engineering (kỹ thuật)</p>
+                                        <a href="#" class="blog-card-more">
+                                            Xem thêm
+                                            <span class="more-icon">
+                                                <img src="../assets/arrow-right.svg">
+                                            </span>
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <!-- Bài viết 3 -->
+                            <div class="col-md-6 col-xl-4 col-sm-12">
+                                <article class="blog-card">
+                                    <div class="blog-card-image">
+                                        <img src="../assets/library-thumb.webp" alt="9 kỹ năng sống cần thiết cho trẻ khi đi học" class="blog-card-img">
+                                    </div>
+                                    <div class="blog-card-content">
+                                        <h3 class="blog-card-title">9 kỹ năng sống cần thiết cho trẻ khi đi học</h3>
+                                        <p class="blog-card-excerpt">STEM là viết tắt của các từ Science (khoa học), Technology (công nghệ), Engineering (kỹ thuật)</p>
+                                        <a href="#" class="blog-card-more">
+                                            Xem thêm
+                                            <span class="more-icon">
+                                                <img src="../assets/arrow-right.svg">
+                                            </span>
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <!-- Bài viết 4 -->
+                            <div class="col-md-6 col-xl-4 col-sm-12">
+                                <article class="blog-card">
+                                    <div class="blog-card-image">
+                                        <img src="../assets/library-thumb.webp" alt="9 kỹ năng sống cần thiết cho trẻ khi đi học" class="blog-card-img">
+                                    </div>
+                                    <div class="blog-card-content">
+                                        <h3 class="blog-card-title">9 kỹ năng sống cần thiết cho trẻ khi đi học</h3>
+                                        <p class="blog-card-excerpt">STEM là viết tắt của các từ Science (khoa học), Technology (công nghệ), Engineering (kỹ thuật)</p>
+                                        <a href="#" class="blog-card-more">
+                                            Xem thêm
+                                            <span class="more-icon">
+                                                <img src="../assets/arrow-right.svg">
+                                            </span>
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <!-- Bài viết 5 -->
+                            <div class="col-md-6 col-xl-4 col-sm-12">
+                                <article class="blog-card">
+                                    <div class="blog-card-image">
+                                        <img src="../assets/library-thumb.webp" alt="9 kỹ năng sống cần thiết cho trẻ khi đi học" class="blog-card-img">
+                                    </div>
+                                    <div class="blog-card-content">
+                                        <h3 class="blog-card-title">9 kỹ năng sống cần thiết cho trẻ khi đi học</h3>
+                                        <p class="blog-card-excerpt">STEM là viết tắt của các từ Science (khoa học), Technology (công nghệ), Engineering (kỹ thuật)</p>
+                                        <a href="#" class="blog-card-more">
+                                            Xem thêm
+                                            <span class="more-icon">
+                                                <img src="../assets/arrow-right.svg">
+                                            </span>
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <!-- Bài viết 6 -->
+                            <div class="col-md-6 col-xl-4 col-sm-12">
+                                <article class="blog-card">
+                                    <div class="blog-card-image">
+                                        <img src="../assets/library-thumb.webp" alt="9 kỹ năng sống cần thiết cho trẻ khi đi học" class="blog-card-img">
+                                    </div>
+                                    <div class="blog-card-content">
+                                        <h3 class="blog-card-title">9 kỹ năng sống cần thiết cho trẻ khi đi học</h3>
+                                        <p class="blog-card-excerpt">STEM là viết tắt của các từ Science (khoa học), Technology (công nghệ), Engineering (kỹ thuật)</p>
+                                        <a href="#" class="blog-card-more">
+                                            Xem thêm
+                                            <span class="more-icon">
+                                                <img src="../assets/arrow-right.svg">
+                                            </span>
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <!-- Bài viết 7 -->
+                            <div class="col-md-6 col-xl-4 col-sm-12">
+                                <article class="blog-card">
+                                    <div class="blog-card-image">
+                                        <img src="../assets/library-thumb.webp" alt="9 kỹ năng sống cần thiết cho trẻ khi đi học" class="blog-card-img">
+                                    </div>
+                                    <div class="blog-card-content">
+                                        <h3 class="blog-card-title">9 kỹ năng sống cần thiết cho trẻ khi đi học</h3>
+                                        <p class="blog-card-excerpt">STEM là viết tắt của các từ Science (khoa học), Technology (công nghệ), Engineering (kỹ thuật)</p>
+                                        <a href="#" class="blog-card-more">
+                                            Xem thêm
+                                            <span class="more-icon">
+                                                <img src="../assets/arrow-right.svg">
+                                            </span>
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <!-- Bài viết 8 -->
+                            <div class="col-md-6 col-xl-4 col-sm-12">
+                                <article class="blog-card">
+                                    <div class="blog-card-image">
+                                        <img src="../assets/library-thumb.webp" alt="9 kỹ năng sống cần thiết cho trẻ khi đi học" class="blog-card-img">
+                                    </div>
+                                    <div class="blog-card-content">
+                                        <h3 class="blog-card-title">9 kỹ năng sống cần thiết cho trẻ khi đi học</h3>
+                                        <p class="blog-card-excerpt">STEM là viết tắt của các từ Science (khoa học), Technology (công nghệ), Engineering (kỹ thuật)</p>
+                                        <a href="#" class="blog-card-more">
+                                            Xem thêm
+                                            <span class="more-icon">
+                                                <img src="../assets/arrow-right.svg">
+                                            </span>
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <!-- Bài viết 9 -->
+                            <div class="col-md-6 col-xl-4 col-sm-12">
+                                <article class="blog-card">
+                                    <div class="blog-card-image">
+                                        <img src="../assets/library-thumb.webp" alt="9 kỹ năng sống cần thiết cho trẻ khi đi học" class="blog-card-img">
+                                    </div>
+                                    <div class="blog-card-content">
+                                        <h3 class="blog-card-title">9 kỹ năng sống cần thiết cho trẻ khi đi học</h3>
+                                        <p class="blog-card-excerpt">STEM là viết tắt của các từ Science (khoa học), Technology (công nghệ), Engineering (kỹ thuật)</p>
+                                        <a href="#" class="blog-card-more">
+                                            Xem thêm
+                                            <span class="more-icon">
+                                                <img src="../assets/arrow-right.svg">
+                                            </span>
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Cột Bộ lọc bên phải -->
+                    <div class="col-lg-3 col-md-12">
+                        <aside class="filter-sidebar">
+                            <h2 class="filter-title">Bộ lọc</h2>
+                            <div class="filter-options">
+                                <a href="#" class="filter-option-item active">
+                                    <span class="option-label">Mẫu giáo</span>
+                                    <span class="option-count">(10)</span>
+                                </a>
+                                <a href="#" class="filter-option-item">
+                                    <span class="option-label">Tiểu học</span>
+                                    <span class="option-count">(10)</span>
+                                </a>
+                                <a href="#" class="filter-option-item">
+                                    <span class="option-label">THCS</span>
+                                    <span class="option-count">(10)</span>
+                                </a>
+                                <a href="#" class="filter-option-item">
+                                    <span class="option-label">THPT</span>
+                                    <span class="option-count">(10)</span>
+                                </a>
+                            </div>
+                        </aside>
+                    </div>
+
+                </div>
             </div>
         </section>
     </main>

@@ -1,0 +1,442 @@
+/* ==========================================================================
+   Library Section - Phần Thư viện bài viết (Figma Node 1:3383)
+   ========================================================================== */
+
+/* Thiết lập khoảng cách và màu nền nhạt đặc trưng cho phần thư viện */
+.library-section {
+  padding: 80px 0;
+  background-color: #fdfdfd; /* Nền nhạt giúp các thẻ card màu trắng nổi bật lên */
+}
+
+/* Thanh công cụ chứa khối sắp xếp bên trái và tìm kiếm bên phải */
+.library-toolbar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 48px;
+  flex-wrap: wrap; /* Cho phép tự xuống dòng trên màn hình hẹp */
+  gap: 175px;
+}
+
+/* Khối sắp xếp theo điều kiện */
+.toolbar-sort {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Nhãn chữ "Sắp xếp theo:" */
+.sort-label {
+  font-family: var(--font-main), sans-serif;
+  font-size: 16px;
+  color: #000000;
+  font-weight: 400;
+}
+
+/* Hộp dropdown sắp xếp */
+.sort-dropdown {
+  position: relative;
+}
+
+/* Nút bấm của dropdown sắp xếp được căn chỉnh flexbox để chữ và icon nằm ngang hàng */
+.sort-btn {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 0 16px;
+  width: 158px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-main), sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+  box-shadow: none;
+  cursor: pointer;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Định kích thước cho ảnh icon arrow down bên trong nút bấm (SVG gốc màu trắng nên cần chuyển màu sang đen/xám để hiển thị được trên nền trắng) */
+.sort-icon-wrapper img {
+  width: 12px;
+  height: auto;
+  display: block;
+  filter: brightness(0) opacity(1);
+}
+
+/* Khối tìm kiếm */
+.toolbar-search {
+  flex-grow: 0;
+}
+
+/* Khung bọc ô input tìm kiếm và nút bấm kính lúp */
+.search-bar-wrapper {
+  position: relative;
+  width: 484px; /* Độ rộng cố định theo đúng Figma trên desktop */
+  height: 39px;
+}
+
+/* Ô nhập từ khóa tìm kiếm */
+.search-input {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 8px 48px 8px 16px; /* Chừa khoảng trống bên phải cho nút kính lúp */
+  font-family: var(--font-main), sans-serif;
+  font-size: 16px;
+  outline: none;
+  color: #49454F;
+}
+
+/* Nút bấm tìm kiếm chứa icon kính lúp */
+.search-btn {
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s;
+}
+
+/* ==========================================================================
+   Blog Card Component - Thẻ bài viết
+   ========================================================================== */
+
+/* Cấu trúc thẻ bài viết màu trắng với các góc bo tròn lớn */
+.blog-card {
+  background-color: #fafafa;
+  border-radius: 20px;
+  padding: 16px;
+  height: 388px; /* Chiều cao cố định theo Figma */
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid transparent;
+}
+
+/* Hiệu ứng hover nổi thẻ lên trên */
+.blog-card:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  border-color: rgba(0, 174, 239, 0.1);
+}
+
+/* Khung chứa ảnh bài viết */
+.blog-card-image {
+  height: 160px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  position: relative;
+  background-color: #d9d9d9; /* Màu nền xám mặc định khi chưa tải ảnh */
+}
+
+/* Ảnh bài viết bên trong thẻ card */
+.blog-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Phủ kín khung hình không bị méo tỷ lệ */
+  display: block;
+  transition: transform 0.5s ease; /* Hiệu ứng zoom mượt khi di chuột qua */
+}
+
+/* Khối nội dung chữ bên dưới ảnh */
+.blog-card-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* Tiêu đề bài viết giới hạn tối đa 2 dòng */
+.blog-card-title {
+  font-family: var(--font-main), sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: rgba(42, 42, 42, 0.89);
+  line-height: 1.5;
+  margin-bottom: 8px;
+  height: 48px; /* Khóa chiều cao tương ứng 2 dòng */
+  overflow: hidden;
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* Mô tả ngắn bài viết giới hạn tối đa 3 dòng */
+.blog-card-excerpt {
+  font-family: var(--font-main), sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(38, 38, 38, 0.8);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  height: 68px; /* Khóa chiều cao tương ứng 3 dòng */
+  overflow: hidden;
+  display: -webkit-box;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+/* Nút liên kết xem chi tiết */
+.blog-card-more {
+  margin-top: auto; /* Đưa nút bám sát xuống đáy */
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-main), sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--primary-color);
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+/* Vòng tròn nhỏ chứa mũi tên Xem thêm */
+.more-icon {
+  width: 28px;
+  height: 28px;
+  background-color: #00AEEF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* ==========================================================================
+   Sidebar Filter - Bộ lọc bên phải
+   ========================================================================== */
+
+/* Hộp bộ lọc màu trắng nổi bật có bóng đổ và bo góc lớn */
+.filter-sidebar {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0px 4px 12px rgba(55, 55, 55, 0.12);
+}
+
+/* Tiêu đề "Bộ lọc" */
+.filter-title {
+  font-family: var(--font-main), sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 24px;
+}
+
+/* Nhóm các liên kết lựa chọn lọc cấp học */
+.filter-options {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Khoảng cách giữa các ô là 20px */
+}
+
+/* Từng ô lựa chọn lọc */
+.filter-option-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 48px;
+  padding: 0 20px;
+  border: 0.5px solid rgba(70, 70, 70, 0.35); /* Viền mờ xám giống Figma */
+  border-radius: 12px;
+  background-color: #ffffff;
+  text-decoration: none;
+  color: #000000;
+  font-family: var(--font-main), sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+}
+
+/* Phần hiển thị số lượng số bài viết (10) */
+.option-count {
+  color: #272626;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+/* Hiệu ứng khi di chuột lên ô chọn */
+.filter-option-item:hover {
+  border-color: var(--primary-color);
+  background-color: rgba(0, 174, 239, 0.02);
+  color: var(--primary-color);
+}
+
+/* Định dạng cho ô bộ lọc đang được kích hoạt */
+.filter-option-item.active {
+  border-color: var(--primary-color);
+  background-color: rgba(0, 174, 239, 0.06);
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.filter-option-item.active .option-count {
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   Pagination Component - Thanh Phân Trang
+   ========================================================================== */
+
+/* Căn giữa thanh phân trang bên dưới danh sách bài viết */
+.library-pagination {
+  margin-top: 48px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Danh sách các nút số trang */
+.pagination-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 12px;
+}
+
+/* Nút liên kết phân trang hình tròn */
+.pagination-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 174, 239, 0.2);
+  color: #000000;
+  font-family: var(--font-main), sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+/* Hiệu ứng khi hover nút phân trang */
+.pagination-link:hover {
+  background-color: rgba(0, 174, 239, 0.08);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+/* Nút phân trang active */
+.pagination-item.active .pagination-link {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: #ffffff;
+}
+
+/* Trạng thái bị khóa của nút phân trang (ví dụ nút Back trang đầu) */
+.pagination-item.disabled .pagination-link {
+  background-color: #f5f5f5;
+  border-color: #e0e0e0;
+  color: #999999;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   Responsive CSS - Tối ưu hóa trên các màn hình nhỏ hơn
+   ========================================================================== */
+
+/* Trình duyệt màn hình laptop nhỏ (dưới 1200px) */
+@media (max-width: 1200px) {
+  .search-bar-wrapper {
+    width: 360px; /* Thu hẹp thanh tìm kiếm để không bị đẩy lệch hàng */
+  }
+
+  .blog-card {
+    height: 400px; /* Tăng nhẹ chiều cao thẻ bài viết để tránh tràn chữ khi cột hẹp lại */
+  }
+}
+
+/* Trình duyệt màn hình máy tính bảng (dưới 992px) */
+@media (max-width: 992px) {
+  .library-section {
+    padding: 60px 0;
+  }
+
+  .library-toolbar {
+    margin-bottom: 32px;
+  }
+
+  .search-bar-wrapper {
+    width: 100%; /* Cho phép thanh tìm kiếm kéo dài hết không gian */
+    max-width: 450px;
+  }
+
+  .blog-card {
+    height: 388px; /* Đặt lại chiều cao chuẩn do lưới hiển thị 2 cột rộng rãi hơn */
+  }
+
+  /* Bố trí lại phần sidebar bộ lọc khi bị đẩy xuống dưới lưới bài viết */
+  .filter-sidebar {
+    margin-top: 24px;
+  }
+
+  .filter-options {
+    flex-direction: row; /* Đổi thành hàng ngang */
+    flex-wrap: wrap; /* Cho phép tự xuống dòng */
+    gap: 12px;
+  }
+
+  .filter-option-item {
+    flex: 1 1 calc(50% - 12px); /* Hiển thị 2 ô lựa chọn lọc trên một hàng */
+    justify-content: center;
+    gap: 8px;
+  }
+}
+
+/* Trình duyệt màn hình điện thoại di động (dưới 768px) */
+@media (max-width: 768px) {
+  .library-section {
+    padding: 40px 0;
+  }
+
+  .library-toolbar {
+    flex-direction: column; /* Xếp dọc các công cụ tìm kiếm và bộ lọc */
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .toolbar-sort {
+    justify-content: space-between;
+  }
+
+  .search-bar-wrapper {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .blog-card {
+    height: auto; /* Chiều cao tự động co giãn theo lượng chữ thực tế để tránh tràn viền */
+    min-height: 360px;
+  }
+
+  .blog-card-excerpt {
+    height: auto;
+    max-height: 72px;
+  }
+
+  .filter-option-item {
+    flex: 1 1 100%; /* Mỗi ô lựa chọn chiếm toàn bộ hàng ngang */
+  }
+}
+
+/* Màn hình điện thoại nhỏ (dưới 576px) */
+@media (max-width: 576px) {
+  .filter-sidebar {
+    padding: 16px;
+  }
+
+  .filter-title {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+}
