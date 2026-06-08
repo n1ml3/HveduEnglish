@@ -5,14 +5,23 @@
  */
 
 $(document).ready(function() {
+  // Tự động xác định tiền tố đường dẫn tương đối (prefix) dựa trên vị trí trang hiện tại
+  let prefix = '';
+  if (window.location.pathname.indexOf('/pages/') !== -1 || window.location.href.indexOf('/pages/') !== -1) {
+    prefix = '../';
+  } else {
+    prefix = './';
+  }
   
   // 1. Nạp động Navbar và gán sự kiện điều hướng sau khi nạp xong để tránh lỗi phần tử chưa tồn tại
-  $("#navbar-placeholder").load("/compoments/navbar.html", function() {
+  $("#navbar-placeholder").load(prefix + "compoments/navbar.html", function() {
+    adjustLoadedPaths("#navbar-placeholder", prefix);
     initNavbar();
   });
 
   // 2. Nạp động Footer và gán sự kiện nhận bản tin sau khi nạp thành công
-  $("#footer-placeholder").load("/compoments/footer.html", function() {
+  $("#footer-placeholder").load(prefix + "compoments/footer.html", function() {
+    adjustLoadedPaths("#footer-placeholder", prefix);
     initNewsletterForm();
   });
 
@@ -152,6 +161,28 @@ function initNavbar() {
       } else {
         $(this).removeClass('active');
       }
+    }
+  });
+}
+
+/**
+ * Điều chỉnh động các đường dẫn tuyệt đối bắt đầu bằng '/' thành đường dẫn tương đối phù hợp với cấp thư mục.
+ * Giúp website hoạt động không lỗi khi đẩy lên hosting tĩnh ở thư mục con (ví dụ GitHub Pages).
+ */
+function adjustLoadedPaths(placeholderId, prefix) {
+  // 1. Cập nhật href cho các thẻ a bắt đầu bằng '/'
+  $(placeholderId + ' a').each(function() {
+    const href = $(this).attr('href');
+    if (href && href.startsWith('/')) {
+      $(this).attr('href', prefix + href.substring(1));
+    }
+  });
+
+  // 2. Cập nhật src cho các thẻ img bắt đầu bằng '/'
+  $(placeholderId + ' img').each(function() {
+    const src = $(this).attr('src');
+    if (src && src.startsWith('/')) {
+      $(this).attr('src', prefix + src.substring(1));
     }
   });
 }
