@@ -30,6 +30,11 @@ $(document).ready(function() {
   if ($("#testimonialsSlider").length) {
     initTestimonialsSlider();
   }
+
+  // 6. Khởi tạo tính năng chuyển đổi tab danh mục khóa học nếu tồn tại
+  if ($(".course-tab").length) {
+    initCourseTabs();
+  }
 });
 
 /**
@@ -118,5 +123,16 @@ function initFaqAccordion() {
         'opacity': '1'
       });
     }
+  });
+}
+
+/**
+ * Khởi tạo tính năng chuyển đổi các tab bộ lọc danh mục khóa học.
+ * Thêm lớp 'active' cho tab được chọn và gỡ bỏ khỏi các tab khác để cập nhật giao diện.
+ */
+function initCourseTabs() {
+  $('.course-tab').on('click', function() {
+    $('.course-tab').removeClass('active');
+    $(this).addClass('active');
   });
 }

@@ -144,6 +144,80 @@
   padding: 13px 50px;
 }
 
+/* ==========================================================================
+   Courses Page Header & Tabs - Tiêu đề & Danh mục bộ lọc khóa học
+   ========================================================================== */
+
+/* Cấu trúc tiêu đề phần khóa học để căn giữa nội dung gọn gàng */
+.courses-header {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* Tiêu đề trang khóa học sử dụng cỡ chữ 36px dày dặn theo Figma */
+.courses-title {
+  font-family: var(--font-main), sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--text-darker);
+  margin-bottom: 16px;
+  line-height: 1.25;
+}
+
+/* Điểm nhấn nổi bật tên thương hiệu HVG Education */
+.courses-title .text-highlight {
+  color: var(--primary-color);
+}
+
+/* Phụ đề mô tả chi tiết khóa học, giới hạn độ rộng để dễ đọc hơn */
+.courses-subtitle {
+  font-family: var(--font-main), sans-serif;
+  font-size: 16px;
+  color: #474747; /* Màu xám đậm giảm mỏi mắt cho người dùng */
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Khung chứa các tab lọc thiết lập khoảng cách và hỗ trợ tự động rớt dòng trên di động */
+.courses-tabs {
+  margin-bottom: 48px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* Thẻ nút danh mục thiết kế theo khuôn viên thuốc (capsule) chuẩn kích thước Figma: 163px x 42px */
+.course-tab {
+  width: 163px;
+  height: 42px;
+  border-radius: 20px;
+  border: 1px solid var(--primary-color);
+  background-color: transparent;
+  color: var(--primary-color);
+  font-family: var(--font-main), sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-smooth);
+}
+
+/* Trạng thái hoạt động của danh mục: đổ nền đặc xanh và đổ bóng nhẹ */
+.course-tab.active {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+/* Trạng thái di chuột nhẹ để cung cấp phản hồi trực quan không quá gắt */
+.course-tab:not(.active):hover {
+  background-color: rgba(0, 174, 239, 0.08);
+  transform: translateY(-1px);
+}
+
 /* --- Responsive CSS --- */
 @media (max-width: 991px) {
   .courses-section {

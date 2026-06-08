@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="/styles/breadcrumb.css">
     <link rel="stylesheet" href="/styles/lms-system.css">
     <link rel="stylesheet" href="/styles/courses.css">
+    <link rel="stylesheet" href="/styles/why-choose.css">
+    <link rel="stylesheet" href="/styles/contact.css">
 
     <!-- Tải thư viện jQuery trước để hỗ trợ nạp động -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
@@ -47,7 +49,379 @@
             </div>
         </section>
 
-        
+        <!-- Phần hiển thị danh sách tất cả các khóa học tại HVG Education (Figma Node 1:3019 - 1:3025) -->
+        <section class="courses-section">
+            <div class="container">
+                <!-- Tiêu đề trang khóa học căn giữa và có phần chữ HVG Education được highlight màu xanh -->
+                <div class="courses-header text-center">
+                    <h2 class="courses-title">Các khoá học tại <span class="text-highlight">HVG Education</span></h2>
+                    <p class="courses-subtitle">
+                        Chương trình đào tạo chất lượng cao, được thiết kế chuyên sâu giúp bạn tiếp cận kiến thức hiệu quả và nâng cao kỹ năng tiếng Anh nhanh chóng
+                    </p>
+                </div>
+
+                <!-- Tabs danh mục để người dùng lựa chọn lọc khóa học nhanh (giữ nguyên kích thước viên thuốc chuẩn Figma) -->
+                <div class="courses-tabs">
+                    <button class="course-tab active" type="button">IELTS cấp tốc</button>
+                    <button class="course-tab" type="button">IELTS cấp tốc</button>
+                    <button class="course-tab" type="button">IELTS cấp tốc</button>
+                    <button class="course-tab" type="button">IELTS cấp tốc</button>
+                </div>
+
+                <!-- Lưới lưới hiển thị 6 thẻ khóa học sử dụng Bootstrap 5 Grid System (3 cột trên máy tính, 2 cột trên tablet, 1 cột trên mobile) -->
+                <div class="row g-4 justify-content-center courses-cards-row">
+                    <!-- Khóa học 1 -->
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="course-card">
+                            <!-- Ảnh nền và lớp phủ tối mờ 30% để làm nổi chữ bên trên -->
+                            <div class="course-bg-img">
+                                <img src="/assets/kid.webp" alt="Tiếng anh mầm non" class="course-img">
+                                <div class="course-img-overlay"></div>
+                            </div>
+
+                            <!-- Nút điều hướng khám phá khóa học -->
+                            <a href="#explore-course-1" class="course-discover-btn">
+                                <span class="btn-text">Khám phá</span>
+                                <span class="btn-arrow">&rarr;</span>
+                            </a>
+
+                            <!-- Dải thông tin màu xanh dương có độ mờ 90% ở dưới đáy chứa tên khóa học -->
+                            <div class="course-banner-info">
+                                <h3 class="course-card-title">Tiếng anh mầm non <br>(3-6 tuổi)</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Khóa học 2 -->
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="course-card">
+                            <!-- Ảnh nền và lớp phủ tối mờ 30% để làm nổi chữ bên trên -->
+                            <div class="course-bg-img">
+                                <img src="/assets/kid.webp" alt="Tiếng anh mầm non" class="course-img">
+                                <div class="course-img-overlay"></div>
+                            </div>
+
+                            <!-- Nút điều hướng khám phá khóa học -->
+                            <a href="#explore-course-2" class="course-discover-btn">
+                                <span class="btn-text">Khám phá</span>
+                                <span class="btn-arrow">&rarr;</span>
+                            </a>
+
+                            <!-- Dải thông tin màu xanh dương có độ mờ 90% ở dưới đáy chứa tên khóa học -->
+                            <div class="course-banner-info">
+                                <h3 class="course-card-title">Tiếng anh mầm non <br>(3-6 tuổi)</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Khóa học 3 -->
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="course-card">
+                            <!-- Ảnh nền và lớp phủ tối mờ 30% để làm nổi chữ bên trên -->
+                            <div class="course-bg-img">
+                                <img src="/assets/kid.webp" alt="Tiếng anh mầm non" class="course-img">
+                                <div class="course-img-overlay"></div>
+                            </div>
+
+                            <!-- Nút điều hướng khám phá khóa học -->
+                            <a href="#explore-course-3" class="course-discover-btn">
+                                <span class="btn-text">Khám phá</span>
+                                <span class="btn-arrow">&rarr;</span>
+                            </a>
+
+                            <!-- Dải thông tin màu xanh dương có độ mờ 90% ở dưới đáy chứa tên khóa học -->
+                            <div class="course-banner-info">
+                                <h3 class="course-card-title">Tiếng anh mầm non <br>(3-6 tuổi)</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Khóa học 4 -->
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="course-card">
+                            <!-- Ảnh nền và lớp phủ tối mờ 30% để làm nổi chữ bên trên -->
+                            <div class="course-bg-img">
+                                <img src="/assets/kid.webp" alt="Tiếng anh mầm non" class="course-img">
+                                <div class="course-img-overlay"></div>
+                            </div>
+
+                            <!-- Nút điều hướng khám phá khóa học -->
+                            <a href="#explore-course-4" class="course-discover-btn">
+                                <span class="btn-text">Khám phá</span>
+                                <span class="btn-arrow">&rarr;</span>
+                            </a>
+
+                            <!-- Dải thông tin màu xanh dương có độ mờ 90% ở dưới đáy chứa tên khóa học -->
+                            <div class="course-banner-info">
+                                <h3 class="course-card-title">Tiếng anh mầm non <br>(3-6 tuổi)</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Khóa học 5 -->
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="course-card">
+                            <!-- Ảnh nền và lớp phủ tối mờ 30% để làm nổi chữ bên trên -->
+                            <div class="course-bg-img">
+                                <img src="/assets/kid.webp" alt="Tiếng anh mầm non" class="course-img">
+                                <div class="course-img-overlay"></div>
+                            </div>
+
+                            <!-- Nút điều hướng khám phá khóa học -->
+                            <a href="#explore-course-5" class="course-discover-btn">
+                                <span class="btn-text">Khám phá</span>
+                                <span class="btn-arrow">&rarr;</span>
+                            </a>
+
+                            <!-- Dải thông tin màu xanh dương có độ mờ 90% ở dưới đáy chứa tên khóa học -->
+                            <div class="course-banner-info">
+                                <h3 class="course-card-title">Tiếng anh mầm non <br>(3-6 tuổi)</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Khóa học 6 -->
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="course-card">
+                            <!-- Ảnh nền và lớp phủ tối mờ 30% để làm nổi chữ bên trên -->
+                            <div class="course-bg-img">
+                                <img src="/assets/kid.webp" alt="Tiếng anh mầm non" class="course-img">
+                                <div class="course-img-overlay"></div>
+                            </div>
+
+                            <!-- Nút điều hướng khám phá khóa học -->
+                            <a href="#explore-course-6" class="course-discover-btn">
+                                <span class="btn-text">Khám phá</span>
+                                <span class="btn-arrow">&rarr;</span>
+                            </a>
+
+                            <!-- Dải thông tin màu xanh dương có độ mờ 90% ở dưới đáy chứa tên khóa học -->
+                            <div class="course-banner-info">
+                                <h3 class="course-card-title">Tiếng anh mầm non <br>(3-6 tuổi)</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="lms-section">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <!-- Cột trái: Tiêu đề và 6 checklist tính năng -->
+                    <div class="col-lg-6 col-12 lms-content-col">
+                        <h2 class="lms-title">
+                            Chinh phục <span class="text-highlight">IELTS</span> dễ dàng<br>
+                            Với hệ thống <span class="text-highlight">LMS</span> hiện đại!
+                        </h2>
+                        
+                        <ul class="lms-checklist">
+                            <li>
+                                <span class="lms-check-icon">
+                                    <img src="/assets/checked.svg" alt="Check Icon">
+                                </span>
+                                <span class="lms-check-text">100+ video bài giảng full lộ trình từ 0 đến 7.0+</span>
+                            </li>
+                            <li>
+                                <span class="lms-check-icon">
+                                    <img src="/assets/checked.svg" alt="Check Icon">
+                                </span>
+                                <span class="lms-check-text">1000+ Tài liệu tự học miễn phí</span>
+                            </li>
+                            <li>
+                                <span class="lms-check-icon">
+                                    <img src="/assets/checked.svg" alt="Check Icon">
+                                </span>
+                                <span class="lms-check-text">10,000+ Từ vựng cơ bản đến nâng cao trong IELTS</span>
+                            </li>
+                            <li>
+                                <span class="lms-check-icon">
+                                    <img src="/assets/checked.svg" alt="Check Icon">
+                                </span>
+                                <span class="lms-check-text">10,000+ đề luyện tập kèm bài giải mô phỏng giống 100% bài thi thật</span>
+                            </li>
+                            <li>
+                                <span class="lms-check-icon">
+                                    <img src="/assets/checked.svg" alt="Check Icon">
+                                </span>
+                                <span class="lms-check-text">Theo dõi lộ trình học và thời gian biểu chi tiết</span>
+                            </li>
+                            <li>
+                                <span class="lms-check-icon">
+                                    <img src="/assets/checked.svg" alt="Check Icon">
+                                </span>
+                                <span class="lms-check-text">Bài test đánh giá trình độ định kỳ</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Cột phải: Khung ảnh minh họa kèm khối màu bóng đổ lệch phía sau -->
+                    <div class="col-lg-6 col-12 lms-visual-col">
+                        <div class="lms-image-wrapper">
+                            <img src="/assets/teacher-introduce.webp" alt="Học viên học qua hệ thống LMS">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="why-choose-section">
+            <div class="container">
+                <!-- Tiêu đề và Phụ đề phần -->
+                <div class="why-choose-header text-center">
+                    <h2 class="why-title">Lý do chọn <span class="text-highlight">HVG Education</span></h2>
+                    <div class="why-decor-line"></div>
+                    <p class="why-subtitle">Chất lượng giảng dạy vượt trội</p>
+                </div>
+
+                <div class="row align-items-center why-content-row">
+                    <!-- Cột trái: 2 tính năng (căn lề phải trên desktop) -->
+                    <div class="col-lg-4 col-12 order-lg-1 order-2 left-features">
+                        <!-- Tính năng 1: Cam kết đầu ra bằng hợp đồng -->
+                        <div class="feature-item mb-5">
+                            <img src="../assets/commitment.svg" alt="Commitment Icon" class="feature-icon">
+                            <h3 class="feature-title">Cam kết đầu ra <span class="text-highlight">bằng hợp đồng</span>
+                            </h3>
+                            <p class="feature-desc">Chất lượng giảng dạy được cam kết bằng văn bản hợp đồng có hiệu lực
+                                pháp lý.</p>
+                        </div>
+
+                        <!-- Tính năng 3: Giáo trình chuẩn CELTA - Cambridge -->
+                        <div class="feature-item">
+                            <img src="../assets/cambridge.svg" alt="Cambridge Icon" class="feature-icon">
+                            <h3 class="feature-title">Giáo trình chuẩn <span class="text-highlight">CELTA -
+                                    Cambridge</span></h3>
+                            <p class="feature-desc">Chương trình học được thiết kế theo tiêu chuẩn của quốc tế, giúp bạn
+                                vững chắc nền tảng.</p>
+                        </div>
+                    </div>
+
+                    <!-- Cột giữa: Vòng tròn trung tâm -->
+                    <div class="col-lg-4 col-12 order-lg-2 order-1 text-center center-visual-col">
+                        <div class="why-center-visual">
+                            <img src="../assets/Ellipse 6.webp" alt="Center Illustration" class="center-circle-img">
+                        </div>
+                    </div>
+
+                    <!-- Cột phải: 2 tính năng (căn lề trái trên desktop) -->
+                    <div class="col-lg-4 col-12 order-lg-3 order-3 right-features">
+                        <!-- Tính năng 2: Lớp nhóm nhỏ chỉ từ 10 - 15 học viên -->
+                        <div class="feature-item mb-5">
+                            <img src="../assets/team.svg" alt="Team Icon" class="feature-icon">
+                            <h3 class="feature-title">Lớp nhóm nhỏ chỉ từ <span class="text-highlight">10 - 15 học
+                                    viên</span></h3>
+                            <p class="feature-desc">Lớp học với sỉ số siêu lý tưởng, chú trọng đến sự tương tác và theo
+                                sát từng học viên.</p>
+                        </div>
+
+                        <!-- Tính năng 4: Hỗ trợ việc học 24/7 -->
+                        <div class="feature-item">
+                            <img src="../assets/support.svg" alt="Support Icon" class="feature-icon">
+                            <h3 class="feature-title">Hỗ trợ việc học <span class="text-highlight">24/7</span></h3>
+                            <p class="feature-desc">Đồng hành cùng bạn mọi lúc, hỗ trợ giải đáp mọi thắc mắc một cách
+                                nhanh chóng.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="contact-bg-overlay"></div>
+            <div class="container contact-container">
+                <div class="row contact-row">
+                    <!-- Cột trái: Thông tin liên hệ -->
+                    <div class="col-lg-6 col-12 contact-info-col">
+                        <h2 class="contact-title">Bạn có điều cần thắc mắc?</h2>
+                        <p class="contact-desc">
+                            Đội ngũ chuyên gia của chúng tôi luôn sẵn sàng lắng nghe và tư vấn miễn phí để giúp bạn chọn được chương trình phù hợp nhất!
+                        </p>
+                        <div class="contact-info-divider"></div>
+                        
+                        <div class="contact-details">
+                            <!-- Địa chỉ -->
+                            <div class="contact-detail-item">
+                                <div class="contact-detail-icon">
+                                    <img src="../assets/location.svg">
+                                </div>
+                                <p class="contact-detail-text">
+                                    <span class="detail-label">Địa chỉ:</span> 33 Trung Kính, Cầu Giấy, Hà Nội
+                                </p>
+                            </div>
+
+                            <!-- Hotline -->
+                            <div class="contact-detail-item">
+                                <div class="contact-detail-icon">
+                                    <img src="../assets/telephone.svg">
+                                </div>
+                                <p class="contact-detail-text">
+                                    <span class="detail-label">Hotline:</span> Mobile: (+84)846020703 / Tel: (+84)12346789
+                                </p>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="contact-detail-item">
+                                <div class="contact-detail-icon">
+                                    <img src="../assets/message.svg">
+                                </div>
+                                <p class="contact-detail-text">
+                                    <span class="detail-label">Email:</span> 123dadas@gmail.com
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cột phải: Form tư vấn -->
+                    <div class="col-lg-6 col-12 contact-form-col">
+                        <form class="contact-form">
+                            <!-- Trường Họ và Tên -->
+                            <div class="form-group-custom">
+                                <input type="text" class="form-input-custom" placeholder="Họ và tên của bạn" required>
+                            </div>
+
+                            <!-- Email và Số điện thoại nằm ngang -->
+                            <div class="form-row-custom">
+                                <div class="form-group-custom flex-grow-1">
+                                    <input type="email" class="form-input-custom" placeholder="Email" required>
+                                </div>
+                                <div class="form-group-custom flex-grow-1">
+                                    <input type="tel" class="form-input-custom" placeholder="Số điện thoại" required>
+                                </div>
+                            </div>
+
+                            <!-- Nội dung quan tâm (Select dropdown tùy biến) -->
+                            <div class="form-group-custom select-wrapper-custom">
+                                <select class="form-select-custom" required>
+                                    <option value="" disabled selected hidden>Nội dung bạn quan tâm</option>
+                                    <option value="tieng-anh-mam-non">Tiếng Anh Mầm Non (3-6 tuổi)</option>
+                                    <option value="tieng-anh-tieu-hoc">Tiếng Anh Tiểu Học (6-11 tuổi)</option>
+                                    <option value="tieng-anh-thcs">Tiếng Anh THCS (11-15 tuổi)</option>
+                                    <option value="luyen-thi-ielts">Luyện thi IELTS</option>
+                                    <option value="khac">Yêu cầu khác</option>
+                                </select>
+                                <span class="select-arrow-custom">
+                                    <img src="../assets/arrow-down.svg">
+                                </span>
+                            </div>
+
+                            <!-- Lời nhắn -->
+                            <div class="form-group-custom">
+                                <input type="text" class="form-input-custom" placeholder="Lời nhắn">
+                            </div>
+
+                            <!-- Nút Gửi HVG -->
+                            <button type="submit" class="btn-contact-submit">
+                                <span class="submit-icon">
+                                    <img src="../assets/mailsend.svg">
+                                </span>
+                                <span class="submit-text">Gửi HVG!</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
     <!-- Khung chứa Footer được tải động bằng jQuery -->
     <footer id="footer-placeholder"></footer>
