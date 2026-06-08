@@ -235,12 +235,26 @@ body {
 
   .map-container {
     height: auto !important;
-    padding: 0px !important;
+    padding: 0 24px !important; /* Đệm lề hai bên để bản đồ không bị chạm sát mép màn hình */
     margin-bottom: 50px !important;
+  }
+
+  .map {
+    height: 400px !important; /* Giảm chiều cao bản đồ trên các màn hình tablet lớn */
   }
 }
 
 @media (max-width: 991px) {
+  .contact-section {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+  }
+
+  .contact-map-section {
+    padding-top: 0px !important;
+    padding-bottom: 40px !important;
+  }
+
   .contact-form-container {
     /* Giảm padding của form container trên tablet để tiết kiệm diện tích */
     padding: 35px 25px;
@@ -269,6 +283,16 @@ body {
 }
 
 @media (max-width: 768px) {
+  .contact-section {
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+  }
+
+  .contact-map-section {
+    padding-top: 0px !important;
+    padding-bottom: 30px !important;
+  }
+
   .info-card {
     /* Thu gọn thêm padding và đổi bố cục xếp dọc trên thiết bị di động */
     padding: 20px;
@@ -281,13 +305,14 @@ body {
     height: 40px !important;
   }
   .map {
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 16 / 9; /* Thay đổi sang tỷ lệ 16:9 để bản đồ trông dẹt và cân đối hơn trên di động */
     height: auto !important;
-    border-radius: 10px;
+    border-radius: 15px; /* Giữ bo góc đẹp đồng bộ với desktop */
   }
   .map-container {
     padding: 0 15px !important;
-    margin-top: -30px !important;
+    margin-top: 0px !important; /* Loại bỏ margin âm để tránh làm các phần tử đè lên nhau */
+    margin-bottom: 30px !important;
   }
   .contact-info-cards{
     gap: 20px;
@@ -315,6 +340,16 @@ body {
 }
 
 @media (max-width: 576px) {
+  .contact-section {
+    padding-top: 25px !important;
+    padding-bottom: 25px !important;
+  }
+
+  .contact-map-section {
+    padding-top: 0px !important;
+    padding-bottom: 25px !important;
+  }
+
   .info-card {
     /* Giảm tối đa padding của thẻ trên màn hình di động nhỏ */
     padding: 15px !important;

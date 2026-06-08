@@ -136,3 +136,22 @@ function initCourseTabs() {
     $(this).addClass('active');
   });
 }
+
+/**
+ * Khởi tạo thanh điều hướng Navbar.
+ * Tự động tìm đường dẫn URL hiện tại để thêm lớp 'active' cho liên kết tương ứng trên thanh điều hướng.
+ */
+function initNavbar() {
+  const currentPath = window.location.pathname;
+  $('.nav-link').each(function() {
+    const page = $(this).attr('data-page');
+    if (page) {
+      if (currentPath.includes(page) || 
+          (page === 'home' && (currentPath === '/' || currentPath === '' || currentPath.endsWith('index.html')))) {
+        $(this).addClass('active');
+      } else {
+        $(this).removeClass('active');
+      }
+    }
+  });
+}
