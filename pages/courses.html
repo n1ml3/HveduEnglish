@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu - HVG English</title>
+    <!-- Tải thư viện Bootstrap 5 (CSS) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Tải các tệp style cốt lõi để đồng bộ giao diện -->
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/navbar.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="/styles/breadcrumb.css">
+    <link rel="stylesheet" href="/styles/lms-system.css">
+    <link rel="stylesheet" href="/styles/courses.css">
+
+    <!-- Tải thư viện jQuery trước để hỗ trợ nạp động -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+    <!-- Tải thư viện Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"
+        defer></script>
+    <!-- Tải script chính để thực hiện nạp động header và footer -->
+    <script src="/scripts/main.js" defer></script>
+</head>
+
+<body>
+    <!-- Khung chứa Navbar được tải động bằng jQuery -->
+    <header id="navbar-placeholder"></header>
+    <main>
+        <!-- Breadcrumb Header Banner (Figma Node 1:2858) -->
+        <section class="breadcrumb-banner">
+            <div class="container">
+                <h1 class="breadcrumb-title">Khoá học</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb-list">
+                        <li class="breadcrumb-item"><a href="/index.html" class="breadcrumb-link">Trang chủ</a></li>
+                        <li class="breadcrumb-separator">
+                            <img src="../assets/arrow-right-filled.svg" alt="arrow right">
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">Khóa học</li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+
+        
+    </main>
+    <!-- Khung chứa Footer được tải động bằng jQuery -->
+    <footer id="footer-placeholder"></footer>
+</body>
