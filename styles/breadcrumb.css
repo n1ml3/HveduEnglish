@@ -4,7 +4,7 @@
 
 .breadcrumb-banner {
     background-color: var(--bg-soft); /* Sử dụng nền xanh nhạt dịu mát #edf7fd */
-    padding: 200px 0 160px; /* Bù chiều cao của navbar fixed (80px) + 60px khoảng cách Figma */
+    padding: 140px 0;
     position: relative;
     width: 100%;
 }

@@ -1,5 +1,4 @@
 header {
-  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -120,5 +119,33 @@ header {
   
   .navbar-collapse {
     padding: 20px;
+  }
+}
+
+/* Tối ưu hóa kích thước menu điều hướng trên màn hình laptop từ 992px đến 1200px (bao gồm màn hình 1024px) 
+   để các liên kết không bị xuống dòng hoặc tràn màn hình do không gian ngang hẹp */
+@media (min-width: 992px) and (max-width: 1200px) {
+  .navbar-inner-container {
+    /* Giảm padding hai bên để tối ưu hóa không gian cho menu */
+    padding: 0 30px;
+  }
+
+  .navbar-nav {
+    /* Giảm khoảng cách giữa các mục menu chính */
+    gap: 12px !important;
+  }
+
+  .nav-link {
+    /* Giảm cỡ chữ và khoảng cách đệm của các liên kết để chúng nằm gọn trên một dòng */
+    font-size: 14px !important;
+    padding: 6px 8px !important;
+    white-space: nowrap;
+  }
+
+  .btn-consult {
+    /* Điều chỉnh nhẹ kích thước nút kêu gọi hành động để đồng bộ với menu */
+    font-size: 14px;
+    padding: 10px 16px;
+    height: 44px;
   }
 }
