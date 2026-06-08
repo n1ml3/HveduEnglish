@@ -77,10 +77,6 @@
   margin-bottom: 10px;
 }
 
-.course-block-list li::marker {
-  color: var(--primary-color); /* Bullet point có màu xanh dương sáng */
-}
-
 /* ==========================================================================
    Sidebar: Card thông tin lớp học (cột phải)
    ========================================================================== */
@@ -98,6 +94,7 @@
   font-weight: 500;
   color: rgba(0, 0, 0, 0.85);
   margin-bottom: 30px;
+  border-bottom: 0.6px solid rgba(136, 136, 136, 0.25); /* Đường kẻ viền mờ ngăn cách các hàng */
 }
 
 /* Mỗi hàng thông tin trong card */
@@ -108,10 +105,6 @@
   padding-bottom: 15px;
   margin-bottom: 15px;
   border-bottom: 0.6px solid rgba(136, 136, 136, 0.25); /* Đường kẻ viền mờ ngăn cách các hàng */
-}
-
-.info-card-item:last-of-type {
-  border-bottom: none; /* Hàng cuối không có viền ngăn cách */
 }
 
 .info-item-key {
