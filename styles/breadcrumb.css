@@ -4,7 +4,7 @@
 
 .breadcrumb-banner {
     background-color: var(--bg-soft); /* Sử dụng nền xanh nhạt dịu mát #edf7fd */
-    padding: 140px 0 80px; /* Bù chiều cao của navbar fixed (80px) + 60px khoảng cách Figma */
+    padding: 200px 0 160px; /* Bù chiều cao của navbar fixed (80px) + 60px khoảng cách Figma */
     position: relative;
     width: 100%;
 }
@@ -12,10 +12,10 @@
 .breadcrumb-title {
     font-family: var(--font-main), sans-serif;
     font-size: 46px; /* Cỡ chữ 46px theo thiết kế gốc của Figma */
-    font-weight: 800;
+    font-weight: 700;
     color: #323232; /* Tông màu xám tối #323232 */
     margin: 0 0 20px 0;
-    line-height: 1.2;
+    line-height: 1;
 }
 
 /* Danh sách breadcrumbs hiển thị ngang */
@@ -38,7 +38,7 @@
 
 /* Định dạng liên kết breadcrumb */
 .breadcrumb-link {
-    color: rgba(50, 50, 50, 0.7); /* Chữ xám nhạt hơn cho mục chưa hoạt động */
+    color: #323232F2;
     text-decoration: none;
     transition: color 0.3s ease;
 }

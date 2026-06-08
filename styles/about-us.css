@@ -9,7 +9,7 @@
   background-color: #ffffff; /* Nền trắng sạch sẽ làm nổi bật các thẻ hình ảnh và khối màu */
   position: relative;
   overflow: hidden;
-  padding: 100px 0;
+  padding-top: 100px;
 }
 
 /* --- Khối ảnh Collage nghệ thuật (Bên trái) ---
@@ -46,11 +46,6 @@
   position: relative;
   background-color: #f0f0f0; /* Nền xám nhẹ làm placeholder khi ảnh chưa kịp tải */
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Hiệu ứng hover phóng to nhẹ thẻ ảnh giúp giao diện sinh động và tăng tương tác người dùng */
-.collage-card:hover {
-  transform: translateY(-5px);
 }
 
 .collage-card img {
