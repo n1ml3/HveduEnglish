@@ -148,40 +148,17 @@
         font-size: 32px;
     }
 
+    /* Giữ nguyên thiết kế grid của desktop trên tablet và thu nhỏ khoảng cách */
     .gallery-grid {
-        /* Cấu hình hiển thị cuộn ngang cho các cột ảnh trên tablet */
-        display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: nowrap !important;
-        overflow-x: auto !important;
-        scroll-behavior: smooth;
-        -webkit-overflow-scrolling: touch;
-        justify-content: flex-start !important;
-        
-        /* Chừa khoảng trống cho lề và bóng đổ */
-        padding-top: 10px !important;
-        padding-bottom: 20px !important;
-        margin-left: -20px !important;
-        margin-right: -20px !important;
-        padding-left: 20px !important;
-        padding-right: 20px !important;
-        scrollbar-width: none; /* Ẩn thanh cuộn vật lý */
-    }
-
-    .gallery-grid::-webkit-scrollbar {
-        display: none; /* Ẩn thanh cuộn trên Webkit */
+        gap: 16px !important;
     }
 
     .gallery-col {
-        /* Cố định chiều rộng cột để cuộn ngang mượt mà */
-        flex: 0 0 320px !important;
-        max-width: 320px !important;
+        gap: 16px !important;
     }
 
-    /* Ở cột giữa, ảnh đứng điều chỉnh chiều cao khớp với hai cột bên cạnh */
-    .gallery-col-middle .item-tall {
-        height: 339px !important;
-        flex: none;
+    .gallery-row {
+        gap: 16px !important;
     }
 }
 
@@ -206,23 +183,45 @@
         margin-top: 10px;
     }
 
+    /* Áp dụng thiết kế cuộn ngang mượt mà cho cột ảnh riêng trên di động */
+    .gallery-grid {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        justify-content: flex-start !important;
+        gap: 16px !important;
+        
+        /* Chừa khoảng trống cho lề và bóng đổ */
+        padding-top: 10px !important;
+        padding-bottom: 20px !important;
+        margin-left: -15px !important;
+        margin-right: -15px !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        scrollbar-width: none; /* Ẩn thanh cuộn vật lý */
+    }
+
+    .gallery-grid::-webkit-scrollbar {
+        display: none; /* Ẩn thanh cuộn trên Webkit */
+    }
+
     .gallery-col {
         /* Thu nhỏ chiều rộng cột trên di động nhỏ */
         flex: 0 0 290px !important;
         max-width: 290px !important;
+        gap: 16px !important;
+    }
+
+    .gallery-row {
+        gap: 16px !important;
     }
 
     .gallery-col-middle .item-tall {
         /* Điều chỉnh chiều cao cột giữa tương ứng với chiều rộng cột di động nhỏ */
         height: 308px !important;
         flex: none;
-    }
-
-    .gallery-grid {
-        /* Điều chỉnh lề âm khớp với lề 15px của container trên mobile nhỏ để tránh bị tràn và gây lỗi cuộn ngang trang */
-        margin-left: -15px !important;
-        margin-right: -15px !important;
-        padding-left: 15px !important;
-        padding-right: 15px !important;
     }
 }
