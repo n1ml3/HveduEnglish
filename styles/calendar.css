@@ -190,11 +190,10 @@
     padding: 10px;
   }
 
-  /* Thu nhỏ ô dữ liệu để khớp màn hình máy tính bảng và tránh cuộn ngang */
+  /* Thu nhỏ ô dữ liệu để khớp màn hình máy tính bảng */
   .table.schedule-table thead th {
     padding: 8px 5px; /* Giảm thêm padding tiêu đề bảng */
     font-size: 13px; /* Giảm cỡ chữ tiêu đề bảng */
-    white-space: normal; /* Cho phép tiêu đề xuống dòng khi cột quá hẹp */
   }
   
   .table.schedule-table td {
@@ -214,118 +213,74 @@
     font-size: 14px;
     border-radius: 8px;
   }
+
+  /* Cố định cột Mã lớp khi cuộn ngang */
+  .table.schedule-table th:first-child,
+  .table.schedule-table td:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 10;
+  }
+
+  .table.schedule-table th:first-child {
+    z-index: 11;
+    background-color: #1b136a !important; /* Giữ màu nền header */
+  }
+
+  .table.schedule-table tbody td:first-child {
+    background-color: #ffffff !important; /* Giữ màu nền cell */
+  }
+
+  /* Đồng bộ hiệu ứng hover cho cột Mã lớp được cố định */
+  .table.schedule-table tbody tr:hover td:first-child {
+    background-color: #f6fcfe !important;
+  }
 }
 
-/* Trình duyệt di động (dưới 768px) - Chuyển sang dạng thẻ dọc để triệt tiêu hoàn toàn thanh cuộn ngang */
+/* Màn hình di động (dưới 768px) */
 @media (max-width: 768px) {
+  .schedule-section {
+    padding: 30px 0;
+  }
+
+  .schedule-title {
+    font-size: 24px;
+  }
+
   .schedule-table-card {
-    border: none;
-    padding: 0;
-    background-color: transparent;
-    box-shadow: none;
+    padding: 8px;
   }
-
-  .schedule-table-card .table-responsive {
-    border-radius: 0;
-    overflow: visible; /* Cho phép hiển thị tự nhiên */
-  }
-
-  .table.schedule-table {
-    display: block;
-    background-color: transparent;
-  }
-
-  /* Ẩn tiêu đề cột nằm ngang */
-  .table.schedule-table thead {
-    display: none;
-  }
-
-  .table.schedule-table tbody,
-  .table.schedule-table tr {
-    display: block;
-    width: 100%;
-  }
-
-  /* Biến mỗi hàng dữ liệu thành một thẻ độc lập */
-  .table.schedule-table tr {
-    background-color: #ffffff;
-    border: 1px solid rgba(0, 174, 239, 0.25);
-    border-radius: 16px;
-    padding: 20px 24px;
-    margin-bottom: 24px;
-    box-shadow: 0px 4px 15px rgba(13, 48, 122, 0.03);
-  }
-
-  .table.schedule-table tr:last-child {
-    margin-bottom: 0;
-  }
-
-  /* Định dạng các ô thành hàng ngang song song (label bên trái, value bên phải) */
-  .table.schedule-table td {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 0;
-    font-size: 15px;
-    border-bottom: 1px dashed rgba(0, 174, 239, 0.1);
-    white-space: normal; /* Cho phép xuống dòng nếu chữ quá dài */
-    background-color: transparent;
-  }
-
-  /* Ô đăng ký cuối cùng căn giữa nút bấm */
-  .table.schedule-table td.col-register {
-    border-bottom: none;
-    padding-top: 16px;
-    justify-content: center;
-    width: 100%;
-  }
-
-  .btn-register-table {
-    width: 100%; /* Cho nút đăng ký kéo dài hết chiều ngang thẻ di động */
-    height: 44px;
-    font-size: 16px;
-    border-radius: 10px;
-  }
-
-  /* Chèn nhãn tiêu đề trước dữ liệu bằng CSS pseudo-element để giữ HTML sạch sẽ */
-  .table.schedule-table td:nth-of-type(1)::before { content: "Mã lớp"; font-weight: 700; color: var(--secondary-color); }
-  .table.schedule-table td:nth-of-type(2)::before { content: "Cơ sở"; font-weight: 700; color: var(--secondary-color); }
-  .table.schedule-table td:nth-of-type(3)::before { content: "Đầu vào"; font-weight: 700; color: var(--secondary-color); }
-  .table.schedule-table td:nth-of-type(4)::before { content: "Đầu ra"; font-weight: 700; color: var(--secondary-color); }
-  .table.schedule-table td:nth-of-type(5)::before { content: "Khai giảng"; font-weight: 700; color: var(--secondary-color); }
-  .table.schedule-table td:nth-of-type(6)::before { content: "Lịch học"; font-weight: 700; color: var(--secondary-color); }
-  .table.schedule-table td:nth-of-type(7)::before { content: "Thời lượng"; font-weight: 700; color: var(--secondary-color); }
-  .table.schedule-table td:nth-of-type(8)::before { content: "Tình trạng"; font-weight: 700; color: var(--secondary-color); }
 }
 
 /* Màn hình điện thoại nhỏ (dưới 576px) */
 @media (max-width: 576px) {
   .schedule-section {
-    /* Giảm padding trên màn hình di động */
     padding: 25px 0;
   }
   
   .schedule-title {
-    /* Giảm thêm cỡ chữ tiêu đề trên di động nhỏ */
-    font-size: 22px !important;
+    font-size: 20px !important;
   }
 
   .schedule-header {
     margin-bottom: 32px;
   }
 
-  .table.schedule-table tr {
-    padding: 16px;
+  /* Điều chỉnh cỡ chữ và padding nhỏ hơn một chút trên màn hình cực nhỏ để hiển thị tối ưu */
+  .table.schedule-table thead th {
+    padding: 6px 4px;
+    font-size: 12px;
   }
 
   .table.schedule-table td {
-    /* Giảm thêm cỡ chữ ô dữ liệu trên di động nhỏ */
-    font-size: 14px !important;
-    padding: 10px 0;
+    padding: 6px 4px;
+    font-size: 12px !important;
   }
 
   .btn-register-table {
-    /* Giảm thêm cỡ chữ nút đăng ký trên di động nhỏ */
-    font-size: 14px !important;
+    width: 85px;
+    height: 32px;
+    font-size: 12px !important;
+    border-radius: 6px;
   }
 }
