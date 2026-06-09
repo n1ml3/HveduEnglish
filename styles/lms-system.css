@@ -119,7 +119,7 @@
   }
 
   .lms-content-col {
-    margin-bottom: 60px; /* Thêm khoảng trống khi xếp chồng trên Tablet */
+    margin-bottom: 10px; /* Thêm khoảng trống khi xếp chồng trên Tablet */
   }
 
   /* Thu nhỏ tỉ lệ lệch bóng đổ để tránh tràn lề phải màn hình tablet */

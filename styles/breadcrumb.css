@@ -57,7 +57,6 @@
 .breadcrumb-separator {
     display: flex;
     align-items: center;
-    color: rgba(50, 50, 50, 0.6);
 }
 
 .breadcrumb-separator svg {
@@ -100,6 +99,13 @@
         font-size: 20px; /* Thu nhỏ breadcrumb để cân đối trên Tablet */
     }
 
+    /* Giảm kích thước mũi tên phân cách phù hợp với font chữ trên Tablet */
+    .breadcrumb-separator img,
+    .breadcrumb-separator svg {
+        height: 24px !important;
+        width: auto !important;
+    }
+
     /* Thu nhỏ ảnh minh họa trên màn hình Tablet */
     .breadcrumb-img {
         max-height: 200px;
@@ -124,6 +130,13 @@
     .breadcrumb-item {
         /* Giảm thêm cỡ chữ mục liên kết trên di động nhỏ */
         font-size: 15px !important;
+    }
+
+    /* Giảm thêm kích thước mũi tên phân cách phù hợp với font chữ trên di động */
+    .breadcrumb-separator img,
+    .breadcrumb-separator svg {
+        height: 18px !important;
+        width: auto !important;
     }
 
     .breadcrumb-list {
