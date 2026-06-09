@@ -192,3 +192,68 @@
         font-size: 15px;
     }
 }
+
+/* ==========================================================================
+   Modal Popup Container & Overlay
+   ========================================================================== */
+
+.register-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(13, 48, 122, 0.6); /* Blueish dark overlay */
+    backdrop-filter: blur(5px);
+    display: none; /* Controlled via JS */
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.register-modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 850px;
+    margin: auto;
+    animation: registerSlideUp 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28) forwards;
+}
+
+.register-modal-close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    background: transparent;
+    border: none;
+    font-size: 36px;
+    font-weight: 300;
+    color: #ffffff;
+    cursor: pointer;
+    z-index: 10;
+    transition: var(--transition-smooth, all 0.3s ease);
+    line-height: 1;
+}
+
+.register-modal-close:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+@keyframes registerSlideUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Ensure form inside popup fits nicely without unnecessary margins */
+.register-modal-content .register-section {
+    padding: 0;
+}
+

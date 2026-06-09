@@ -49,6 +49,11 @@ $(document).ready(function() {
   if ($(".filter-sidebar").length) {
     initFilterSidebarFlyout();
   }
+
+  // 8. Khởi tạo tính năng popup đăng ký khóa học nếu có nút đăng ký
+  if ($(".btn-register").length) {
+    initRegisterPopup();
+  }
 });
 
 /**
@@ -207,5 +212,66 @@ function initFilterSidebarFlyout() {
     $('.filter-sidebar').removeClass('active');
     $('.filter-backdrop').removeClass('active');
     $('body').removeClass('filter-open');
+  });
+}
+
+/**
+ * Khởi tạo popup đăng ký khóa học dynamically.
+ * Nạp động register-form.html vào modal popup khi bấm nút đăng ký.
+ */
+function initRegisterPopup() {
+  const $btnRegister = $('.btn-register');
+  if (!$btnRegister.length) return;
+
+  // Khởi tạo container modal trong body
+  const modalHTML = `
+    <div id="registerModal" class="register-modal-overlay">
+      <div class="register-modal-content">
+        <button type="button" class="register-modal-close" aria-label="Đóng popup">&times;</button>
+        <div id="registerModalBody"></div>
+      </div>
+    </div>
+  `;
+  
+  $('body').append(modalHTML);
+  const $modal = $('#registerModal');
+  const $modalBody = $('#registerModalBody');
+  let isFormLoaded = false;
+
+  $btnRegister.on('click', function(e) {
+    e.preventDefault();
+    
+    // Tự động xác định tiền tố đường dẫn tương đối
+    let prefix = '';
+    if (window.location.pathname.indexOf('/pages/') !== -1 || window.location.href.indexOf('/pages/') !== -1) {
+      prefix = '../';
+    } else {
+      prefix = './';
+    }
+
+    // Tự động tải stylesheet register-form.css nếu chưa tồn tại
+    if (!$('link[href*="register-form.css"]').length) {
+      $('head').append('<link rel="stylesheet" href="' + prefix + 'styles/register-form.css">');
+    }
+    
+    // Nạp động file register-form.html
+    if (!isFormLoaded) {
+      $modalBody.load(prefix + "compoments/register-form.html", function() {
+        isFormLoaded = true;
+        $modal.css('display', 'flex');
+        $('body').css('overflow', 'hidden'); // Chặn cuộn trang nền
+      });
+    } else {
+      $modal.css('display', 'flex');
+      $('body').css('overflow', 'hidden');
+    }
+  });
+
+  // Sự kiện đóng modal
+  $modal.on('click', function(e) {
+    if ($(e.target).hasClass('register-modal-overlay') || $(e.target).hasClass('register-modal-close')) {
+      $modal.css('display', 'none');
+      $('body').css('overflow', ''); // Khôi phục cuộn trang
+    }
   });
 }
