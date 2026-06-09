@@ -1,0 +1,9 @@
+.detail-title {
+    margin-top: 80px;
+}
+
+@media (max-width: 768px) {
+    .detail-title {
+        margin-top: 20px;
+    }
+}
