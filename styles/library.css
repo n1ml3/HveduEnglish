@@ -651,3 +651,52 @@ body.filter-open {
     font-size: 14px !important;
   }
 }
+
+/* ==========================================================================
+   Related News Section - Phần tin liên quan (library-detail.html)
+   ========================================================================== */
+
+.related-news-section {
+  padding: 60px 0;
+  background-color: #ffffff;
+}
+
+.related-news-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+  width: 100%;
+}
+
+.related-news-title {
+  font-family: var(--font-main), sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 0;
+  white-space: nowrap;
+}
+
+.related-news-line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: rgba(0, 174, 239, 0.3); /* Subtle primary color line */
+}
+
+/* Ensure blog cards inside related section fit nicely */
+.related-news-section .blog-card {
+  height: auto;
+  min-height: 388px;
+}
+
+@media (max-width: 768px) {
+  .related-news-header {
+    margin-bottom: 24px;
+  }
+  
+  .related-news-title {
+    font-size: 20px;
+  }
+}
+
