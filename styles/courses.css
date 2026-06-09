@@ -242,41 +242,32 @@
   }
 
   .courses-cards-row {
-    /* Tạo thanh cuộn ngang mượt mà cho các thẻ khoá học trên tablet và di động */
     display: flex !important;
-    flex-wrap: nowrap !important;
-    overflow-x: auto !important;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-    
-    /* Ghi đè justify-content-center của Bootstrap để thanh cuộn bắt đầu từ thẻ đầu tiên bên trái thay vì bị căn giữa cắt mất lề trái */
-    justify-content: flex-start !important;
-    padding-bottom: 25px !important;
-    
-    margin-left: -20px !important; /* Tràn sát mép màn hình di động/tablet */
-    margin-right: -20px !important;
-    padding-left: 20px !important; /* Tạo lề đệm bên trong cho phần tử đầu và cuối */
-    padding-right: 20px !important;
-    scrollbar-width: none; /* Ẩn thanh cuộn vật lý */
+    flex-wrap: wrap !important;
+    overflow-x: visible !important;
+    padding-bottom: 0 !important;
+    margin-left: -12px !important;
+    margin-right: -12px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 
   .courses-cards-row::-webkit-scrollbar {
-    display: none; /* Ẩn thanh cuộn trên Chrome/Safari */
+    display: none;
   }
 
   .courses-cards-row > div {
-    /* Giữ cố định kích thước thẻ khóa học khi cuộn ngang */
-    flex: 0 0 320px !important;
-    max-width: 320px !important;
+    flex: 0 0 auto !important;
+    max-width: none !important;
   }
 
   .course-card {
-    margin: 0 !important; /* Bỏ căn giữa margin auto cũ */
+    margin: 0 auto !important;
     width: 100% !important;
     height: 440px !important; /* Đặt chiều cao đồng nhất cho tablet */
   }
 
-  .see-more-btn-wrapper{
+  .see-more-btn-wrapper {
     margin-top: 0 !important;
   }
   
@@ -301,18 +292,34 @@
     font-size: 14px !important;
   }
 
+  /* Thu nhỏ các tab lọc phù hợp với Mobile */
+  .courses-tabs {
+    gap: 10px !important;
+    margin-bottom: 30px !important;
+  }
+
   .course-tab {
-    /* Giảm thêm cỡ chữ tab lọc trên di động nhỏ */
-    font-size: 14px !important;
+    width: auto !important;
+    height: 36px !important;
+    padding: 0 16px !important;
+    font-size: 13.5px !important;
+    border-radius: 18px !important;
+  }
+
+  .courses-cards-row {
+    margin-left: -12px !important;
+    margin-right: -12px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 
   .courses-cards-row > div {
-    /* Giảm nhẹ chiều ngang thẻ trên di động để hiển thị hé lộ thẻ tiếp theo kích thích cuộn */
-    flex: 0 0 290px !important;
-    max-width: 290px !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
   }
 
   .course-card {
+    max-width: 100% !important;
     height: 420px !important;
   }
 
@@ -321,11 +328,18 @@
     font-size: 20px !important;
   }
 
-  .courses-cards-row {
-    /* Điều chỉnh lề âm khớp với lề 15px của container trên mobile nhỏ để tránh bị tràn và gây lỗi cuộn ngang trang */
-    margin-left: -15px !important;
-    margin-right: -15px !important;
-    padding-left: 15px !important;
-    padding-right: 15px !important;
+  /* Tối ưu riêng cho các màn hình siêu nhỏ (Mobile S - dưới 360px) */
+  @media (max-width: 360px) {
+    .courses-tabs {
+      gap: 8px !important;
+      margin-bottom: 24px !important;
+    }
+
+    .course-tab {
+      height: 32px !important;
+      padding: 0 12px !important;
+      font-size: 12px !important;
+      border-radius: 16px !important;
+    }
   }
 }
