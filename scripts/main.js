@@ -44,6 +44,11 @@ $(document).ready(function() {
   if ($(".course-tab").length) {
     initCourseTabs();
   }
+
+  // 7. Khởi tạo tính năng bộ lọc sidebar flyout nếu tồn tại
+  if ($(".filter-sidebar").length) {
+    initFilterSidebarFlyout();
+  }
 });
 
 /**
@@ -184,5 +189,23 @@ function adjustLoadedPaths(placeholderId, prefix) {
     if (src && src.startsWith('/')) {
       $(this).attr('src', prefix + src.substring(1));
     }
+  });
+}
+
+/**
+ * Khởi tạo tính năng bộ lọc flyout cho trang Thư viện trên thiết bị di động/tablet.
+ * Mở và đóng sidebar lọc bằng hoạt ảnh mượt mà kèm lớp phủ mờ (backdrop).
+ */
+function initFilterSidebarFlyout() {
+  $(document).on('click', '.filter-toggle-btn', function() {
+    $('.filter-sidebar').addClass('active');
+    $('.filter-backdrop').addClass('active');
+    $('body').addClass('filter-open');
+  });
+
+  $(document).on('click', '.filter-close-btn, .filter-backdrop', function() {
+    $('.filter-sidebar').removeClass('active');
+    $('.filter-backdrop').removeClass('active');
+    $('body').removeClass('filter-open');
   });
 }

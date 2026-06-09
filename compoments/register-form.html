@@ -1,0 +1,54 @@
+<!-- Biểu mẫu đăng ký tư vấn miễn phí (Register Form Component - Figma Node 1:3795) -->
+<section class="register-section">
+  <div class="register-card">
+    <div class="register-header">
+      <h2 class="register-title">Đăng ký ngay để nhận tư vấn miễn phí</h2>
+      <p class="register-desc">Quý phụ huynh và các bạn học sinh vui lòng để lại thông tin để nhận tư vấn về các khoá học</p>
+    </div>
+    
+    <form class="register-form">
+      <div class="register-form-grid">
+        <!-- Trường Họ và tên -->
+        <div class="register-form-group">
+          <input type="text" class="register-input" placeholder="Họ và tên" required>
+        </div>
+        
+        <!-- Trường Năm sinh -->
+        <div class="register-form-group">
+          <input type="text" class="register-input" placeholder="Năm sinh" required>
+        </div>
+        
+        <!-- Trường E-mail -->
+        <div class="register-form-group">
+          <input type="email" class="register-input" placeholder="E-mail" required>
+        </div>
+        
+        <!-- Trường Số điện thoại -->
+        <div class="register-form-group">
+          <input type="tel" class="register-input" placeholder="Số điện thoại" required>
+        </div>
+        
+        <!-- Trường Nội dung quan tâm -->
+        <div class="register-form-group full-width">
+          <div class="register-select-wrapper">
+            <select class="register-select" required>
+              <option value="" disabled selected hidden>Nội dung quan tâm: -Vui lòng chọn-</option>
+              <option value="tieng-anh-mam-non">Tiếng Anh Mầm Non (3-6 tuổi)</option>
+              <option value="tieng-anh-tieu-hoc">Tiếng Anh Tiểu Học (6-11 tuổi)</option>
+              <option value="tieng-anh-thcs">Tiếng Anh THCS (11-15 tuổi)</option>
+              <option value="luyen-thi-ielts">Luyện thi IELTS</option>
+              <option value="khac">Yêu cầu khác</option>
+            </select>
+          </div>
+        </div>
+        
+        <!-- Nút gửi đăng ký -->
+        <div class="register-submit-group">
+          <button type="submit" class="btn-register-submit">
+            Gửi ngay cho chúng tôi
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
