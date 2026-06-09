@@ -9,11 +9,6 @@
   overflow: hidden; /* Ngăn chặn bất kỳ tràn cột/thanh cuộn ngang nào ra ngoài section */
 }
 
-/* --- Danh sách thẻ khóa học --- */
-.courses-cards-row {
-  margin-top: 40px;
-}
-
 /* Thẻ khóa học */
 .course-card {
   position: relative;
@@ -256,10 +251,6 @@
     
     /* Ghi đè justify-content-center của Bootstrap để thanh cuộn bắt đầu từ thẻ đầu tiên bên trái thay vì bị căn giữa cắt mất lề trái */
     justify-content: flex-start !important;
-    
-    /* Chừa thêm khoảng trống bên trong (padding) ở cả đầu và đáy để các hiệu ứng nổi của card không bị cắt */
-    padding-top: 15px !important;
-    margin-top: 25px !important; /* Bù trừ khoảng cách 40px gốc (40px - 15px padding-top) */
     padding-bottom: 25px !important;
     
     margin-left: -20px !important; /* Tràn sát mép màn hình di động/tablet */
@@ -283,6 +274,10 @@
     margin: 0 !important; /* Bỏ căn giữa margin auto cũ */
     width: 100% !important;
     height: 440px !important; /* Đặt chiều cao đồng nhất cho tablet */
+  }
+
+  .see-more-btn-wrapper{
+    margin-top: 0 !important;
   }
   
   .course-discover-btn {

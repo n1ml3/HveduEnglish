@@ -133,6 +133,10 @@
 /* --- Responsive CSS (Tương thích màn hình nhỏ) --- */
 
 @media (max-width: 991px) {
+  .why-choose-header {
+    margin-bottom: 0px;
+  }
+
   .why-choose-section {
     /* Giảm padding trên màn hình tablet để tối ưu khoảng trống */
     padding: 40px 0;

@@ -187,6 +187,10 @@
 
 /* Giao diện trên thiết bị Di động (màn hình dưới 576px) */
 @media (max-width: 576px) {
+    .gallery-header {
+        margin-bottom: 20px;
+    }
+
     .gallery-section {
         /* Giảm padding trên màn hình di động */
         padding: 25px 0 !important;

@@ -202,6 +202,11 @@
         font-size: 17px;
     }
 
+    /* Tiêu đề chính của section giảng viên */
+    .teachers-header {
+        margin-bottom: 20px;
+    }
+
     .teacher-bg-shape {
         /* Loại bỏ ảnh nền trang trí phía sau trên màn hình máy tính bảng và điện thoại di động */
         display: none !important;
