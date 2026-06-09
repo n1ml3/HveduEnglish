@@ -368,26 +368,152 @@
     margin-bottom: 30px;
   }
   
-  /* Chuyển wrapper thành flexbox để xếp chồng các badge chỉ số cân đối */
+  /* Thiết lập khung chứa ảnh và họa tiết trang trí trên di động */
   .hero-img-wrapper {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 380px !important;
+    height: 200px !important;
+    margin: 30px auto 0 !important;
+    display: block !important;
+    overflow: visible !important;
+  }
+  
+  /* Căn chỉnh hình ảnh giảng viên */
+  .hero-instructor-img {
+    position: absolute !important;
+    bottom: 0 !important;
+    top: auto !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 240px !important;
     height: auto !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 12px !important;
-    margin-top: 20px !important;
+    scale: 1.15 !important;
+    z-index: 2 !important;
   }
   
-  /* Chuyển các badge về hiển thị tĩnh bình thường thay vì absolute */
+  .hero-instructor-img img {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+  }
+  
+  /* Huy hiệu nổi bật trên di động */
   .hero-badge {
-    position: static !important;
-    width: fit-content !important;
-    padding: 8px 16px !important;
+    position: absolute !important;
+    padding: 6px 12px !important;
+    border-radius: 20px !important;
+    box-shadow: 0px 4px 10px rgba(193, 238, 255, 0.8) !important;
+    z-index: 5 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    width: max-content !important;
   }
   
-  /* Ẩn các điểm trang trí nhỏ trên di động để giao diện gọn gàng */
-  .decor-box, .decor-dot, .decor-shape {
-    display: none !important;
+  .badge-icon img {
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  .badge-num {
+    font-size: 14px !important;
+  }
+
+  .badge-desc {
+    font-size: 10px !important;
+  }
+
+  .badge-expert {
+    left: -10px !important;
+    top: 60px !important;
+  }
+
+  .badge-students {
+    right: -10px !important;
+    bottom: 40px !important;
+  }
+  
+  /* Hộp trang trí nhỏ trên di động */
+  .decor-box {
+    display: none;
+  }
+  
+  /* Các điểm chấm tròn và hình học nhỏ nền di động */
+  .decor-dot, .decor-shape {
+    display: none;
+  }
+  
+  .decor-dot-1 {
+    left: 100px !important;
+    top: 150px !important;
+    width: 10px !important;
+    height: 10px !important;
+  }
+  
+  .decor-dot-2 {
+    right: 50px !important;
+    top: 40px !important;
+    width: 12px !important;
+    height: 12px !important;
+  }
+  
+  .decor-shape-triangle {
+    left: 120px !important;
+    top: 20px !important;
+    border-left: 7px solid transparent !important;
+    border-right: 7px solid transparent !important;
+    border-bottom: 12px solid #00aeef !important;
+  }
+  
+  .decor-shape-blue-square {
+    left: 40px !important;
+    bottom: 120px !important;
+    width: 10px !important;
+    height: 10px !important;
+  }
+
+  /* Tối ưu hóa thêm cho các màn hình siêu nhỏ (Mobile S - dưới 360px) */
+  @media (max-width: 360px) {
+    .hero-img-wrapper {
+      height: 170px !important;
+      max-width: 300px !important;
+    }
+    
+    .hero-instructor-img {
+      width: 200px !important;
+      scale: 1.1 !important;
+    }
+    
+    .badge-expert {
+      left: -5px !important;
+      top: 50px !important;
+    }
+    
+    .badge-students {
+      right: -5px !important;
+      bottom: 30px !important;
+    }
+    
+    .decor-box {
+      width: 40px !important;
+      height: 40px !important;
+    }
+    
+    .decor-box img {
+      width: 18px !important;
+      height: 18px !important;
+    }
+    
+    .decor-box-orange {
+      left: 15px !important;
+      top: 200px !important;
+    }
+    
+    .decor-box-teal {
+      right: 10px !important;
+      top: 90px !important;
+    }
   }
 }
 
