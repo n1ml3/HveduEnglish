@@ -3,7 +3,7 @@
 .hero-section {
   position: relative;
   background-color: #edf7fd; /* Màu xanh nhạt đặc trưng của Hero theo Figma */
-  padding: 100px 0;
+  padding: 60px 0;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -148,22 +148,12 @@
   height: 520px;
 }
 
-/* Nền quạt lớn màu xanh bo tròn góc sau lưng giảng viên */
-.hero-bg-fan {
-  position: absolute;
-  top: 200px;
-  right: -130px;
-  width: 669px;
-  height: 610px; 
-  z-index: 1;
-}
-
 /* Khối hình ảnh giảng viên */
 .hero-instructor-img {
   position: absolute;
   z-index: 2;
-  scale: 1.5;
-  top: 49px;
+  scale: 1.2;
+  top: 0px;
 }
 
 .instructor-avatar {
@@ -201,13 +191,13 @@
 .badge-desc {
   font-family: var(--font-main), sans-serif;
   font-size: 13px;
-  color: #555555;
+  color: #000000;
   line-height: 1.2;
 }
 
 .badge-expert {
   left: -20px;
-  top: 100px;
+  top: 80px;
 }
 
 .badge-students {
@@ -218,9 +208,9 @@
 /* Hộp trang trí ô vuông nhỏ */
 .decor-box {
   position: absolute;
-  width: 60px;
-  height: 60px;
-  border-radius: 12px;
+  width: 69px;
+  height: 69px;
+  border-radius: 10px;
   z-index: 3;
   display: flex;
   align-items: center;
@@ -229,15 +219,15 @@
 }
 
 .decor-box-orange {
-  left: 80px;
+  left: 50px;
   top: 250px;
 }
 
 
 .decor-box-teal {
   background-color: #00b2bd;
-  right: 60px;
-  top: 130px;
+  right: 10px;
+  top: 100px;
 }
 
 .decor-box-teal .icon-placeholder {
@@ -255,17 +245,15 @@
 .decor-dot-1 {
   width: 18px;
   height: 18px;
-  left: 170px;
-  top: 200px;
-  opacity: 0.8;
+  left: 150px;
+  top: 170px;
 }
 
 .decor-dot-2 {
   width: 22px;
   height: 22px;
-  right: 140px;
-  top: 80px;
-  opacity: 0.8;
+  right: 60px;
+  top: 50px;
 }
 
 .decor-shape {
@@ -279,20 +267,18 @@
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   border-bottom: 18px solid #00aeef;
-  left: 230px;
-  top: 70px;
+  left: 180px;
+  top: 30px;
   transform: rotate(16deg);
-  opacity: 0.8;
 }
 
 .decor-shape-blue-square {
   background-color: #00aeef;
   width: 18px;
   height: 18px;
-  left: 90px;
-  bottom: 120px;
+  left: 70px;
+  bottom: 150px;
   transform: rotate(15deg);
-  opacity: 0.8;
 }
 
 /* --- Thiết kế tương thích phản hồi (Responsive CSS) --- */
@@ -380,12 +366,6 @@
 
   .hero-visual {
     margin-bottom: 30px;
-  }
-  
-  /* Ẩn quạt trang trí và hình ảnh giảng viên trên mobile theo yêu cầu */
-  .hero-bg-fan,
-  .hero-instructor-img {
-    display: none !important;
   }
   
   /* Chuyển wrapper thành flexbox để xếp chồng các badge chỉ số cân đối */
