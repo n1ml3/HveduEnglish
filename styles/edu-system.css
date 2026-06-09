@@ -27,10 +27,6 @@
   color: var(--primary-color); /* Màu xanh dương thương hiệu */
 }
 
-/* Lưới danh sách thẻ thông tin */
-.edu-cards-row {
-  margin-top: 10px;
-}
 
 /* Kiểu dáng thẻ thông tin */
 .edu-card {
@@ -87,10 +83,23 @@
 }
 
 /* --- Responsive CSS --- */
+@media (max-width: 1024px) {
+  .edu-system-section {
+    padding: 50px 0;
+  }
+  .edu-system-section .section-title-wrapper {
+    margin-bottom: 35px !important;
+  }
+}
+
 @media (max-width: 991px) {
   .edu-system-section {
     /* Giảm padding trên màn hình tablet để tối ưu khoảng trống và đồng bộ hệ thống khoảng cách */
     padding: 40px 0;
+  }
+  
+  .edu-system-section .section-title-wrapper {
+    margin-bottom: 25px !important;
   }
   
   .edu-system-section .section-title {
@@ -98,69 +107,75 @@
     font-size: 30px;
   }
   
+  .edu-card {
+    min-height: auto; /* Tự động co giãn theo nội dung trên tablet/mobile */
+    padding: 28px !important;
+    border-radius: 28px !important;
+  }
+
+  .edu-card-icon {
+    width: 55px !important;
+    height: 55px !important;
+    margin-bottom: 18px !important;
+  }
+
   .edu-card-title {
     /* Giảm cỡ chữ tiêu đề thẻ trên tablet */
-    font-size: 19px;
+    font-size: 18px !important;
+    margin-bottom: 12px !important;
   }
   
   .edu-card-desc {
     /* Giảm nhẹ cỡ chữ mô tả trên tablet */
-    font-size: 15.5px;
-  }
-  
-  .edu-card {
-    min-height: auto; /* Tự động co giãn theo nội dung trên tablet/mobile */
-    padding: 30px;
-    border-radius: 30px;
+    font-size: 14.5px !important;
   }
 }
 
 @media (max-width: 576px) {
   .edu-system-section {
     /* Giảm padding của phần hệ thống giáo dục trên mobile để gọn gàng hơn và tránh chiếm dụng nhiều diện tích */
-    padding: 25px 0 !important;
+    padding: 20px 0 !important;
   }
 
   .edu-system-section .section-title-wrapper {
     /* Giảm khoảng cách dưới tiêu đề */
-    margin-bottom: 30px !important;
+    margin-bottom: 18px !important;
   }
 
   .edu-cards-row {
-    /* Tạo thanh cuộn ngang mượt mà cho các edu-card trên màn hình mobile */
     display: flex !important;
-    flex-wrap: nowrap !important;
-    overflow-x: auto !important;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
+    flex-wrap: wrap !important;
+    overflow-x: visible !important;
     
-    /* Chừa thêm khoảng trống bên trong (padding) ở cả đầu và đáy để các hiệu ứng nổi của card không bị cắt */
-    padding-top: 15px !important;
-    margin-top: -5px !important; /* Bù trừ khoảng cách 10px gốc (10px - 15px padding-top) */
-    padding-bottom: 20px !important; /* Khoảng trống cho bóng đổ của card */
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+    padding-bottom: 0 !important;
     
-    margin-left: -15px !important; /* Tràn sát mép màn hình di động nhỏ, khớp với lề 15px của container chính */
-    margin-right: -15px !important;
-    padding-left: 15px !important; /* Tạo lề đệm bên trong cho phần tử đầu và cuối */
-    padding-right: 15px !important;
-    scrollbar-width: none; /* Ẩn thanh cuộn vật lý */
+    margin-left: -12px !important;
+    margin-right: -12px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 
   .edu-cards-row::-webkit-scrollbar {
-    display: none; /* Ẩn thanh cuộn trên Webkit */
+    display: none;
   }
 
   .edu-cards-row > div {
-    /* Giữ cố định kích thước thẻ khi cuộn ngang */
-    flex: 0 0 280px !important;
-    max-width: 280px !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
   }
 
   .edu-card {
-    /* Giảm nhẹ padding của card và điều chỉnh min-height cho phù hợp khi nằm ngang */
-    padding: 24px !important;
-    border-radius: 24px !important;
-    min-height: 280px !important;
+    padding: 20px !important;
+    border-radius: 20px !important;
+    min-height: auto !important;
+  }
+
+  .edu-card-icon {
+    width: 48px !important;
+    height: 48px !important;
+    margin-bottom: 14px !important;
   }
 
   .edu-system-section .section-title {
@@ -170,12 +185,39 @@
   
   .edu-card-title {
     /* Giảm thêm cỡ chữ tiêu đề thẻ trên di động nhỏ */
-    font-size: 17px !important;
-    margin-bottom: 12px;
+    font-size: 16px !important;
+    margin-bottom: 8px !important;
   }
   
   .edu-card-desc {
     /* Giảm thêm cỡ chữ mô tả trên di động nhỏ */
-    font-size: 14px !important;
+    font-size: 13.5px !important;
+  }
+
+  /* Tối ưu riêng cho các màn hình siêu nhỏ (Mobile S - dưới 360px) */
+  @media (max-width: 360px) {
+    .edu-system-section .section-title-wrapper {
+      margin-bottom: 12px !important;
+    }
+
+    .edu-card {
+      padding: 16px !important;
+      border-radius: 16px !important;
+    }
+
+    .edu-card-icon {
+      width: 40px !important;
+      height: 40px !important;
+      margin-bottom: 10px !important;
+    }
+
+    .edu-card-title {
+      font-size: 15px !important;
+      margin-bottom: 6px !important;
+    }
+
+    .edu-card-desc {
+      font-size: 12.5px !important;
+    }
   }
 }
