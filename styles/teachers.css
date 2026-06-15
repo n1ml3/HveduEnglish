@@ -157,6 +157,15 @@
     transform: rotate(180deg);
 }
 
+/* Hiệu ứng chuyển màu vàng cho SVG trang trí khi hover */
+.teacher-decor-circle svg path {
+    transition: fill var(--transition-smooth);
+}
+
+.teacher-card:hover .teacher-decor-circle svg path {
+    fill: var(--accent-color);
+}
+
 /* Tên giảng viên chuyển màu sang xanh ngọc */
 .teacher-card:hover .teacher-name {
     color: var(--primary-color);
