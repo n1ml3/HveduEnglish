@@ -97,6 +97,7 @@
   box-shadow: none; /* Triệt tiêu màu phủ nền mặc định của Bootstrap */
   white-space: normal; /* Cho phép tự động xuống dòng khi màn hình hẹp */
   border-bottom: none;
+  text-align: center;
 }
 
 /* Giữ không cho xuống dòng ở các cột chứa thông tin ngắn/cố định để bảo toàn định dạng */
