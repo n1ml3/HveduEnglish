@@ -25,8 +25,8 @@ $(document).ready(function() {
     initNewsletterForm();
   });
 
-  // 3. Nếu tìm thấy biểu mẫu tư vấn trên trang (index.html), khởi tạo xác thực
-  if ($("#contact-form").length) {
+  // 3. Nếu tìm thấy biểu mẫu tư vấn trên trang (index.html hoặc liên hệ), khởi tạo xác thực
+  if ($(".contact-form").length) {
     initContactForm();
   }
 
@@ -104,26 +104,20 @@ function initTestimonialsSlider() {
 /**
  * Khởi tạo tính năng câu hỏi thường gặp (FAQ) Accordion.
  * Điều khiển việc đóng/mở câu trả lời một cách mượt mà và chuyển đổi các trạng thái active.
- * Giải thích chi tiết bằng tiếng Việt theo yêu cầu của dự án.
+ * Tránh lưu giữ dom collection trong closure để hạn chế rò rỉ bộ nhớ.
  */
 function initFaqAccordion() {
-  const $faqItems = $('.faq-item');
-
-  $faqItems.find('.faq-header').on('click', function() {
+  $('.faq-item .faq-header').off('click').on('click', function() {
     const $currentItem = $(this).closest('.faq-item');
     const $currentWrapper = $currentItem.find('.faq-answer-wrapper');
     const isActive = $currentItem.hasClass('active');
 
     // 1. Đóng toàn bộ các câu hỏi khác đang mở để giữ bố cục gọn gàng
-    $faqItems.each(function() {
-      const $item = $(this);
-      if (!$item.is($currentItem) && $item.hasClass('active')) {
-        $item.removeClass('active');
-        $item.find('.faq-answer-wrapper').css({
-          'max-height': '0',
-          'opacity': '0'
-        });
-      }
+    const $otherActiveItems = $('.faq-item.active').not($currentItem);
+    $otherActiveItems.removeClass('active');
+    $otherActiveItems.find('.faq-answer-wrapper').css({
+      'max-height': '0',
+      'opacity': '0'
     });
 
     // 2. Chuyển đổi trạng thái đóng/mở của câu hỏi hiện tại
@@ -150,7 +144,7 @@ function initFaqAccordion() {
  * Thêm lớp 'active' cho tab được chọn và gỡ bỏ khỏi các tab khác để cập nhật giao diện.
  */
 function initCourseTabs() {
-  $('.course-tab').on('click', function() {
+  $('.course-tab').off('click').on('click', function() {
     $('.course-tab').removeClass('active');
     $(this).addClass('active');
   });
@@ -202,13 +196,13 @@ function adjustLoadedPaths(placeholderId, prefix) {
  * Mở và đóng sidebar lọc bằng hoạt ảnh mượt mà kèm lớp phủ mờ (backdrop).
  */
 function initFilterSidebarFlyout() {
-  $(document).on('click', '.filter-toggle-btn', function() {
+  $(document).off('click', '.filter-toggle-btn').on('click', '.filter-toggle-btn', function() {
     $('.filter-sidebar').addClass('active');
     $('.filter-backdrop').addClass('active');
     $('body').addClass('filter-open');
   });
 
-  $(document).on('click', '.filter-close-btn, .filter-backdrop', function() {
+  $(document).off('click', '.filter-close-btn, .filter-backdrop').on('click', '.filter-close-btn, .filter-backdrop', function() {
     $('.filter-sidebar').removeClass('active');
     $('.filter-backdrop').removeClass('active');
     $('body').removeClass('filter-open');
@@ -223,22 +217,24 @@ function initRegisterPopup() {
   const $btnRegister = $('.btn-register');
   if (!$btnRegister.length) return;
 
-  // Khởi tạo container modal trong body
-  const modalHTML = `
-    <div id="registerModal" class="register-modal-overlay">
-      <div class="register-modal-content">
-        <button type="button" class="register-modal-close" aria-label="Đóng popup">&times;</button>
-        <div id="registerModalBody"></div>
+  // Chỉ tạo container modal nếu chưa tồn tại trong body để tránh tích tụ DOM trùng lặp
+  if (!$('#registerModal').length) {
+    const modalHTML = `
+      <div id="registerModal" class="register-modal-overlay" style="display: none;">
+        <div class="register-modal-content">
+          <button type="button" class="register-modal-close" aria-label="Đóng popup">&times;</button>
+          <div id="registerModalBody"></div>
+        </div>
       </div>
-    </div>
-  `;
+    `;
+    $('body').append(modalHTML);
+  }
   
-  $('body').append(modalHTML);
   const $modal = $('#registerModal');
   const $modalBody = $('#registerModalBody');
   let isFormLoaded = false;
 
-  $btnRegister.on('click', function(e) {
+  $btnRegister.off('click').on('click', function(e) {
     e.preventDefault();
     
     // Tự động xác định tiền tố đường dẫn tương đối
@@ -260,6 +256,9 @@ function initRegisterPopup() {
         isFormLoaded = true;
         $modal.css('display', 'flex');
         $('body').css('overflow', 'hidden'); // Chặn cuộn trang nền
+        
+        // Khởi tạo xử lý submit cho form vừa tải xong
+        initLoadedRegisterForm();
       });
     } else {
       $modal.css('display', 'flex');
@@ -268,10 +267,54 @@ function initRegisterPopup() {
   });
 
   // Sự kiện đóng modal
-  $modal.on('click', function(e) {
+  $modal.off('click').on('click', function(e) {
     if ($(e.target).hasClass('register-modal-overlay') || $(e.target).hasClass('register-modal-close')) {
       $modal.css('display', 'none');
       $('body').css('overflow', ''); // Khôi phục cuộn trang
     }
+  });
+}
+
+/**
+ * Khởi tạo và xử lý sự kiện biểu mẫu nhận bản tin ở footer.
+ */
+function initNewsletterForm() {
+  const $form = $('.newsletter-form');
+  if (!$form.length) return;
+
+  $form.off('submit').on('submit', function(e) {
+    e.preventDefault();
+    alert('Cảm ơn bạn đã đăng ký nhận bản tin từ HVG English!');
+    $form.trigger('reset');
+  });
+}
+
+/**
+ * Khởi tạo và xử lý sự kiện biểu mẫu liên hệ / tư vấn.
+ */
+function initContactForm() {
+  const $form = $('.contact-form');
+  if (!$form.length) return;
+
+  $form.off('submit').on('submit', function(e) {
+    e.preventDefault();
+    alert('Gửi thông tin tư vấn thành công! Chúng tôi sẽ liên hệ lại sớm nhất.');
+    $form.trigger('reset');
+  });
+}
+
+/**
+ * Khởi tạo xử lý submit cho biểu mẫu đăng ký trong modal sau khi tải xong.
+ */
+function initLoadedRegisterForm() {
+  const $form = $('.register-form');
+  if (!$form.length) return;
+
+  $form.off('submit').on('submit', function(e) {
+    e.preventDefault();
+    alert('Đăng ký tư vấn khóa học thành công!');
+    $('#registerModal').css('display', 'none');
+    $('body').css('overflow', '');
+    $form.trigger('reset');
   });
 }
