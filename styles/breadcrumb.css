@@ -108,7 +108,7 @@
 
     /* Thu nhỏ ảnh minh họa trên màn hình Tablet */
     .breadcrumb-img {
-        max-height: 200px;
+        max-height: 150px;
         right: 40px;
         bottom: -30px; /* Cập nhật bottom khớp với padding-bottom: 30px */
     }
